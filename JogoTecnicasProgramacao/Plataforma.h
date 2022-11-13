@@ -11,6 +11,7 @@ namespace Entidades
         public:
             Plataforma();
             ~Plataforma();
+            void executar();
         };
     }
 }

@@ -6,7 +6,8 @@ using namespace Entidades::Personagens;
 
 Jogo::Jogo(): 
 jogador1(),
-pGerenteGrafico()
+pGerenteGrafico(),
+plat()
 
 {
 	Fase_Primeira fase1;
@@ -34,8 +35,9 @@ void Jogo::exec()
 		//TESTE
 		Robo* rob = &fase1.robo1;
 		Ger.checkCollision(&jogador1, rob);
+		Ger.checkGround(&jogador1, &plat);
 		//TESTE
-
+		
 		fase1.alien1.executar();
 		
 		//fase1.ini1.imprimir();

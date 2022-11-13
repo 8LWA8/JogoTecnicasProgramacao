@@ -19,3 +19,8 @@ void Ente::setTextura(const char* path)
 	this->textura = pGerenteGrafico->loadTexture(path);
 	this->corpo.setTexture(textura);
 }
+
+sf::RectangleShape* Ente::getCorpo() 
+{
+	return &corpo;
+}

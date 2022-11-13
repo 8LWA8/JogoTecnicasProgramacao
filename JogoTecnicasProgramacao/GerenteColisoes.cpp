@@ -29,4 +29,26 @@ namespace Gerenciadores {
 
 	}
 
+
+	void GerenteColisoes::checkGround(Entidade* ent1, Entidade* plat) 
+	{
+		Coord* coord1 = ent1->getCoord();
+		Coord* coord2 = plat->getCoord();
+		Coord* tam1 = ent1->getTam();
+		Coord* tam2 = plat->getTam();
+
+		float dy = abs((coord1->y + (tam1->y / 2)) - (coord2->y + (tam2->y / 2)) - (tam1->y + tam2->y));
+
+		if (dy > 0) 
+		{
+			ent1->getCorpo()->move(sf::Vector2f(0.f, 0.1f));
+			coord1->y += 0.1;
+		}
+		else if (coord1->y <50)
+		{
+			ent1->getCorpo()->move(sf::Vector2f(0.f, 0.f));
+		}
+	}
+
 }
+

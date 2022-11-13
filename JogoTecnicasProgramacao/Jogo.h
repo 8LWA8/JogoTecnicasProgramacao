@@ -14,6 +14,7 @@ private:
 	GerenteGrafico* pGerenteGrafico;
 	GerenteColisoes Ger;
 	Jogador jogador1;
+	Plataforma plat; //TESTE 
 	Inimigo ini1;
 	Fase_Primeira fase1;
 	Fase_Segunda fase2;

@@ -1,1 +1,3 @@
-﻿  JogoTecProg.vcxproj -> C:\Users\letic\Desktop\UTFPR\UTFPR - 2022.2\Técnicas de Programação\JOGO\JogoTecProg\Debug\JogoTecProg.exe
+﻿  GerenteColisoes.cpp
+C:\Users\bruno\OneDrive\Documents\GitHub\JogoTecnicasProgramacao\JogoTecnicasProgramacao\GerenteColisoes.cpp(45,20): warning C4305: '+=': truncation from 'double' to 'float'
+  JogoTecProg.vcxproj -> C:\Users\bruno\OneDrive\Documents\GitHub\JogoTecnicasProgramacao\JogoTecnicasProgramacao\Debug\JogoTecProg.exe
