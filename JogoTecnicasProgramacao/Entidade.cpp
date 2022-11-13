@@ -2,13 +2,13 @@
 #include <iostream>
 using namespace Entidades;
 
-Entidade::Entidade(): coordenada(),
-tam()
+Entidade::Entidade(): coordenada(0.0,0.0),
+tam(0.0,0.0),
+vel(0.1, 0.1),
+coll(0.0,0.0)
 {
-	coordenada.x = corpo.getPosition().x;
-	coordenada.y = corpo.getPosition().y;
-	tam.x = corpo.getSize().x;
-	tam.y = corpo.getSize().y;
+	coordenada.setVal(corpo.getPosition().x, corpo.getPosition().y);
+	tam.setVal(corpo.getSize().x, corpo.getSize().y);
 
 }
 
@@ -26,6 +26,16 @@ Coord* Entidade::getTam()
 	return &tam;
 }
 
+Coord* Entidade::getVel() 
+{
+	return &vel;
+}
+
+Coord* Entidade::getColl() 
+{
+	return &coll;
+}
+
 
 void Entidade::imprimir() 
 {
@@ -35,3 +45,4 @@ void Entidade::imprimir()
 	pGerenteGraf->render(&corpo);
 
 }
+

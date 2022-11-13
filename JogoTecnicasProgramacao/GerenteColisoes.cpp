@@ -8,47 +8,77 @@ namespace Gerenciadores {
 
 	void GerenteColisoes::checkCollision(Entidade* ent1, Entidade* ent2)
 	{
-		/*
-		int x1 = ent1->getPos();
-		int x2 = ent2->getPos();
-		int dx = abs((x1 + 50)- (x2 + 50))- (50+50);
-			*/
 
 		Coord* coord1 = ent1->getCoord();
 		Coord* coord2 = ent2->getCoord();
 		Coord* tam1 = ent1->getTam();
 		Coord* tam2 = ent2->getTam();
 
-		float dx = abs((coord1->x + (tam1->x / 2)) - (coord2->x + (tam2->x / 2)) - (tam1->x + tam2->x));
-		float dy = abs((coord1->y + (tam1->y / 2)) - (coord2->y + (tam2->y / 2)) - (tam1->y + tam2->y));
+		//Utilizados para os calculos de colisao no eixo X
+		float x1 = ent1->getCoord()->getX();
+		float x2 = ent2->getCoord()->getX();
 
-		if (dx < 0.0 || dy < 0.0) 
+		float tx1 = ent1->getTam()->getX();
+		float tx2 = ent2->getTam()->getX();
+		
+		//Utilizados para os calculos de colisao no eixo Y
+		float y1 = ent1->getCoord()->getY();
+		float y2 = ent2->getCoord()->getY();
+
+		float ty1 = ent1->getTam()->getY();
+		float ty2 = ent2->getTam()->getY();
+
+		//Calculos
+		float dx = abs((x1 + (tx1 / 2)) - (x2 + (tx2 / 2)) - (tx1 + tx2));
+		float dy = abs((y1 + (ty1 / 2)) - (y2 + (ty2 / 2)) - (ty1 + ty2));
+		
+
+		Coord* coll1 = ent1->getColl();
+		Coord* coll2 = ent2->getColl();
+		if (dx <= 0.0) 
 		{
-			exit(1);
+			if (coord1->getX() > coord2->getX()) 
+			{
+				coll1->setValX(1.0);
+				coll2->setValX(-1.0);
+			}
+			else 
+			{
+				coll1->setValX(-1.0);
+				coll2->setValX(1.0);
+			}
+
+		}
+		else 
+		{
+			coll1->setValX(0.0);
+			coll2->setValX(0.0);
+		}
+
+		if (dy <= 0.0)
+		{
+			if (coord1->getY() > coord2->getY())
+			{
+				coll1->setValY(1.0);
+				coll2->setValY(-1.0);
+			}
+			else
+			{
+				coll1->setValY(-1.0);
+				coll2->setValY(1.0);
+			}
+
+		}
+		else
+		{
+			coll1->setValY(0.0);
+			coll2->setValY(0.0);
 		}
 
 	}
 
 
-	void GerenteColisoes::checkGround(Entidade* ent1, Entidade* plat) 
-	{
-		Coord* coord1 = ent1->getCoord();
-		Coord* coord2 = plat->getCoord();
-		Coord* tam1 = ent1->getTam();
-		Coord* tam2 = plat->getTam();
-
-		float dy = abs((coord1->y + (tam1->y / 2)) - (coord2->y + (tam2->y / 2)) - (tam1->y + tam2->y));
-
-		if (dy > 0) 
-		{
-			ent1->getCorpo()->move(sf::Vector2f(0.f, 0.1f));
-			coord1->y += 0.1;
-		}
-		else if (coord1->y <50)
-		{
-			ent1->getCorpo()->move(sf::Vector2f(0.f, 0.f));
-		}
-	}
+	
 
 }
 

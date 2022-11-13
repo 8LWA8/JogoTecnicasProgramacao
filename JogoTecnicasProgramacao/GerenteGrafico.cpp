@@ -104,7 +104,7 @@ using namespace Gerenciadores;
 
 	void GerenteGrafico::CenterView(Coord* coord) 
 	{
-		view.setCenter(sf::Vector2f(coord->x, coord->y));
+		view.setCenter(sf::Vector2f(coord->getX(), coord->getY()));
 		window->setView(view);
 	}
 

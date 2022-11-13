@@ -2,11 +2,12 @@
 
 using namespace Entidades::Personagens;
 
-Jogador::Jogador()
+Jogador::Jogador(): 
 {
     setTextura("astronauta.png");
     corpo.setSize(sf::Vector2f(50.f, 100.f));
     corpo.setPosition(sf::Vector2f(100.f, 100.f));
+    vel.setVal(1.0, 1.0);
 }
 
 Jogador::~Jogador()
@@ -25,32 +26,34 @@ void Jogador::executar()
 
 void Jogador::mover()
 {
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::D) || sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
+    if ( sf::Keyboard::isKeyPressed(sf::Keyboard::D) && (coll.getX() != 1.0) )
     {
-        corpo.move(sf::Vector2f(0.1f, 0.f));
-		coordenada.x += 0.1;
+        corpo.move(sf::Vector2f(vel.getX(), 0.f));
+        coordenada.addX(vel.getX());
     }
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::A) || sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
+    if ( sf::Keyboard::isKeyPressed(sf::Keyboard::A) && (coll.getX() != -1.0) )
     {
-        corpo.move(sf::Vector2f(-0.1f, 0.f));
-		coordenada.x -= 0.1;
+        corpo.move(sf::Vector2f(-vel.getX(), 0.f));
+        coordenada.addX(-vel.getY());
     }
-	if (coordenada.y < 50) 
-	{
-		corpo.move(sf::Vector2f(0.f, 0.1f));
-		coordenada.y += 0.1;
-	}
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::W) || sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
+    float y = coordenada.getY();
+  
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::W) && coll.getY() != -1.0)
     {
-		//TESTE
-        corpo.move(sf::Vector2f(0.f, -0.1f));
-		coordenada.y -= 0.1;
+        //TESTE
+        corpo.move(sf::Vector2f(0.f, -vel.getY()));
+        coordenada.addY(-vel.getY());
     }
-	/*
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::S) || sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
+    else if (coll.getY() == 0.0) 
     {
-        corpo.move(sf::Vector2f(0.f, 0.1f));
-		coordenada.y += 0.1;
-    }*/
+        corpo.move(sf::Vector2f(0.f, 0.5));
+        coordenada.addY(0.5);
+    }
+    
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::S))
+    {
+        corpo.move(sf::Vector2f(0.f, vel.getY()));
+        coordenada.addY(vel.getY());
+    }
 }
 

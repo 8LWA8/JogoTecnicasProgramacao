@@ -9,14 +9,18 @@ namespace Entidades
 	protected:
 		Coord  coordenada;
 		Coord tam;
+		Coord vel;
+		Coord coll;
 		
 	public:
 		Entidade();
 		~Entidade();
 		virtual void executar()=0;
 		virtual void imprimir();
-		Coord* getCoord();  //const???
+		Coord* getCoord();  
 		Coord* getTam();
+		Coord* getVel();
+		Coord* getColl();
 
 	};
 }

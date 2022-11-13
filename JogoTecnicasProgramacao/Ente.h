@@ -18,6 +18,9 @@ public:
 	virtual void imprimir() = 0 ;
 	virtual void setTextura(const char* path);
 	sf::RectangleShape* getCorpo();
+
+	void setId(int id);
+	int getId();
 	//virtual void update();
 };
 

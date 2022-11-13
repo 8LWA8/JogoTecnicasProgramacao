@@ -31,14 +31,14 @@ void Inimigo::moveAleatorio()
 		movAleatorio = rand() % 2 + 1;
 	}
 
-	if (movAleatorio == 1) 
+	if (movAleatorio == 1 && coll.getX() != 1.0) 
 	{
-		corpo.move(sf::Vector2f(0.1f, 0.f));
-		coordenada.x += 0.1;
+		corpo.move(sf::Vector2f(vel.getX(), 0.f));
+		coordenada.addX(0.1);
 	}
-	else 
+	else if (coll.getX() != -1.0)
 	{
-		corpo.move(sf::Vector2f(-0.1f, 0.f));
-		coordenada.x -= 0.1;
+		corpo.move(sf::Vector2f(-vel.getX(), 0.f));
+		coordenada.addX(-0.1);
 	}
 }
