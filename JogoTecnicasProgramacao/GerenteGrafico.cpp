@@ -41,6 +41,7 @@ using namespace Gerenciadores;
 			instance = new GerenteGrafico();
 		}
 		return instance;
+		//std::cout << "grafico" << std::endl;
 	}
 
 	float GerenteGrafico::dt = 0;
@@ -59,6 +60,7 @@ using namespace Gerenciadores;
 	void GerenteGrafico::render(sf::RectangleShape* body) 
 	{
 		window->draw(*body);
+		//std::cout << "render" << std::endl;
 	}
 
 	void GerenteGrafico::render(sf::Text* text) 

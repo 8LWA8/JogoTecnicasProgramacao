@@ -1,5 +1,5 @@
 #include "Entidade.h"
-
+#include <iostream>
 using namespace Entidades;
 
 Entidade::Entidade(): coordenada(),
@@ -29,6 +29,7 @@ Coord* Entidade::getTam()
 
 void Entidade::imprimir() 
 {
+	//std::cout << "imprimiu ent" << std::endl;
 	GerenteGrafico* pGerenteGraf = GerenteGrafico::getInstance();
 	//pGerenteGraf->CenterView(pos);
 	pGerenteGraf->render(&corpo);

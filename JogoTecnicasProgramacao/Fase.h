@@ -15,11 +15,12 @@ namespace Fases
 	protected:
 		Entidades::Personagens::Jogador* pJogador1;
 
-		Entidades::Personagens::Inimigo* pInimigo1;
+		//Entidades::Personagens::Inimigo* pInimigo1;
 	public:
 		Fase();
 		~Fase();
 		virtual void executar() = 0;
+		void criaEntidades();
 		void criaInimigos();
 		void criaRobos();
 		void criaObstaculos();

@@ -8,8 +8,17 @@ namespace Listas
 {
 	class ListaEntidades
 	{
-	public:
+	private:
 		Lista<Entidade> LEs;
-		//void executarEntidades();
+	public:
+		ListaEntidades();
+		~ListaEntidades();
+		void addEntidade(Entidade* entidade);
+		void removerEntidade(Entidade* entidade);
+		void removerEntidade(int pos);
+		int getTam();
+		Entidade* operator[](int pos);
+		void limpaLista();
+		void executarTodos();
 	};
 }

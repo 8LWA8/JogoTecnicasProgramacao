@@ -6,11 +6,8 @@ using namespace Entidades::Personagens;
 
 Jogo::Jogo(): 
 jogador1(),
-pGerenteGrafico(),
-plat()
-
+pGerenteGrafico(), fase1()
 {
-	Fase_Primeira fase1;
 }
 
 void Jogo::exec() 
@@ -27,17 +24,16 @@ void Jogo::exec()
 				pGerenteGrafico->closeWindow();
         }
 		
-		fase1.executar();
-		pGerenteGrafico->clear();
 		
+		pGerenteGrafico->clear();
+		fase1.executar();
 		execEnt();
 
 		//TESTE
 		Robo* rob = &fase1.robo1;
 		Ger.checkCollision(&jogador1, rob);
-		Ger.checkGround(&jogador1, &plat);
 		//TESTE
-		
+
 		fase1.alien1.executar();
 		
 		//fase1.ini1.imprimir();
@@ -57,7 +53,7 @@ void Jogo::execEnt()
 	//ini1.executar();
 	fase1.espi1.executar();
 	fase1.rocha1.executar();
-	fase1.robo1.executar();
+	//fase1.robo1.executar();
 	fase1.chao.executar();
 }
 

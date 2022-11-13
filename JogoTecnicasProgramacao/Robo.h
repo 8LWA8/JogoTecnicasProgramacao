@@ -10,6 +10,7 @@ namespace Entidades
         {
         public:
             Robo();
+            Robo(const sf::Vector2f pos);
             ~Robo();
             //void executar();
         };

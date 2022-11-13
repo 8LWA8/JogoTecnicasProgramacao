@@ -1,5 +1,5 @@
 #include "Inimigo.h"
-
+#include <iostream>
 using namespace Entidades::Personagens;
 
 Inimigo::Inimigo() : movAleatorio(-1)
@@ -15,6 +15,7 @@ Inimigo::~Inimigo()
 
 void Inimigo::executar()
 {
+	//std::cout << "INI EXE" << std::endl;
 	Inimigo::imprimir();
 	Inimigo::moveAleatorio();
 }
