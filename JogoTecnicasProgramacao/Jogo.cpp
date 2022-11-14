@@ -32,7 +32,7 @@ void Jogo::exec()
 		//TESTE
 		Robo* rob = &fase1.robo1;
 		Plataforma* plat = &fase1.chao;
-		Ger.checkCollision(&jogador1, rob);
+		//Ger.checkCollision(&jogador1, rob);
 		Ger.checkCollision(&jogador1, plat);
 		//TESTE
 

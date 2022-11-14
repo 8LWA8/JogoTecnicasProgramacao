@@ -18,11 +18,14 @@ Entidade::~Entidade()
 
 Coord* Entidade::getCoord() 
 {
+
+	coordenada.setVal(corpo.getGlobalBounds().left, corpo.getGlobalBounds().top);
 	return &coordenada;
 };
 
 Coord* Entidade::getTam() 
 {
+	//tam.setVal(corpo.getGlobalBounds().width, corpo.getGlobalBounds().height);
 	return &tam;
 }
 
@@ -33,6 +36,7 @@ Coord* Entidade::getVel()
 
 Coord* Entidade::getColl() 
 {
+
 	return &coll;
 }
 

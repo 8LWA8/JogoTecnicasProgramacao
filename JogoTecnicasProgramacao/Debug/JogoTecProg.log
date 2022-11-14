@@ -1,1 +1,5 @@
-﻿  JogoTecProg.vcxproj -> C:\Users\bruno\OneDrive\Documents\GitHub\JogoTecnicasProgramacao\JogoTecnicasProgramacao\Debug\JogoTecProg.exe
+﻿  Entidade.cpp
+C:\Users\bruno\OneDrive\Documents\GitHub\JogoTecnicasProgramacao\JogoTecnicasProgramacao\Entidade.cpp(9,1): warning C4305: 'argument': truncation from 'double' to 'float'
+  GerenteColisoes.cpp
+  Generating Code...
+  JogoTecProg.vcxproj -> C:\Users\bruno\OneDrive\Documents\GitHub\JogoTecnicasProgramacao\JogoTecnicasProgramacao\Debug\JogoTecProg.exe

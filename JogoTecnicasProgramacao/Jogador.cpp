@@ -2,7 +2,7 @@
 
 using namespace Entidades::Personagens;
 
-Jogador::Jogador(): 
+Jogador::Jogador() 
 {
     setTextura("astronauta.png");
     corpo.setSize(sf::Vector2f(50.f, 100.f));

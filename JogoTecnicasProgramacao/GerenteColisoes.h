@@ -1,6 +1,7 @@
 #pragma once
 #include "Entidade.h"
 #include <math.h>
+#include <iostream>
 
 using namespace Entidades;
 namespace Gerenciadores {

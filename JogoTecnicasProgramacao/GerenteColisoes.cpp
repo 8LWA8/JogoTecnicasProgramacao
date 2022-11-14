@@ -14,6 +14,9 @@ namespace Gerenciadores {
 		Coord* tam1 = ent1->getTam();
 		Coord* tam2 = ent2->getTam();
 
+		std::cout << "1 " << coord1->getX() << " " << coord1->getY() << " | " << tam1->getX() << " " << tam1->getY() << std::endl;
+		std::cout << "2 " << coord2->getX() << " " << coord2->getY() << " | "  << tam2->getX() << " " << tam2->getY() << std::endl;
+
 		//Utilizados para os calculos de colisao no eixo X
 		float x1 = ent1->getCoord()->getX();
 		float x2 = ent2->getCoord()->getX();
@@ -29,8 +32,9 @@ namespace Gerenciadores {
 		float ty2 = ent2->getTam()->getY();
 
 		//Calculos
-		float dx = abs((x1 + (tx1 / 2)) - (x2 + (tx2 / 2)) - (tx1 + tx2));
-		float dy = abs((y1 + (ty1 / 2)) - (y2 + (ty2 / 2)) - (ty1 + ty2));
+		float dx = abs((x1 + (tx1 / 2)) - (x2 + (tx2 / 2)) - (tx1+ tx2)/2);
+		//float dy = abs((y1 + (ty1 / 2)) - (y2 + (ty2 / 2)) - (ty1 + ty2)/2);
+		float dy = abs((y1 ) - (y2)) - (ty1 + ty2) / 2;
 		
 
 		Coord* coll1 = ent1->getColl();
