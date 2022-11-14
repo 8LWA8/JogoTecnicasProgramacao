@@ -2,6 +2,7 @@
 #include "Jogador.h"
 #include "Inimigo.h"
 #include "Robo.h"
+#include "Rocha.h"
 #include "ListaEntidades.h"
 
 
@@ -20,10 +21,8 @@ namespace Fases
 		Fase();
 		~Fase();
 		virtual void executar() = 0;
-		void criaEntidades();
-		void criaInimigos();
 		void criaRobos();
-		void criaObstaculos();
+		void criaRochas();
 
     };
 }

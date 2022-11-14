@@ -10,6 +10,7 @@ namespace Entidades
         {
         public:
             Rocha();
+            Rocha(const sf::Vector2f pos);
             ~Rocha();
         };
     }

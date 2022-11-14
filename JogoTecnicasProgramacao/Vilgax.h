@@ -7,6 +7,10 @@ namespace Entidades
         class Vilgax :
             public Inimigo
         {
+        public:
+            Vilgax();
+            Vilgax(const sf::Vector2f pos);
+            ~Vilgax();
         };
     }
 }
