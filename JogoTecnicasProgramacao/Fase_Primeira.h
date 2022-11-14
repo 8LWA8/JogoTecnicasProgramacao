@@ -2,9 +2,9 @@
 #include "Fase.h"
 #include "Lista.h"
 #include "ListaEntidades.h"
-#include "Lista.h"
 #include "Inimigo.h"
 #include "Robo.h"
+#include "Vilgax.h"
 #include "Rocha.h"
 #include "Alienigena.h"
 #include "Plataforma.h"
@@ -14,6 +14,7 @@ using namespace Entidades::Obstaculos;
 
 namespace Fases
 {
+
     class Fase_Primeira :
         public Fase
     {
@@ -21,13 +22,13 @@ namespace Fases
     public:
         Fase_Primeira();
         ~Fase_Primeira();
-        Robo robo1;
         Alienigena alien1;
-        Rocha rocha1;
-        Espinhos espi1;
+        //Espinhos espi1;
         Plataforma chao;
 
         void executar();
         void imprimir();
+        void criaVilgax();
+        void criaEspinhos();
     };
 }

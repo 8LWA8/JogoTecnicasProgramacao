@@ -12,6 +12,6 @@ Personagem::~Personagem()
 
 void Entidades::Personagens::Personagem::executar()
 {
-	std::cout << "PERSONAGEM EXE" << std::endl;
+	//std::cout << "PERSONAGEM EXE" << std::endl;
 	imprimir();
 }

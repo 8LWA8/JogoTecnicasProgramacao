@@ -10,6 +10,7 @@ namespace Entidades
         {
         public:
             Espinhos();
+            Espinhos(const sf::Vector2f pos);
             ~Espinhos();
         };
     }

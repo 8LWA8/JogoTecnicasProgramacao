@@ -1,7 +1,7 @@
 #include "Obstaculo.h"
 using namespace Entidades::Obstaculos;
 
-Entidades::Obstaculos::Obstaculo::Obstaculo()
+Entidades::Obstaculos::Obstaculo::Obstaculo(): causa_dano(false)
 {
 }
 

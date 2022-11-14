@@ -8,6 +8,8 @@ namespace Entidades
         class Obstaculo :
             public Entidade
         {
+        protected:
+            bool causa_dano;
         public:
             Obstaculo();
             ~Obstaculo();
