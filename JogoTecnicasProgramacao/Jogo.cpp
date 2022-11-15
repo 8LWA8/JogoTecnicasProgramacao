@@ -45,17 +45,22 @@ void Jogo::exec()
 
 void Jogo::execEnt()
 {
-	//TESTE
-	Plataforma* plat = &fase1.chao;
-	fase1.alien1.executar();
-	Ger.checkCollision(&jogador1, plat);
-	Ger.checkCollision(&(fase1.alien1), plat);
-	Ger.checkCollision(&(fase1.alien1), &jogador1);
-	//TESTE
 
+	fase1.alien1.executar();
 	jogador1.executar();
 	fase1.executar();
 	fase1.chao.executar();
+	//TESTE
+	Plataforma* plat = &fase1.chao;
+	
+	//std::cout << "jogador - plat" << std::endl;
+	Ger.checkCollision(&jogador1, plat);
+	//std::cout << "alien - plat" << std::endl;
+	Ger.checkCollision(&(fase1.alien1), plat);
+	//std::cout << "jogador - alien" << std::endl;
+	Ger.checkCollision(&jogador1, &(fase1.alien1));
+	//TESTE
+	
 }
 
 /*Jogo::~Jogo() 

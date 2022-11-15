@@ -2,13 +2,15 @@
 #include <iostream>
 using namespace Entidades;
 
-Entidade::Entidade(): coordenada(0.0,0.0),
-tam(0.0,0.0),
+Entidade::Entidade() : coordenada(0.0, 0.0),
+tam(0.0, 0.0),
 vel(0.1, 0.1),
-coll(0.0,0.0)
+coll(0.0, 0.0),
+mov(false)
 {
 	coordenada.setVal(corpo.getGlobalBounds().left, corpo.getGlobalBounds().top);
-	tam.setVal(corpo.getSize().x, corpo.getSize().y);
+	//coordenada.setVal(corpo.getPosition().x, corpo.getPosition().y);
+	tam.setVal(corpo.getGlobalBounds().width, corpo.getGlobalBounds().height);
 
 }
 
@@ -20,6 +22,7 @@ Coord* Entidade::getCoord()
 {
 
 	coordenada.setVal(corpo.getGlobalBounds().left, corpo.getGlobalBounds().top);
+	//coordenada.setVal(corpo.getPosition().x, corpo.getPosition().y);
 	return &coordenada;
 };
 
@@ -51,5 +54,10 @@ void Entidade::imprimir()
 
 void Entidade::resetColl() 
 {
-	coordenada.setVal(0.0, 0.0);
+	coll.setVal(0.0, 0.0);
+}
+
+bool Entidade::getMov() const
+{
+	return mov;
 }

@@ -16,8 +16,10 @@ Inimigo::~Inimigo()
 void Inimigo::executar()
 {
 	//std::cout << "INI EXE" << std::endl;
-	Inimigo::imprimir();
-	Inimigo::moveAleatorio();
+	this->imprimir();
+	this->moveAleatorio();
+	this->resetColl();
+	
 }
 
 void Inimigo::moveAleatorio() 
@@ -37,14 +39,15 @@ void Inimigo::moveAleatorio()
 		coordenada.addY(1.0);
 	}
 
-	if (movAleatorio == 1 && coll.getX() != 1.0) 
+	if (movAleatorio == 1) 
 	{
 		corpo.move(sf::Vector2f(vel.getX(), 0.f));
 		coordenada.addX(vel.getX());
 	}
-	else if (coll.getX() != -1.0)
+	else 
 	{
 		corpo.move(sf::Vector2f(-vel.getX(), 0.f));
 		coordenada.addX(-vel.getX());
 	}
+
 }

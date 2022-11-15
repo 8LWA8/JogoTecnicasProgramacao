@@ -1,15 +1,17 @@
 #include "Alienigena.h"
 using namespace Entidades::Personagens;
 
-Entidades::Personagens::Alienigena::Alienigena()
+Alienigena::Alienigena()
 {
 	setTextura("alien_parado.png");
-	corpo.setFillColor(sf::Color::White);
 	corpo.setSize(sf::Vector2f(50.f, 100.f));
 	corpo.setPosition(sf::Vector2f(400.f, 100.f));
+
+	coordenada.setVal(corpo.getGlobalBounds().left, corpo.getGlobalBounds().top);
+	tam.setVal(corpo.getGlobalBounds().width, corpo.getGlobalBounds().height);
 }
 
-Entidades::Personagens::Alienigena::~Alienigena()
+Alienigena::~Alienigena()
 {
 }
 

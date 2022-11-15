@@ -11,6 +11,7 @@ namespace Entidades
 		Coord tam;
 		Coord vel;
 		Coord coll;
+		bool mov;  
 		
 	public:
 		Entidade();
@@ -22,6 +23,7 @@ namespace Entidades
 		Coord* getTam();
 		Coord* getVel();
 		Coord* getColl();
+		bool getMov() const;
 
 
 	};
