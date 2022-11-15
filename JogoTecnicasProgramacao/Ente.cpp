@@ -33,3 +33,4 @@ sf::RectangleShape* Ente::getCorpo()
 {
 	return &corpo;
 }
+

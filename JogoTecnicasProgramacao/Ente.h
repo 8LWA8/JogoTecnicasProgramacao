@@ -16,7 +16,8 @@ public:
 	virtual ~Ente();
 	virtual void executar() = 0;
 	virtual void imprimir() = 0 ;
-	virtual void setTextura(const char* path);
+	void setTextura(const char* path);
+	void setTam(float x, float y);
 	sf::RectangleShape* getCorpo();
 
 	void setId(int id);

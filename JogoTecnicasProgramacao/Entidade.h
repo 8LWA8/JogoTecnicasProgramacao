@@ -17,10 +17,12 @@ namespace Entidades
 		~Entidade();
 		virtual void executar()=0;
 		virtual void imprimir();
+		void resetColl();
 		Coord* getCoord();  
 		Coord* getTam();
 		Coord* getVel();
 		Coord* getColl();
+
 
 	};
 }

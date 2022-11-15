@@ -17,15 +17,17 @@ Jogador::~Jogador()
 
 void Jogador::executar()
 {
-    mover();
-	pGerenteGrafico->CenterView(&coordenada);
-	imprimir();
+	this->imprimir();
+    pGerenteGrafico->CenterView(&coordenada);
+    this->mover();
+    this->resetColl();
 }
 
 
 
 void Jogador::mover()
 {
+ 
     if ( sf::Keyboard::isKeyPressed(sf::Keyboard::D) && (coll.getX() != 1.0) )
     {
         corpo.move(sf::Vector2f(vel.getX(), 0.f));
@@ -38,11 +40,11 @@ void Jogador::mover()
     }
     float y = coordenada.getY();
   
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::W) && coll.getY() != -1.0)
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::W) && coll.getY() == 1.0)
     {
         //TESTE
-        corpo.move(sf::Vector2f(0.f, -vel.getY()));
-        coordenada.addY(-vel.getY());
+        corpo.move(sf::Vector2f(0.f, -2*vel.getY()));
+        coordenada.addY(-2*vel.getY());
     }
     else if (coll.getY() == 0.0) 
     {
@@ -50,10 +52,10 @@ void Jogador::mover()
         coordenada.addY(0.5);
     }
     
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::S))
+    /*if (sf::Keyboard::isKeyPressed(sf::Keyboard::S) && coll.getY() != 1.0)
     {
         corpo.move(sf::Vector2f(0.f, vel.getY()));
         coordenada.addY(vel.getY());
-    }
+    }*/
 }
 

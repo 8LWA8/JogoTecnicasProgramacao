@@ -26,15 +26,9 @@ void Jogo::exec()
 		
 		
 		pGerenteGrafico->clear();
-		fase1.executar();
 		execEnt();
 
-		//TESTE
-		Robo* rob = &fase1.robo1;
-		Plataforma* plat = &fase1.chao;
-		//Ger.checkCollision(&jogador1, rob);
-		Ger.checkCollision(&jogador1, plat);
-		//TESTE
+		
 
 		
 		
@@ -51,11 +45,16 @@ void Jogo::exec()
 
 void Jogo::execEnt()
 {
+	//TESTE
+	Plataforma* plat = &fase1.chao;
+	fase1.alien1.executar();
+	Ger.checkCollision(&jogador1, plat);
+	Ger.checkCollision(&(fase1.alien1), plat);
+	Ger.checkCollision(&(fase1.alien1), &jogador1);
+	//TESTE
+
 	jogador1.executar();
-	//ini1.executar();
-	fase1.espi1.executar();
-	fase1.rocha1.executar();
-	//fase1.robo1.executar();
+	fase1.executar();
 	fase1.chao.executar();
 }
 

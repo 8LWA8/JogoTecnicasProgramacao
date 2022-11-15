@@ -7,7 +7,7 @@ tam(0.0,0.0),
 vel(0.1, 0.1),
 coll(0.0,0.0)
 {
-	coordenada.setVal(corpo.getPosition().x, corpo.getPosition().y);
+	coordenada.setVal(corpo.getGlobalBounds().left, corpo.getGlobalBounds().top);
 	tam.setVal(corpo.getSize().x, corpo.getSize().y);
 
 }
@@ -25,7 +25,7 @@ Coord* Entidade::getCoord()
 
 Coord* Entidade::getTam() 
 {
-	//tam.setVal(corpo.getGlobalBounds().width, corpo.getGlobalBounds().height);
+	tam.setVal(corpo.getGlobalBounds().width, corpo.getGlobalBounds().height);
 	return &tam;
 }
 
@@ -36,7 +36,6 @@ Coord* Entidade::getVel()
 
 Coord* Entidade::getColl() 
 {
-
 	return &coll;
 }
 
@@ -50,3 +49,7 @@ void Entidade::imprimir()
 
 }
 
+void Entidade::resetColl() 
+{
+	coordenada.setVal(0.0, 0.0);
+}
