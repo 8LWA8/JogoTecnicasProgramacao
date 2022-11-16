@@ -25,3 +25,12 @@ void Plataforma::executar()
 	this->resetColl();
 
 }
+
+void Plataforma::setFlutua(bool f)
+{
+	this->flutua = f;
+}
+bool Plataforma::getFlutua() 
+{
+	return flutua;
+}

@@ -8,10 +8,14 @@ namespace Entidades
         class Plataforma :
             public Obstaculo
         {
+        protected:
+            bool flutua;
         public:
             Plataforma();
             ~Plataforma();
             void executar();
+            void setFlutua(bool f);
+            bool getFlutua();
         };
     }
 }

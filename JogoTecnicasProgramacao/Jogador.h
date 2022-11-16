@@ -12,12 +12,14 @@ namespace Entidades
             public Personagem
         {
         private:
-
+            int pontuacao;
         public:
             Jogador();
             ~Jogador();
             void executar();
             void mover();
+            void setPontuacao(int p);
+            int getPontuacao();
         };
     }
 }

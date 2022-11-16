@@ -2,6 +2,8 @@
 #include <iostream>
 using namespace Entidades::Personagens;
 
+
+
 Jogador::Jogador() 
 {
     setTextura("astronauta.png");
@@ -57,6 +59,13 @@ void Jogador::mover()
             coordenada.addY(0.5);
         }
     }
+
+
+    void Jogador::setPontuacao(int p) 
+    {
+        
+    }
+    int Jogador::getPontuacao() {}
     /*if (sf::Keyboard::isKeyPressed(sf::Keyboard::S) && coll.getY() != 1.0)
     {
         corpo.move(sf::Vector2f(0.f, vel.getY()));
