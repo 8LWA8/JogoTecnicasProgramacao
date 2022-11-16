@@ -15,6 +15,7 @@ namespace Gerenciadores {
 		GerenteColisoes();
 		~GerenteColisoes();
 
+		void verificaColisaoHor(Entidade* ent1, Entidade* ent2);
 		void checkCollision(Entidade* ent1, Entidade* ent2);
 		void checkGround(Entidade* ent1, Entidade* plat);
 

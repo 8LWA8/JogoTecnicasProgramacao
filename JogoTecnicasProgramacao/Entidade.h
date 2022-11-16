@@ -12,6 +12,8 @@ namespace Entidades
 		Coord vel;
 		Coord coll;
 		bool mov;  
+		bool mov_dir;
+		bool mov_esq;
 		
 	public:
 		Entidade();
@@ -24,7 +26,8 @@ namespace Entidades
 		Coord* getVel();
 		Coord* getColl();
 		bool getMov() const;
-
-
+		void setMov(bool m);
+		void setMovDir(bool m);
+		void setMovEsq(bool m);
 	};
 }

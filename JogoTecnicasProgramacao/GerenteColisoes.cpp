@@ -1,10 +1,88 @@
 #include "GerenteColisoes.h"
+
 using namespace Entidades;
 
 namespace Gerenciadores {
 
 	GerenteColisoes::GerenteColisoes() {};
 	GerenteColisoes::~GerenteColisoes() {};
+
+	void GerenteColisoes::verificaColisaoHor(Entidade* ent1, Entidade* ent2)
+	{
+		/*float x1 = ent1->getCoord()->getX();
+		float x2 = ent2->getCoord()->getX();
+
+		float tx1 = ent1->getTam()->getX();
+		float tx2 = ent2->getTam()->getX();
+
+		float y1 = ent1->getCoord()->getY();
+		float y2 = ent2->getCoord()->getY();
+
+		float ty1 = ent1->getTam()->getY();
+		float ty2 = ent2->getTam()->getY();
+
+		//if (x1 + tx1 == x2)
+			//&& y1 + ty1 >=y2 && y1>=y2+ty2)
+		//{
+		//	std::cout << "colisao hor dir" << std::endl;
+			//ent1->setMovDir(false);
+		//}
+		//else
+		//{
+		//	ent1->setMovDir(true);
+		//}
+
+		//if (x2 + tx2 == x1)
+			//&& y2 + ty2 >= y1 && y2 >= y1 + ty1)
+		//{
+		//	std::cout << "colisao hor esq" << std::endl;
+		//	ent1->setMovEsq(false);
+		//}
+		//else
+		//{
+		//	ent1->setMovEsq(true);
+		//}
+		*/
+
+		sf::FloatRect nextPos;
+		sf::FloatRect playerBounds = ent1->getCorpo()->getGlobalBounds();
+		sf::FloatRect objBounds = ent2->getCorpo()->getGlobalBounds();
+
+		nextPos = playerBounds;
+		nextPos.left += ent1->getVel()->getX();
+		nextPos.top += ent1->getVel()->getY();
+
+		if (objBounds.intersects(nextPos))
+		{
+			//Colisao direita
+			if (playerBounds.left < objBounds.left
+				&& playerBounds.left + playerBounds.width < objBounds.left + objBounds.width
+				&& playerBounds.top < objBounds.top + objBounds.height
+				&& playerBounds.top + playerBounds.height > objBounds.height)
+			{
+				std::cout << "COLISAO DIREITA" << std::endl;
+				ent1->setMovDir(false);
+				//ent1->getCorpo()->setPosition(objBounds.left - playerBounds.width, playerBounds.top);
+			}
+			
+			//Colisao esquerda
+			if (playerBounds.left > objBounds.left
+				&& playerBounds.left + playerBounds.width > objBounds.left + objBounds.width
+				&& playerBounds.top < objBounds.top + objBounds.height
+				&& playerBounds.top + playerBounds.height > objBounds.height)
+			{
+				std::cout << "COLISAO ESQUERDA" << std::endl;
+				ent1->setMovEsq(false);
+				//ent1->getCorpo()->setPosition(objBounds.left + playerBounds.width, playerBounds.top);
+			}
+		}
+		else
+		{
+			ent1->setMovDir(true);
+			ent1->setMovEsq(true);
+		}
+	
+	}
 
 	void GerenteColisoes::checkCollision(Entidade* ent1, Entidade* ent2)
 	{
@@ -52,7 +130,6 @@ namespace Gerenciadores {
 		//std::cout << "dy " << dy << std::endl;
 		//TESTE
 
-
 		if (dy <= 0.0 && ((x1 <= x2 && x2 <= (x1 + tx1)) || (x2 <= x1 && x1 <= (x2 + tx2))))
 		{
 			if (coord1->getY() > coord2->getY())
@@ -86,9 +163,13 @@ namespace Gerenciadores {
 			}
 
 		}
-		else if (dx <= 0.0 && ((y1 <= y2 && y2 <= (y1 + ty1)) || (y2 <= y1 && y1 <= (y2 + ty2))))
+		/*else if (dx <= 0.0 && ((y1 <= y2 && y2 <= (y1 + ty1)) || (y2 <= y1 && y1 <= (y2 + ty2))))
 		{
 			std::cout << "col" << std::endl;
+			if (dx <= 0.0)
+			{
+				std::cout << "dx" << std::endl;
+			}
 			if (coord1->getX() > coord2->getX())
 			{
 				coll1->setValX(1.0);
@@ -147,7 +228,7 @@ namespace Gerenciadores {
 			}
 
 			
-		}
+		}*/
 
 
 	}

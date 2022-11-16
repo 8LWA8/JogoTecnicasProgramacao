@@ -4,6 +4,9 @@ using namespace Entidades::Personagens;
 
 Inimigo::Inimigo() : movAleatorio(-1)
 {
+	mov = true;
+	mov_dir = true;
+	mov_esq = true;
 	corpo.setPosition(sf::Vector2f(200.f, 200.f));	
 	coordenada.setVal(corpo.getGlobalBounds().left, corpo.getGlobalBounds().top);
 	tam.setVal(corpo.getGlobalBounds().width, corpo.getGlobalBounds().height);
