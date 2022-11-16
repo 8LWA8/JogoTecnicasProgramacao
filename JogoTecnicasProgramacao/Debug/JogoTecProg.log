@@ -1,2 +1,4 @@
-﻿  GerenteColisoes.cpp
+﻿  Inimigo.cpp
+C:\Users\bruno\OneDrive\Documents\GitHub\JogoTecnicasProgramacao\JogoTecnicasProgramacao\Inimigo.cpp(11,21): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\bruno\OneDrive\Documents\GitHub\JogoTecnicasProgramacao\JogoTecnicasProgramacao\Inimigo.cpp(32,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
   JogoTecProg.vcxproj -> C:\Users\bruno\OneDrive\Documents\GitHub\JogoTecnicasProgramacao\JogoTecnicasProgramacao\Debug\JogoTecProg.exe

@@ -8,6 +8,7 @@ Inimigo::Inimigo() : movAleatorio(-1)
 	mov_dir = true;
 	mov_esq = true;
 	corpo.setPosition(sf::Vector2f(200.f, 200.f));	
+	vel.setVal(0.1, 0.1);
 	coordenada.setVal(corpo.getGlobalBounds().left, corpo.getGlobalBounds().top);
 	tam.setVal(corpo.getGlobalBounds().width, corpo.getGlobalBounds().height);
 }

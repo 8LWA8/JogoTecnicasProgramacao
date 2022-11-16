@@ -19,3 +19,13 @@ Alienigena::~Alienigena()
 {
 	Alienigena::imprimir();
 }*/
+
+
+void Alienigena::setAtirou(bool estado) 
+{
+	this->atirou = estado;
+}
+bool Alienigena::getAtirou() 
+{
+	return this->atirou;
+}
