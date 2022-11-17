@@ -9,6 +9,7 @@ namespace Gerenciadores {
 	GerenteColisoes::GerenteColisoes() {};
 	GerenteColisoes::~GerenteColisoes() {};
 
+	//Função inspirada no vídeo: https://www.youtube.com/watch?v=A04MPkBL5H4
 	void GerenteColisoes::verificaColisao(Entidade* ent1, Entidade* ent2, ListaEntidades* lista)
 	{
 		//ent1 = jogador
@@ -27,37 +28,28 @@ namespace Gerenciadores {
 		if (ent2Bounds.intersects(nextPos))
 		{
 			//Colisao embaixo
-			if (ent1Bounds.top < ent2Bounds.top
-				&& ent1Bounds.top + ent1Bounds.height < ent2Bounds.top + ent2Bounds.height
-				&& ent1Bounds.left < ent2Bounds.left + ent2Bounds.width
-				&& ent1Bounds.left + ent1Bounds.width > ent2Bounds.left)
+			if (colideEmbaixo(ent1Bounds, ent2Bounds) == true)
 			{
-				//std::cout << "COLISAO EMBAIXO" << std::endl;
 				coll1->setValY(1.0); //colide embaixo
 				coll2->setValY(-1.0); //colide em cima
 
-			//	if (ent2->getMov()==true)
-			//	{
-			//		lista->removerEntidade(ent2);
-			//	}
+				if (ent2->getMov() == true)
+				{
+					if (Personagem* p = dynamic_cast <Personagem*>(ent2))
+					{
+						p->setVivo(false);
+					}
+				}
 			}
-
 			//Colisao em cima
-			if (ent1Bounds.top > ent2Bounds.top
-				&& ent1Bounds.top + ent1Bounds.height > ent2Bounds.top + ent2Bounds.height
-				&& ent1Bounds.left < ent2Bounds.left + ent2Bounds.width
-				&& ent1Bounds.left + ent1Bounds.width > ent2Bounds.left)
+			if (colideEmcima(ent1Bounds, ent2Bounds) == true)
 			{
-				//std::cout << "COLISAO EM CIMA" << std::endl;
 				coll1->setValY(-1.0); //colide em cima
 				coll2->setValY(1.0); //colide embaixo
 			}
 
 			//Colisao direita
-			if (ent1Bounds.left < ent2Bounds.left
-				&& ent1Bounds.left + ent1Bounds.width < ent2Bounds.left + ent2Bounds.width
-				&& ent1Bounds.top < ent2Bounds.top + ent2Bounds.height
-				&& ent1Bounds.top + ent1Bounds.height > ent2Bounds.height)
+			if (colideDireita(ent1Bounds, ent2Bounds) == true)
 			{
 				//std::cout << "COLISAO DIREITA" << std::endl;
 				coll1->setValX(1.0); //colide pela direita
@@ -65,10 +57,7 @@ namespace Gerenciadores {
 			}
 			
 			//Colisao esquerda
-			if (ent1Bounds.left > ent2Bounds.left
-				&& ent1Bounds.left + ent1Bounds.width > ent2Bounds.left + ent2Bounds.width
-				&& ent1Bounds.top < ent2Bounds.top + ent2Bounds.height
-				&& ent1Bounds.top + ent1Bounds.height > ent2Bounds.height)
+			if (colideEsquerda(ent1Bounds, ent2Bounds) == true)
 			{
 				//std::cout << "COLISAO ESQUERDA" << std::endl;
 				coll1->setValX(-1.0); //colide pela esquerda
@@ -78,7 +67,56 @@ namespace Gerenciadores {
 	
 	}
 
-	void GerenteColisoes::checkCollision(Entidade* ent1, Entidade* ent2)
+	bool GerenteColisoes::colideEmbaixo(sf::FloatRect ent1Bounds, sf::FloatRect ent2Bounds)
+	{
+		if (ent1Bounds.top < ent2Bounds.top
+			&& ent1Bounds.top + ent1Bounds.height < ent2Bounds.top + ent2Bounds.height
+			&& ent1Bounds.left < ent2Bounds.left + ent2Bounds.width
+			&& ent1Bounds.left + ent1Bounds.width > ent2Bounds.left
+			)
+		{
+			return true;
+		}
+		return false;
+	}
+
+	bool GerenteColisoes::colideEmcima(sf::FloatRect ent1Bounds, sf::FloatRect ent2Bounds)
+	{
+		if (ent1Bounds.top > ent2Bounds.top
+			&& ent1Bounds.top + ent1Bounds.height > ent2Bounds.top + ent2Bounds.height
+			&& ent1Bounds.left < ent2Bounds.left + ent2Bounds.width
+			&& ent1Bounds.left + ent1Bounds.width > ent2Bounds.left)
+		{
+			return true;
+		}
+		return false;
+	}
+
+	bool GerenteColisoes::colideDireita(sf::FloatRect ent1Bounds, sf::FloatRect ent2Bounds)
+	{
+		if (ent1Bounds.left < ent2Bounds.left
+			&& ent1Bounds.left + ent1Bounds.width < ent2Bounds.left + ent2Bounds.width
+			&& ent1Bounds.top < ent2Bounds.top + ent2Bounds.height
+			&& ent1Bounds.top + ent1Bounds.height > ent2Bounds.height)
+		{
+			return true;
+		}
+		return false;
+	}
+
+	bool GerenteColisoes::colideEsquerda(sf::FloatRect ent1Bounds, sf::FloatRect ent2Bounds)
+	{
+		if (ent1Bounds.left > ent2Bounds.left
+			&& ent1Bounds.left + ent1Bounds.width > ent2Bounds.left + ent2Bounds.width
+			&& ent1Bounds.top < ent2Bounds.top + ent2Bounds.height
+			&& ent1Bounds.top + ent1Bounds.height > ent2Bounds.height)
+		{
+			return true;
+		}
+		return false;
+	}
+
+	/*void GerenteColisoes::checkCollision(Entidade* ent1, Entidade* ent2)
 	{
 
 		Coord* coord1 = ent1->getCoord();
@@ -138,7 +176,7 @@ namespace Gerenciadores {
 				ent2->getCorpo()->move(sf::Vector2f(0.0f, -dy / 2));
 				coord2->addY(-dy / 2);
 				//TESTE de possivel aplicacao
-				*/
+			
 			}
 			else
 			{
@@ -153,7 +191,7 @@ namespace Gerenciadores {
 				ent2->getCorpo()->move(sf::Vector2f(0.0f, dy / 2));
 				coord2->addY(dy / 2);
 				//TESTE de possivel aplicacao
-				*/
+				
 			}
 
 		}
@@ -222,10 +260,10 @@ namespace Gerenciadores {
 			}
 
 			
-		}*/
+		}
 
 
-	}
+	}*/
 	void GerenteColisoes::checaColisaoLista(Entidade* ent1, ListaEntidades* lista)
 	{
 		int tam = lista->getTam();
@@ -234,7 +272,17 @@ namespace Gerenciadores {
 		{
 			//cout << "loop exetds" << endl;
 			aux = lista->operator[](i);
-			verificaColisao(ent1, aux , lista);
+			if (Personagem* p = dynamic_cast <Personagem*>(aux))
+			{
+				if (p->getVivo() == true)
+				{
+					verificaColisao(ent1, aux, lista);
+				}
+			}
+			else
+			{
+				verificaColisao(ent1, aux, lista);
+			}
 			//checkCollision(ent1, aux);
 		}
 	}

@@ -22,7 +22,7 @@ namespace Fases
     public:
         Fase_Primeira();
         ~Fase_Primeira();
-        Alienigena alien1;
+        //Alienigena alien1;
         //Espinhos espi1;
         Plataforma chao;
 

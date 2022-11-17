@@ -57,7 +57,8 @@ void Jogo::execEnt()
 	Ger.checaColisaoLista(&jogador1, &fase1.LEnt);
 	Ger.checaColisaoLista(plat, &fase1.LEnt);
 	//std::cout << "jogador - plat" << std::endl;
-	Ger.checkCollision(&jogador1, plat);
+	//Ger.checkCollision(&jogador1, plat);
+	Ger.verificaColisao(&jogador1, plat, &fase1.LEnt);
 	//std::cout << "alien - plat" << std::endl;
 	//Ger.checkCollision(&(fase1.alien1), plat);
 	//std::cout << "jogador - alien" << std::endl;
