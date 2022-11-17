@@ -12,9 +12,9 @@ class Jogo
 {
 private:
 	GerenteGrafico* pGerenteGrafico;
-	GerenteColisoes Ger;
+	//GerenteColisoes Ger;
 	Jogador jogador1;
-	Inimigo ini1;
+	//Inimigo ini1;
 	Fase_Primeira fase1;
 	//Fase_Segunda fase2;
 

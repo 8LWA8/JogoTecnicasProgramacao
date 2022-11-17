@@ -5,7 +5,7 @@ using namespace Obstaculos;
 
 namespace Fases{
 
-Fase::Fase(): pJogador1(nullptr), LEnt()
+	Fase::Fase() : pJogador1(nullptr), LEnt(), Ger(&LEnt)
 {
 	criaRobos();
 	criaRochas();

@@ -10,6 +10,7 @@ namespace Fases {
 	{
 		criaVilgax();
 		criaEspinhos();
+
 	}
 
 	Fases::Fase_Primeira::~Fase_Primeira()

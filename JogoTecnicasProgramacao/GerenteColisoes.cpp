@@ -6,41 +6,36 @@ using namespace Personagens;
 
 namespace Gerenciadores {
 
-	GerenteColisoes::GerenteColisoes() {};
+	GerenteColisoes::GerenteColisoes(ListaEntidades* pL)
+	{
+		pLista = pL;
+	};
+
 	GerenteColisoes::~GerenteColisoes() {};
 
 	//Função inspirada no vídeo: https://www.youtube.com/watch?v=A04MPkBL5H4
-	void GerenteColisoes::verificaColisao(Entidade* ent1, Entidade* ent2, ListaEntidades* lista)
+	void GerenteColisoes::verificaColisao(Entidade* ent1, Entidade* ent2)
 	{
 		//ent1 = jogador
 		//Coll: 1.0 (colisão na direita ou embaixo) -1.0 (colisão em cima ou na esquerda)
 		Coord* coll1 = ent1->getColl(); 
 		Coord* coll2 = ent2->getColl();
 
-		sf::FloatRect nextPos;
+		sf::FloatRect nextPos1;
+		sf::FloatRect nextPos2;
 		sf::FloatRect ent1Bounds = ent1->getCorpo()->getGlobalBounds();
 		sf::FloatRect ent2Bounds = ent2->getCorpo()->getGlobalBounds();
 
-		nextPos = ent1Bounds;
-		nextPos.left += ent1->getVel()->getX();
-		nextPos.top += ent1->getVel()->getY();
+		nextPos1 = ent1Bounds;
+		nextPos1.left += ent1->getVel()->getX();
+		nextPos1.top += ent1->getVel()->getY();
 
-		if (ent2Bounds.intersects(nextPos))
+		nextPos2 = ent2Bounds;
+		nextPos2.left += ent2->getVel()->getX();
+		nextPos2.top += ent2->getVel()->getY();
+
+		if (ent2Bounds.intersects(nextPos1))
 		{
-			//Colisao embaixo
-			if (colideEmbaixo(ent1Bounds, ent2Bounds) == true)
-			{
-				coll1->setValY(1.0); //colide embaixo
-				coll2->setValY(-1.0); //colide em cima
-
-				if (ent2->getMov() == true)
-				{
-					if (Personagem* p = dynamic_cast <Personagem*>(ent2))
-					{
-						p->setVivo(false);
-					}
-				}
-			}
 			//Colisao em cima
 			if (colideEmcima(ent1Bounds, ent2Bounds) == true)
 			{
@@ -55,7 +50,7 @@ namespace Gerenciadores {
 				coll1->setValX(1.0); //colide pela direita
 				coll2->setValX(-1.0); //colide pela esquerda
 			}
-			
+
 			//Colisao esquerda
 			if (colideEsquerda(ent1Bounds, ent2Bounds) == true)
 			{
@@ -63,8 +58,23 @@ namespace Gerenciadores {
 				coll1->setValX(-1.0); //colide pela esquerda
 				coll2->setValX(1.0); //colide pela direita
 			}
+
+			//Colisao embaixo
+			if (colideEmbaixo(ent1Bounds, ent2Bounds) == true)
+			{
+				coll1->setValY(1.0); //colide embaixo
+				coll2->setValY(-1.0); //colide em cima
+
+				//if (ent2->getMov() == true && coll1->getY()==1.0)
+				//{
+				//	if (Personagem* p = dynamic_cast <Personagem*>(ent2))
+				//	{
+				//		p->setVivo(false);
+				//	}
+				//}
+
+			}
 		}
-	
 	}
 
 	bool GerenteColisoes::colideEmbaixo(sf::FloatRect ent1Bounds, sf::FloatRect ent2Bounds)
@@ -264,24 +274,24 @@ namespace Gerenciadores {
 
 
 	}*/
-	void GerenteColisoes::checaColisaoLista(Entidade* ent1, ListaEntidades* lista)
+	void GerenteColisoes::checaColisaoLista(Entidade* ent1)
 	{
-		int tam = lista->getTam();
+		int tam = pLista->getTam();
 		Entidade* aux = nullptr;
 		for (int i = 0; i < tam; i++)
 		{
 			//cout << "loop exetds" << endl;
-			aux = lista->operator[](i);
+			aux = pLista->operator[](i);
 			if (Personagem* p = dynamic_cast <Personagem*>(aux))
 			{
 				if (p->getVivo() == true)
 				{
-					verificaColisao(ent1, aux, lista);
+					verificaColisao(ent1, aux);
 				}
 			}
 			else
 			{
-				verificaColisao(ent1, aux, lista);
+				verificaColisao(ent1, aux);
 			}
 			//checkCollision(ent1, aux);
 		}

@@ -20,11 +20,13 @@ namespace Fases
     {
     private:
     public:
+        Plataforma chao;
+
         Fase_Primeira();
         ~Fase_Primeira();
         //Alienigena alien1;
         //Espinhos espi1;
-        Plataforma chao;
+ 
 
         void executar();
         void imprimir();

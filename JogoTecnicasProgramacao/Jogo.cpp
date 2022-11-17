@@ -46,25 +46,16 @@ void Jogo::exec()
 void Jogo::execEnt()
 {
 	Plataforma* plat = &fase1.chao;
-	plat->getCorpo()->setSize(sf::Vector2f(4000.f, 110.f));
-	plat->getCorpo()->setPosition(sf::Vector2f(-1000.f, 300.f));
+	plat->getCorpo()->setSize(sf::Vector2f(6000.f, 110.f));
+	plat->getCorpo()->setPosition(sf::Vector2f(-2000.f, 300.f));
 	//fase1.alien1.executar();
 	jogador1.executar();
 	fase1.executar();
 	fase1.chao.executar();
-	//TESTE
 	
-	Ger.checaColisaoLista(&jogador1, &fase1.LEnt);
-	Ger.checaColisaoLista(plat, &fase1.LEnt);
-	//std::cout << "jogador - plat" << std::endl;
-	//Ger.checkCollision(&jogador1, plat);
-	Ger.verificaColisao(&jogador1, plat, &fase1.LEnt);
-	//std::cout << "alien - plat" << std::endl;
-	//Ger.checkCollision(&(fase1.alien1), plat);
-	//std::cout << "jogador - alien" << std::endl;
-	//Ger.checkCollision(&jogador1, &fase1.alien1);
-	//Ger.verificaColisao(&jogador1, &fase1.alien1);
-	//TESTE
+	fase1.Ger.checaColisaoLista(&jogador1);
+	fase1.Ger.checaColisaoLista(plat);
+	fase1.Ger.verificaColisao(&jogador1, plat);
 	
 }
 

@@ -4,7 +4,7 @@
 #include "Robo.h"
 #include "Rocha.h"
 #include "ListaEntidades.h"
-
+#include "GerenteColisoes.h"
 
 namespace Fases
 {
@@ -13,6 +13,7 @@ namespace Fases
     {
 	public:
 		Listas::ListaEntidades LEnt;
+		Gerenciadores::GerenteColisoes Ger;
 	protected:
 		Entidades::Personagens::Jogador* pJogador1;
 
