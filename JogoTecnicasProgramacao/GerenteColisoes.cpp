@@ -1,85 +1,79 @@
 #include "GerenteColisoes.h"
+#include "Inimigo.h"
 
 using namespace Entidades;
+using namespace Personagens;
 
 namespace Gerenciadores {
 
 	GerenteColisoes::GerenteColisoes() {};
 	GerenteColisoes::~GerenteColisoes() {};
 
-	void GerenteColisoes::verificaColisaoHor(Entidade* ent1, Entidade* ent2)
+	void GerenteColisoes::verificaColisao(Entidade* ent1, Entidade* ent2, ListaEntidades* lista)
 	{
-		/*float x1 = ent1->getCoord()->getX();
-		float x2 = ent2->getCoord()->getX();
-
-		float tx1 = ent1->getTam()->getX();
-		float tx2 = ent2->getTam()->getX();
-
-		float y1 = ent1->getCoord()->getY();
-		float y2 = ent2->getCoord()->getY();
-
-		float ty1 = ent1->getTam()->getY();
-		float ty2 = ent2->getTam()->getY();
-
-		//if (x1 + tx1 == x2)
-			//&& y1 + ty1 >=y2 && y1>=y2+ty2)
-		//{
-		//	std::cout << "colisao hor dir" << std::endl;
-			//ent1->setMovDir(false);
-		//}
-		//else
-		//{
-		//	ent1->setMovDir(true);
-		//}
-
-		//if (x2 + tx2 == x1)
-			//&& y2 + ty2 >= y1 && y2 >= y1 + ty1)
-		//{
-		//	std::cout << "colisao hor esq" << std::endl;
-		//	ent1->setMovEsq(false);
-		//}
-		//else
-		//{
-		//	ent1->setMovEsq(true);
-		//}
-		*/
+		//ent1 = jogador
+		//Coll: 1.0 (colisão na direita ou embaixo) -1.0 (colisão em cima ou na esquerda)
+		Coord* coll1 = ent1->getColl(); 
+		Coord* coll2 = ent2->getColl();
 
 		sf::FloatRect nextPos;
-		sf::FloatRect playerBounds = ent1->getCorpo()->getGlobalBounds();
-		sf::FloatRect objBounds = ent2->getCorpo()->getGlobalBounds();
+		sf::FloatRect ent1Bounds = ent1->getCorpo()->getGlobalBounds();
+		sf::FloatRect ent2Bounds = ent2->getCorpo()->getGlobalBounds();
 
-		nextPos = playerBounds;
+		nextPos = ent1Bounds;
 		nextPos.left += ent1->getVel()->getX();
 		nextPos.top += ent1->getVel()->getY();
 
-		if (objBounds.intersects(nextPos))
+		if (ent2Bounds.intersects(nextPos))
 		{
-			//Colisao direita
-			if (playerBounds.left < objBounds.left
-				&& playerBounds.left + playerBounds.width < objBounds.left + objBounds.width
-				&& playerBounds.top < objBounds.top + objBounds.height
-				&& playerBounds.top + playerBounds.height > objBounds.height)
+			//Colisao embaixo
+			if (ent1Bounds.top < ent2Bounds.top
+				&& ent1Bounds.top + ent1Bounds.height < ent2Bounds.top + ent2Bounds.height
+				&& ent1Bounds.left < ent2Bounds.left + ent2Bounds.width
+				&& ent1Bounds.left + ent1Bounds.width > ent2Bounds.left)
 			{
-				std::cout << "COLISAO DIREITA" << std::endl;
-				ent1->setMovDir(false);
-				//ent1->getCorpo()->setPosition(objBounds.left - playerBounds.width, playerBounds.top);
+				//std::cout << "COLISAO EMBAIXO" << std::endl;
+				coll1->setValY(1.0); //colide embaixo
+				coll2->setValY(-1.0); //colide em cima
+
+			//	if (ent2->getMov()==true)
+			//	{
+			//		lista->removerEntidade(ent2);
+			//	}
+			}
+
+			//Colisao em cima
+			if (ent1Bounds.top > ent2Bounds.top
+				&& ent1Bounds.top + ent1Bounds.height > ent2Bounds.top + ent2Bounds.height
+				&& ent1Bounds.left < ent2Bounds.left + ent2Bounds.width
+				&& ent1Bounds.left + ent1Bounds.width > ent2Bounds.left)
+			{
+				//std::cout << "COLISAO EM CIMA" << std::endl;
+				coll1->setValY(-1.0); //colide em cima
+				coll2->setValY(1.0); //colide embaixo
+			}
+
+			//Colisao direita
+			if (ent1Bounds.left < ent2Bounds.left
+				&& ent1Bounds.left + ent1Bounds.width < ent2Bounds.left + ent2Bounds.width
+				&& ent1Bounds.top < ent2Bounds.top + ent2Bounds.height
+				&& ent1Bounds.top + ent1Bounds.height > ent2Bounds.height)
+			{
+				//std::cout << "COLISAO DIREITA" << std::endl;
+				coll1->setValX(1.0); //colide pela direita
+				coll2->setValX(-1.0); //colide pela esquerda
 			}
 			
 			//Colisao esquerda
-			if (playerBounds.left > objBounds.left
-				&& playerBounds.left + playerBounds.width > objBounds.left + objBounds.width
-				&& playerBounds.top < objBounds.top + objBounds.height
-				&& playerBounds.top + playerBounds.height > objBounds.height)
+			if (ent1Bounds.left > ent2Bounds.left
+				&& ent1Bounds.left + ent1Bounds.width > ent2Bounds.left + ent2Bounds.width
+				&& ent1Bounds.top < ent2Bounds.top + ent2Bounds.height
+				&& ent1Bounds.top + ent1Bounds.height > ent2Bounds.height)
 			{
-				std::cout << "COLISAO ESQUERDA" << std::endl;
-				ent1->setMovEsq(false);
-				//ent1->getCorpo()->setPosition(objBounds.left + playerBounds.width, playerBounds.top);
+				//std::cout << "COLISAO ESQUERDA" << std::endl;
+				coll1->setValX(-1.0); //colide pela esquerda
+				coll2->setValX(1.0); //colide pela direita
 			}
-		}
-		else
-		{
-			ent1->setMovDir(true);
-			ent1->setMovEsq(true);
 		}
 	
 	}
@@ -231,6 +225,18 @@ namespace Gerenciadores {
 		}*/
 
 
+	}
+	void GerenteColisoes::checaColisaoLista(Entidade* ent1, ListaEntidades* lista)
+	{
+		int tam = lista->getTam();
+		Entidade* aux = nullptr;
+		for (int i = 0; i < tam; i++)
+		{
+			//cout << "loop exetds" << endl;
+			aux = lista->operator[](i);
+			verificaColisao(ent1, aux , lista);
+			//checkCollision(ent1, aux);
+		}
 	}
 }
 	

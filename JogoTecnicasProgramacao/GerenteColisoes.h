@@ -1,9 +1,12 @@
 #pragma once
 #include "Entidade.h"
+#include "ListaEntidades.h"
 #include <math.h>
 #include <iostream>
 
 using namespace Entidades;
+using namespace Listas;
+
 namespace Gerenciadores {
 	class GerenteColisoes
 	{
@@ -15,9 +18,10 @@ namespace Gerenciadores {
 		GerenteColisoes();
 		~GerenteColisoes();
 
-		void verificaColisaoHor(Entidade* ent1, Entidade* ent2);
+		void verificaColisao(Entidade* ent1, Entidade* ent2, ListaEntidades* lista);
 		void checkCollision(Entidade* ent1, Entidade* ent2);
-		void checkGround(Entidade* ent1, Entidade* plat);
+		void checaColisaoLista(Entidade* ent1, ListaEntidades* lista);
+		//void checkGround(Entidade* ent1, Entidade* plat);
 
 	};
 }

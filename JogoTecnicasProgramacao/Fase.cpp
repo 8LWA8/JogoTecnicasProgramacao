@@ -24,7 +24,7 @@ void Fase::criaRobos()
 	int n = 3 + rand() % 3;
 	for (int i = 0; i < n; i++)
 	{
-		Robo* r1 = new Robo(sf::Vector2f(100.f + 150.f*i, 100.f));
+		Robo* r1 = new Robo(sf::Vector2f(-400.f + 150.f*i, 100.f));
 		Entidade* e1 = static_cast <Entidade*>(r1);
 		LEnt.addEntidade(e1);
 	}
@@ -35,7 +35,7 @@ void Fase::criaRochas()
 	int n = 3 + rand() % 3;
 	for (int i = 0; i < n; i++)
 	{
-		Rocha* r1 = new Rocha(sf::Vector2f(-600.f + 150.f * i, 200.f));
+		Rocha* r1 = new Rocha(sf::Vector2f(-900.f + 300.f * i, 0.f));
 		Entidade* e1 = static_cast <Entidade*>(r1);
 		LEnt.addEntidade(e1);
 	}

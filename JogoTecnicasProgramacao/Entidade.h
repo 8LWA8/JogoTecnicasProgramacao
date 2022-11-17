@@ -11,9 +11,7 @@ namespace Entidades
 		Coord tam;
 		Coord vel;
 		Coord coll;
-		bool mov;  
-		bool mov_dir;
-		bool mov_esq;
+		bool mov;
 		
 	public:
 		Entidade();
@@ -21,13 +19,12 @@ namespace Entidades
 		virtual void executar()=0;
 		virtual void imprimir();
 		void resetColl();
+		void sofrer_gravidade();
 		Coord* getCoord();  
 		Coord* getTam();
 		Coord* getVel();
 		Coord* getColl();
 		bool getMov() const;
 		void setMov(bool m);
-		void setMovDir(bool m);
-		void setMovEsq(bool m);
 	};
 }

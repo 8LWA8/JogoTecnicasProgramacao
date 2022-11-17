@@ -10,9 +10,12 @@ namespace Entidades
         {
         protected:
             int num_vidas;
+            bool vivo;
         public:
             Personagem();
             ~Personagem();
+            void setVivo(bool v); 
+            bool getVivo();
             virtual void executar();
         };
     }
