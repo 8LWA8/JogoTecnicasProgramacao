@@ -1,8 +1,9 @@
 #include "Vilgax.h"
 using namespace Entidades::Personagens;
 
-Vilgax::Vilgax():poder_dano(1)
+Vilgax::Vilgax():poder_dano(1.0)
 {
+	this->dano = dano * poder_dano;
 	setTextura("vilgax.png");
 	corpo.setSize(sf::Vector2f(200.f, 200.f));
 	corpo.setPosition(sf::Vector2f(0.f, 0.f));
@@ -20,11 +21,11 @@ Vilgax::~Vilgax()
 
 }
 
-void Vilgax::setPoderDano(int d) 
+void Vilgax::setPoderDano(float d) 
 {
 	this->poder_dano = d;
 }
-int Vilgax::getPoderDano() 
+float Vilgax::getPoderDano() 
 {
 	return poder_dano;
 }

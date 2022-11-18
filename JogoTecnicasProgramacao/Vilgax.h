@@ -8,14 +8,14 @@ namespace Entidades
             public Inimigo
         {
         protected:
-            int poder_dano;
+            float poder_dano;
         public:
             Vilgax();
             Vilgax(const sf::Vector2f pos);
             ~Vilgax();
 
-            void setPoderDano(int d);
-            int getPoderDano();
+            void setPoderDano(float d);
+            float getPoderDano();
 
         };
     }

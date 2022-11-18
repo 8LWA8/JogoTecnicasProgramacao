@@ -6,6 +6,7 @@ Entidade::Entidade() : coordenada(0.0, 0.0),
 tam(0.0, 0.0),
 vel(0.1, 0.1),
 coll(0.0, 0.0),
+dano(0.0),
 mov(false)
 {
 	coordenada.setVal(corpo.getGlobalBounds().left, corpo.getGlobalBounds().top);
@@ -72,7 +73,13 @@ bool Entidade::getMov() const
 	return mov;
 }
 
-void Entidades::Entidade::setMov(bool m)
+void Entidade::setMov(bool m)
 {
 	mov = m;
+}
+
+
+float Entidade::getDano() 
+{
+	return this->dano;
 }

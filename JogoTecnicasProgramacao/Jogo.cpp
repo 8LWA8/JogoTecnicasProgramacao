@@ -6,8 +6,9 @@ using namespace Entidades::Personagens;
 
 Jogo::Jogo(): 
 jogador1(),
-pGerenteGrafico(), fase1()
+pGerenteGrafico(pGerenteGrafico->getInstance()), fase1()
 {
+	pGerenteGrafico->CenterView(0.0, 0.0);
 }
 
 void Jogo::exec() 

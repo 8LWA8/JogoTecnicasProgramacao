@@ -4,7 +4,9 @@ using namespace Entidades::Personagens;
 
 Inimigo::Inimigo() : movAleatorio(-1)
 {
-	mov = true;
+	this->mov = true;
+	this->dano = 0.5;
+
 	corpo.setPosition(sf::Vector2f(200.f, 200.f));	
 	vel.setVal(0.1, 0.1);
 	coordenada.setVal(corpo.getGlobalBounds().left, corpo.getGlobalBounds().top);
@@ -49,5 +51,16 @@ void Inimigo::moveAleatorio()
 		corpo.move(sf::Vector2f(-vel.getX(), 0.f));
 		coordenada.addX(-vel.getX());
 	}
+
 	
+}
+
+void Inimigo::danar(Entidade* ent)
+{
+	if (ent != NULL) 
+	{
+		Personagem* per = static_cast<Personagem*>(ent);
+		
+	}
+
 }

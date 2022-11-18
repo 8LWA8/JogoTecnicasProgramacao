@@ -10,18 +10,36 @@ Personagem::~Personagem()
 {
 }
 
-void Entidades::Personagens::Personagem::setVivo(bool v)
+void Personagem::setVivo(bool v)
 {
 	vivo = v;
 }
 
-bool Entidades::Personagens::Personagem::getVivo()
+bool Personagem::getVivo()
 {
 	return vivo;
 }
 
-void Entidades::Personagens::Personagem::executar()
+void Personagem::executar()
 {
 	//std::cout << "PERSONAGEM EXE" << std::endl;
 	imprimir();
+}
+
+
+float Personagem::getNumVidas() 
+{
+	return this->num_vidas;
+}
+
+
+void Personagem::levaDano(Entidade* ent)
+{
+	float dano_ini = ent->getDano();
+	this->num_vidas = num_vidas - dano_ini;
+}
+
+void Personagem::danar(Entidade* ent) 
+{
+
 }

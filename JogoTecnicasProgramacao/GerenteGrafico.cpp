@@ -102,9 +102,9 @@ using namespace Gerenciadores;
 		return window->getSize();
 	}
 
-	void GerenteGrafico::CenterView(Coord* coord) 
+	void GerenteGrafico::CenterView(float x, float y) 
 	{
-		view.setCenter(sf::Vector2f(coord->getX(), coord->getY()));
+		view.setCenter(sf::Vector2f(x,y));
 		window->setView(view);
 	}
 

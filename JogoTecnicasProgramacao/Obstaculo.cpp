@@ -2,16 +2,23 @@
 #include <iostream>
 using namespace Entidades::Obstaculos;
 
-Entidades::Obstaculos::Obstaculo::Obstaculo(): causa_dano(false)
+Obstaculo::Obstaculo() :
+	causa_dano(false)
+{
+	this->dano = 0.0;
+}
+
+Obstaculo::~Obstaculo()
 {
 }
 
-Entidades::Obstaculos::Obstaculo::~Obstaculo()
-{
-}
-
-void Entidades::Obstaculos::Obstaculo::executar()
+void Obstaculo::executar()
 {
 	Obstaculo::imprimir();
 	sofrer_gravidade();
+}
+
+void Obstaculo::danar(Entidade* ent) 
+{
+	
 }

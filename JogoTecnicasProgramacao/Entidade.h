@@ -12,6 +12,8 @@ namespace Entidades
 		Coord vel;
 		Coord coll;
 		bool mov;
+
+		float dano;
 		
 	public:
 		Entidade();
@@ -26,5 +28,9 @@ namespace Entidades
 		Coord* getColl();
 		bool getMov() const;
 		void setMov(bool m);
+
+		float getDano(); //<--METODO ESTATICO?
+		virtual void danar(Entidade* ent) = 0;
+		
 	};
 }

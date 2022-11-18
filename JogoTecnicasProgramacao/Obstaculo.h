@@ -14,6 +14,7 @@ namespace Entidades
             Obstaculo();
             ~Obstaculo();
             virtual void executar();
+            virtual void danar(Entidade* ent);
         };
     }
 }

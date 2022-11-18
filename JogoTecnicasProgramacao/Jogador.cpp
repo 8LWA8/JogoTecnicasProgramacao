@@ -21,7 +21,6 @@ Jogador::~Jogador()
 void Jogador::executar()
 {
 	this->imprimir();
-    pGerenteGrafico->CenterView(&coordenada);
     this->mover();
     this->resetColl();
 }
@@ -73,4 +72,7 @@ int Jogador::getPontuacao()
 {
     return pontuacao;
 }
+
+
+
 

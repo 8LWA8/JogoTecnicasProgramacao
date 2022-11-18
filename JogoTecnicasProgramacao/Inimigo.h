@@ -17,6 +17,7 @@ namespace Entidades
 			~Inimigo();
 			virtual void executar();
 			void moveAleatorio();
+			void danar(Entidade* ent);
 		};
 	}
 }
