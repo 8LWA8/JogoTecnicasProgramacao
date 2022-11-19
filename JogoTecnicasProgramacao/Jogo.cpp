@@ -56,7 +56,8 @@ void Jogo::execEnt()
 	fase1.executar();
 	fase1.chao.executar();
 	
-	fase1.Ger.verificaColisao(&jogador1, &fase1.esfera1);
+	//fase1.Ger.verificaColisao(&jogador1, &fase1.esfera1);
+	fase1.Ger.checaColisaoEsfera(&jogador1);
 	fase1.Ger.colideCanto(&jogador1);
 	fase1.Ger.checaColisaoObst(&jogador1);
 	fase1.Ger.checaColisaoObst(plat);

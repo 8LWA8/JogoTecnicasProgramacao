@@ -10,6 +10,7 @@ private:
     bool coletada;
 public:
     EsferaPoder();
+    EsferaPoder(const sf::Vector2f pos);
     ~EsferaPoder();
     void setColetada(bool c);
     bool getColetada();

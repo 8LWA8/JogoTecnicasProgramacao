@@ -51,9 +51,14 @@ void Fase::criaRochas()
 
 void Fase::criaPoderes()
 {
-	EsferaPoder* esfera = new EsferaPoder();
-	Entidade* e1 = static_cast <Entidade*>(esfera);
-	LEnt.addEntidade(e1);
+	int n = 2 + rand() % 3;
+	for (int i = 0; i < n; i++)
+	{
+		EsferaPoder* esfera = new EsferaPoder(sf::Vector2f(-550.f + 150.f * i, 150.f));
+		Entidade* e1 = static_cast <Entidade*>(esfera);
+		LEnt.addEntidade(e1);
+		Ger.LPs.push_back(esfera);
+	}
 }
 
 }

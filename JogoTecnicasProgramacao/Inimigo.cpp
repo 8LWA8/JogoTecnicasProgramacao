@@ -34,7 +34,7 @@ void Inimigo::moveAleatorio()
 	srand(time(NULL));
 	float dt = relogio.getElapsedTime().asSeconds();
 	
-	if (dt >= 3.0f) //Cada 1 segundo 
+	if (dt >= 2.0f) //Cada 2 segundos
 	{
 		movAleatorio = rand() % 2 + 1;
 	}

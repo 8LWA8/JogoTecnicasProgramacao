@@ -10,6 +10,13 @@ EsferaPoder::EsferaPoder(): coletada(false)
 	corpo.setPosition(sf::Vector2f(-600.f + (float) p, 150.f));
 }
 
+EsferaPoder::EsferaPoder(const sf::Vector2f pos): coletada(false)
+{
+	setTextura("EsferaPoder.png");
+	corpo.setSize(sf::Vector2f(25.f, 25.f));
+	corpo.setPosition(sf::Vector2f(pos));
+}
+
 EsferaPoder::~EsferaPoder()
 {
 }

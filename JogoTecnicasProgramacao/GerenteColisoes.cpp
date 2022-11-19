@@ -243,6 +243,14 @@ namespace Gerenciadores {
 			verificaColisao(ent, *it);
 		}
 	}
+	void GerenteColisoes::checaColisaoEsfera(Entidade* ent)
+	{
+		vector <EsferaPoder*>::iterator it;
+		for (it = LPs.begin(); it != LPs.end(); it++)
+		{
+			verificaColisao(ent, *it);
+		}
+	}
 }
 	
 
