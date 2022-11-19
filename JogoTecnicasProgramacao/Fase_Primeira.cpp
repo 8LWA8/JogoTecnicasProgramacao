@@ -22,7 +22,7 @@ namespace Fases {
 		//cout << "fase1 exe" << endl;
 		
 		LEnt.executarTodos();
-		this->imprimir();
+		//this->imprimir();
 	}
 
 	void Fase_Primeira::imprimir()
@@ -36,9 +36,11 @@ namespace Fases {
 		int n = 3 + rand() % 3;
 		for (int i = 0; i < n; i++)
 		{
-			Vilgax* v1 = new Vilgax(sf::Vector2f(1000.f + 400.f * i, -200.f));
+			Vilgax* v1 = new Vilgax(sf::Vector2f(600.f - 100.f * i, -200.f));
 			Entidade* e1 = static_cast <Entidade*>(v1);
 			LEnt.addEntidade(e1);
+			Inimigo* i1 = static_cast <Inimigo*>(v1);
+			Ger.LIs.push_back(i1);
 		}
 	}
 
@@ -47,9 +49,11 @@ namespace Fases {
 		int n = 3 + rand() % 3;
 		for (int i = 0; i < n; i++)
 		{
-			Espinhos* es1 = new Espinhos(sf::Vector2f(200.f + 300.f * i, 200.f));
+			Espinhos* es1 = new Espinhos(sf::Vector2f(100.f + 100.f * i, 0.f));
 			Entidade* e1 = static_cast <Entidade*>(es1);
 			LEnt.addEntidade(e1);
+			Obstaculo* o1 = static_cast <Obstaculo*>(es1);
+			Ger.LOs.push_back(o1);
 		}
 	}
 }

@@ -1,21 +1,29 @@
 #pragma once
 #include "Entidade.h"
+#include "Inimigo.h"
+#include "Obstaculo.h"
 #include "ListaEntidades.h"
 #include <math.h>
 #include <iostream>
+#include <vector>
+#include <list>
 
 using namespace Entidades;
 using namespace Listas;
+using namespace Personagens;
+using namespace Obstaculos;
+using namespace std;
 
 namespace Gerenciadores {
 	class GerenteColisoes
 	{
-	private:
-
-		ListaEntidades* pLista;
+		//ListaEntidades* pLista;
+	public:
+		vector <Inimigo*> LIs;
+		list <Obstaculo*> LOs;
 
 	public:
-		GerenteColisoes(ListaEntidades* pL);
+		GerenteColisoes(/*ListaEntidades* pL*/);
 		~GerenteColisoes();
 
 		void verificaColisao(Entidade* ent1, Entidade* ent2);
@@ -23,9 +31,8 @@ namespace Gerenciadores {
 		bool colideEmcima(sf::FloatRect ent1Bounds, sf::FloatRect ent2Bounds);
 		bool colideDireita(sf::FloatRect ent1Bounds, sf::FloatRect ent2Bounds);
 		bool colideEsquerda(sf::FloatRect ent1Bounds, sf::FloatRect ent2Bounds);
-		//void checkCollision(Entidade* ent1, Entidade* ent2);
-		void checaColisaoLista(Entidade* ent1);
-		//void checkGround(Entidade* ent1, Entidade* plat);
-
+		//void checaColisaoLista(Entidade* ent1);
+		void checaColisaoObst(Entidade* ent);
+		void checaColisaoIni(Entidade* ent);
 	};
 }

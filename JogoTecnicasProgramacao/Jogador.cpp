@@ -7,8 +7,8 @@ using namespace Entidades::Personagens;
 Jogador::Jogador() 
 {
     setTextura("astronauta.png");
-    corpo.setSize(sf::Vector2f(50.f, 100.f));
-    corpo.setPosition(sf::Vector2f(100.f, 100.f));
+    corpo.setSize(sf::Vector2f(35.f, 70.f));
+    corpo.setPosition(sf::Vector2f(0.f, 100.f));
     vel.setVal(1.0, 1.0);
     mov = true;
 }
