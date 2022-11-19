@@ -75,8 +75,18 @@ int Jogador::getPontuacao()
 
 void Jogador::ficarEmpoderado()
 {
+    relogio.restart();
+    float dt = relogio.getElapsedTime().asSeconds();
+    cout << dt << endl;
     empoderado = true;
     corpo.setFillColor(sf::Color::Blue);
+    if (dt >= 3.0f)
+    {
+        float dt = relogio.getElapsedTime().asSeconds();
+        empoderado = false;
+        corpo.setFillColor(sf::Color::White);
+        relogio.restart();
+    }
 }
 
 

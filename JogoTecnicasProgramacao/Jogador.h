@@ -14,6 +14,7 @@ namespace Entidades
         private:
             int pontuacao;
             bool empoderado;
+            sf::Clock relogio; //auxiliar para contar o tempo
         public:
             Jogador();
             ~Jogador();
