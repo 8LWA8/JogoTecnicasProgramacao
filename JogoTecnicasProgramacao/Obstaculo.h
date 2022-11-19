@@ -15,6 +15,7 @@ namespace Entidades
             ~Obstaculo();
             virtual void executar();
             virtual void danar(Entidade* ent);
+            virtual const bool getCausa_dano();
         };
     }
 }

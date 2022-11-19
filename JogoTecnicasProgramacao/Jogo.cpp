@@ -4,6 +4,8 @@
 using namespace Fases;
 using namespace Entidades::Personagens;
 
+#define WIDTH 1200
+
 Jogo::Jogo(): 
 jogador1(),
 pGerenteGrafico(pGerenteGrafico->getInstance()), fase1()
@@ -47,19 +49,19 @@ void Jogo::exec()
 void Jogo::execEnt()
 {
 	Plataforma* plat = &fase1.chao;
-	plat->getCorpo()->setSize(sf::Vector2f(1200.f, 60.f));
-	plat->getCorpo()->setPosition(sf::Vector2f(-600.f, 300.f));
-	//fase1.alien1.executar();
+	plat->getCorpo()->setSize(sf::Vector2f(WIDTH, 60.f));
+	plat->getCorpo()->setPosition(sf::Vector2f(-WIDTH/2, 300.f));
+
 	jogador1.executar();
 	fase1.executar();
 	fase1.chao.executar();
 	
-	//fase1.Ger.checaColisaoLista(&jogador1);
+	fase1.Ger.verificaColisao(&jogador1, &fase1.esfera1);
+	fase1.Ger.colideCanto(&jogador1);
 	fase1.Ger.checaColisaoObst(&jogador1);
 	fase1.Ger.checaColisaoObst(plat);
 	fase1.Ger.checaColisaoIni(&jogador1);
 	fase1.Ger.checaColisaoIni(plat);
-	//fase1.Ger.checaColisaoLista(plat);
 	fase1.Ger.verificaColisao(&jogador1, plat);
 	
 }

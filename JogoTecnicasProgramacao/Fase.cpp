@@ -11,6 +11,7 @@ namespace Fases{
 {
 	criaRobos();
 	criaRochas();
+	criaPoderes();
 }
 
 Fase::~Fase()
@@ -46,6 +47,13 @@ void Fase::criaRochas()
 		Obstaculo* o1 = static_cast <Obstaculo*>(r1);
 		Ger.LOs.push_back(o1);
 	}
+}
+
+void Fase::criaPoderes()
+{
+	EsferaPoder* esfera = new EsferaPoder();
+	Entidade* e1 = static_cast <Entidade*>(esfera);
+	LEnt.addEntidade(e1);
 }
 
 }

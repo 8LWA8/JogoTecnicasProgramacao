@@ -3,8 +3,12 @@
 #include "Inimigo.h"
 #include "Robo.h"
 #include "Rocha.h"
+#include "EsferaPoder.h"
+#include "Entidade.h"
 #include "ListaEntidades.h"
 #include "GerenteColisoes.h"
+
+
 
 namespace Fases
 {
@@ -14,6 +18,7 @@ namespace Fases
 	public:
 		Listas::ListaEntidades LEnt;
 		Gerenciadores::GerenteColisoes Ger;
+		EsferaPoder esfera1;
 	protected:
 		Entidades::Personagens::Jogador* pJogador1;
 
@@ -24,6 +29,6 @@ namespace Fases
 		virtual void executar() = 0;
 		void criaRobos();
 		void criaRochas();
-
+		void criaPoderes();
     };
 }

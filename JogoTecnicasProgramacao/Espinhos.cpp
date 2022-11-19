@@ -13,6 +13,7 @@ Espinhos::Espinhos()
 
 Espinhos::Espinhos(const sf::Vector2f pos)
 {
+	causa_dano = true;
 	corpo.setSize(sf::Vector2f(35.f, 35.f));
 	corpo.setPosition(pos);
 	setTextura("espinhos.png");
@@ -20,4 +21,9 @@ Espinhos::Espinhos(const sf::Vector2f pos)
 
 Espinhos::~Espinhos()
 {
+}
+
+const bool Entidades::Obstaculos::Espinhos::getCausa_dano()
+{
+	return causa_dano;
 }

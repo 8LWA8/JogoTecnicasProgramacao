@@ -26,11 +26,12 @@ namespace Gerenciadores {
 		GerenteColisoes(/*ListaEntidades* pL*/);
 		~GerenteColisoes();
 
-		void verificaColisao(Entidade* ent1, Entidade* ent2);
+		bool verificaColisao(Entidade* ent1, Entidade* ent2);
 		bool colideEmbaixo(sf::FloatRect ent1Bounds, sf::FloatRect ent2Bounds);
 		bool colideEmcima(sf::FloatRect ent1Bounds, sf::FloatRect ent2Bounds);
 		bool colideDireita(sf::FloatRect ent1Bounds, sf::FloatRect ent2Bounds);
 		bool colideEsquerda(sf::FloatRect ent1Bounds, sf::FloatRect ent2Bounds);
+		void colideCanto(Entidade* ent);
 		//void checaColisaoLista(Entidade* ent1);
 		void checaColisaoObst(Entidade* ent);
 		void checaColisaoIni(Entidade* ent);

@@ -14,6 +14,7 @@ namespace Entidades
             Espinhos();
             Espinhos(const sf::Vector2f pos);
             ~Espinhos();
+            const bool getCausa_dano();
         };
     }
 }

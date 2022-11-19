@@ -90,6 +90,15 @@
     <ClCompile Include="Coord.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Estado.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MaquinaEstados.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EsferaPoder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Coord.h">
@@ -170,5 +179,34 @@
     <ClInclude Include="Chefao.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Estado.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MaquinaEstados.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EsferaPoder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="alien_parado.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Diagrama.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="fundomenu1.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="vilgax.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="EsferaPoder.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="README.md" />
   </ItemGroup>
 </Project>

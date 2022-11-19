@@ -3,6 +3,7 @@
 #include "Jogador.h"
 #include "Fase_Primeira.h"
 #include "Fase_Segunda.h"
+#include "EsferaPoder.h"
 #include "GerenteColisoes.h"
 
 using namespace Entidades::Personagens;

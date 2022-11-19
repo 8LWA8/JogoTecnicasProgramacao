@@ -22,6 +22,7 @@ namespace Fases {
 		//cout << "fase1 exe" << endl;
 		
 		LEnt.executarTodos();
+
 		//this->imprimir();
 	}
 
@@ -52,8 +53,8 @@ namespace Fases {
 			Espinhos* es1 = new Espinhos(sf::Vector2f(100.f + 100.f * i, 0.f));
 			Entidade* e1 = static_cast <Entidade*>(es1);
 			LEnt.addEntidade(e1);
-			Obstaculo* o1 = static_cast <Obstaculo*>(es1);
-			Ger.LOs.push_back(o1);
+			//Obstaculo* o1 = static_cast <Obstaculo*>(es1);
+			Ger.LOs.push_back(es1);
 		}
 	}
 }

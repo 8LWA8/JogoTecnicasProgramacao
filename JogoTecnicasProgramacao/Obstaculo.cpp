@@ -22,3 +22,8 @@ void Obstaculo::danar(Entidade* ent)
 {
 	
 }
+
+const bool Entidades::Obstaculos::Obstaculo::getCausa_dano()
+{
+	return causa_dano;
+}
