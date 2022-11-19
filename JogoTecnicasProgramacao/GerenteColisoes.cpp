@@ -167,63 +167,6 @@ namespace Gerenciadores {
 		list <Obstaculo*>::iterator it;
 		for (it=LOs.begin(); it!=LOs.end(); it++)
 		{
-			//Coord* coll1 = ent->getColl();
-			//Coord* coll2 = (*it)->getColl();
-
-			//sf::FloatRect nextPos1;
-			//sf::FloatRect nextPos2;
-			//sf::FloatRect ent1Bounds = ent->getCorpo()->getGlobalBounds();
-			//sf::FloatRect ent2Bounds = (*it)->getCorpo()->getGlobalBounds();
-
-			//nextPos1 = ent1Bounds;
-			//nextPos1.left += ent->getVel()->getX();
-			//nextPos1.top += (*it)->getVel()->getY();
-
-			//nextPos2 = ent2Bounds;
-			//nextPos2.left += (*it)->getVel()->getX();
-			//nextPos2.top += (*it)->getVel()->getY();
-
-			//if (ent2Bounds.intersects(nextPos1))
-			//{
-			//	//Colisao em cima
-			//	if (colideEmcima(ent1Bounds, ent2Bounds) == true)
-			//	{
-			//		coll1->setValY(-1.0); //colide em cima
-			//		coll2->setValY(1.0); //colide embaixo
-			//	}
-
-			//	//Colisao direita
-			//	if (colideDireita(ent1Bounds, ent2Bounds) == true)
-			//	{
-			//		//std::cout << "COLISAO DIREITA" << std::endl;
-			//		coll1->setValX(1.0); //colide pela direita
-			//		coll2->setValX(-1.0); //colide pela esquerda
-			//	}
-
-			//	//Colisao esquerda
-			//	if (colideEsquerda(ent1Bounds, ent2Bounds) == true)
-			//	{
-			//		//std::cout << "COLISAO ESQUERDA" << std::endl;
-			//		coll1->setValX(-1.0); //colide pela esquerda
-			//		coll2->setValX(1.0); //colide pela direita
-			//	}
-
-			//	//Colisao embaixo
-			//	if (colideEmbaixo(ent1Bounds, ent2Bounds) == true)
-			//	{
-			//		coll1->setValY(1.0); //colide embaixo
-			//		coll2->setValY(-1.0); //colide em cima
-			//	}
-
-			//	if ((*it)->getCausa_dano() == true)
-			//	{
-			//		if (Jogador* j = dynamic_cast <Jogador*>(ent))
-			//		{
-			//			j->getCorpo()->setFillColor(sf::Color::Red); //ESSA LINHA PODE IR DENTRO DA FUNÇÃO DO JOGADOR LEVAR DANO
-			//			//COLOCAR AQUI FUNÇÃO DO JOGADOR LEVAR DANO
-			//		}
-			//	}
-
 			if (verificaColisao(ent, *it) == true && (*it)->getCausa_dano() == true)
 			{
 				if (Jogador* j = dynamic_cast <Jogador*>(ent))
@@ -243,12 +186,19 @@ namespace Gerenciadores {
 			verificaColisao(ent, *it);
 		}
 	}
-	void GerenteColisoes::checaColisaoEsfera(Entidade* ent)
+	void GerenteColisoes::checaColisaoEsfera(Jogador* jog)
 	{
 		vector <EsferaPoder*>::iterator it;
 		for (it = LPs.begin(); it != LPs.end(); it++)
 		{
-			verificaColisao(ent, *it);
+			if ((*it)->getColetada() == false)
+			{
+				if (verificaColisao(jog, *it) == true)
+				{
+					(*it)->setColetada(true);
+					jog->ficarEmpoderado();
+				}
+			}
 		}
 	}
 }

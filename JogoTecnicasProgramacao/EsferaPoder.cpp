@@ -33,7 +33,10 @@ bool EsferaPoder::getColetada()
 
 void EsferaPoder::executar()
 {
-	imprimir();
+	if (coletada == false)
+	{
+		imprimir();
+	}
 }
 
 void EsferaPoder::danar(Entidade* ent)

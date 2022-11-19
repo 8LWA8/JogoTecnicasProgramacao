@@ -1,6 +1,7 @@
 #pragma once
 #include "Entidade.h"
 #include "Inimigo.h"
+#include "Jogador.h"
 #include "EsferaPoder.h"
 #include "Obstaculo.h"
 #include "ListaEntidades.h"
@@ -37,6 +38,6 @@ namespace Gerenciadores {
 		//void checaColisaoLista(Entidade* ent1);
 		void checaColisaoObst(Entidade* ent);
 		void checaColisaoIni(Entidade* ent);
-		void checaColisaoEsfera(Entidade* ent);
+		void checaColisaoEsfera(Jogador* jog);
 	};
 }

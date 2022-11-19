@@ -13,6 +13,7 @@ namespace Entidades
         {
         private:
             int pontuacao;
+            bool empoderado;
         public:
             Jogador();
             ~Jogador();
@@ -20,6 +21,7 @@ namespace Entidades
             void mover();
             void setPontuacao(int p);
             int getPontuacao();
+            void ficarEmpoderado();
         };
     }
 }

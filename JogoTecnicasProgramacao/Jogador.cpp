@@ -4,7 +4,7 @@ using namespace Entidades::Personagens;
 
 
 
-Jogador::Jogador() 
+Jogador::Jogador(): pontuacao(0), empoderado(false)
 {
     setTextura("astronauta.png");
     corpo.setSize(sf::Vector2f(35.f, 70.f));
@@ -71,6 +71,12 @@ void Jogador::setPontuacao(int p)
 int Jogador::getPontuacao()
 {
     return pontuacao;
+}
+
+void Jogador::ficarEmpoderado()
+{
+    empoderado = true;
+    corpo.setFillColor(sf::Color::Blue);
 }
 
 
