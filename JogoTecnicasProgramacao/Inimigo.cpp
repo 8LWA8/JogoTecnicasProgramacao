@@ -4,8 +4,9 @@ using namespace Entidades::Personagens;
 
 Inimigo::Inimigo() : movAleatorio(-1)
 {
+	this->setId(2);
 	this->mov = true;
-	this->dano = 0.5;
+	this->setDano(0.5);
 
 	corpo.setPosition(sf::Vector2f(200.f, 200.f));	
 	vel.setVal(0.1, 0.1);
@@ -59,8 +60,12 @@ void Inimigo::danar(Entidade* ent)
 {
 	if (ent != NULL) 
 	{
-		Personagem* per = static_cast<Personagem*>(ent);
-		
+		Personagem* per = dynamic_cast<Personagem*>(ent);
+		per->levarDano(this->getDano());
 	}
 
+}
+
+void Inimigo::levarDano(float dano) 
+{
 }

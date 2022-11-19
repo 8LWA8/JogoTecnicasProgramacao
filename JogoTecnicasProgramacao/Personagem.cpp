@@ -33,13 +33,4 @@ float Personagem::getNumVidas()
 }
 
 
-void Personagem::levaDano(Entidade* ent)
-{
-	float dano_ini = ent->getDano();
-	this->num_vidas = num_vidas - dano_ini;
-}
-
-void Personagem::danar(Entidade* ent) 
-{
-
-}
+void Personagem::danar(Entidade* ent) {}

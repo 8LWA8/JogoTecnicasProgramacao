@@ -1,6 +1,6 @@
 #pragma once
 #include "Obstaculo.h"
-
+#include "Personagem.h"
 namespace Entidades
 {
     namespace Obstaculos
@@ -15,6 +15,7 @@ namespace Entidades
             Espinhos(const sf::Vector2f pos);
             ~Espinhos();
             const bool getCausa_dano();
+            void danar(Entidade* ent);
         };
     }
 }

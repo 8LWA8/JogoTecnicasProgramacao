@@ -7,7 +7,7 @@ namespace Entidades
         class Vilgax :
             public Inimigo
         {
-        protected:
+        private:
             float poder_dano;
         public:
             Vilgax();

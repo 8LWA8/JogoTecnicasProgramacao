@@ -78,13 +78,12 @@ void Jogador::ficarEmpoderado()
     relogio.restart();
     float dt = relogio.getElapsedTime().asSeconds();
     cout << dt << endl;
-    empoderado = true;
-    corpo.setFillColor(sf::Color::Blue);
+    
     if (dt >= 3.0f)
     {
         float dt = relogio.getElapsedTime().asSeconds();
         empoderado = false;
-        corpo.setFillColor(sf::Color::White);
+        corpo.setFillColor(sf::Color::Blue);
         relogio.restart();
     }
 }
@@ -92,3 +91,7 @@ void Jogador::ficarEmpoderado()
 
 
 
+void Jogador::levarDano(float dano)
+{
+    this->num_vidas = this->num_vidas - dano;
+}

@@ -83,3 +83,8 @@ float Entidade::getDano()
 {
 	return this->dano;
 }
+
+void Entidade::setDano(float dan) 
+{
+	this->dano = dan;
+}

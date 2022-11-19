@@ -29,7 +29,8 @@ namespace Entidades
 		bool getMov() const;
 		void setMov(bool m);
 
-		float getDano(); //<--METODO ESTATICO?
+		void setDano(float dan);
+		float getDano(); 
 		virtual void danar(Entidade* ent) = 0;
 		
 	};

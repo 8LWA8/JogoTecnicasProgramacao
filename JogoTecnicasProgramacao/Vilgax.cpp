@@ -3,14 +3,15 @@ using namespace Entidades::Personagens;
 
 Vilgax::Vilgax():poder_dano(1.0)
 {
-	this->dano = dano * poder_dano;
+	this->setDano(0.5 * poder_dano);
 	setTextura("vilgax.png");
 	corpo.setSize(sf::Vector2f(150.f, 150.f));
 	corpo.setPosition(sf::Vector2f(0.f, 0.f));
 }
 
-Vilgax::Vilgax(const sf::Vector2f pos):poder_dano(1)
+Vilgax::Vilgax(const sf::Vector2f pos):poder_dano(1.0)
 {
+	this->setDano(0.5 * poder_dano);
 	setTextura("vilgax.png");
 	corpo.setSize(sf::Vector2f(150.f, 150.f));
 	corpo.setPosition(pos);

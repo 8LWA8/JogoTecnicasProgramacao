@@ -23,6 +23,8 @@ namespace Entidades
             void setPontuacao(int p);
             int getPontuacao();
             void ficarEmpoderado();
+            void levarDano(float dano);
+
         };
     }
 }

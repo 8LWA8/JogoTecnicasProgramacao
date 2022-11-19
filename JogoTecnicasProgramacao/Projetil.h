@@ -7,10 +7,9 @@ namespace Entidades
 		public Entidade
 	{
 	private:
-		int dano;
+		
 	public:
-		void setDano(int d);
-		int getDano() const;
+		
 	};
 }
 

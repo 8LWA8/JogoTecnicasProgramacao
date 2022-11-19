@@ -18,6 +18,7 @@ namespace Entidades
 			virtual void executar();
 			void moveAleatorio();
 			void danar(Entidade* ent);
+			void levarDano(float dano);
 		};
 	}
 }

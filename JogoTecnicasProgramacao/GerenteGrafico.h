@@ -18,7 +18,7 @@ namespace Gerenciadores {
 		static Gerenciadores::GerenteGrafico* instance;
 		
 
-		GerenteGrafico(); // <--- PUBLIC??
+		GerenteGrafico(); 
 	public:
 		
 		~GerenteGrafico();
