@@ -28,7 +28,7 @@ void Fase::criaRobos()
 	int n = 3 + rand() % 3;
 	for (int i = 0; i < n; i++)
 	{
-		Robo* r1 = new Robo(sf::Vector2f(-600.f + 150.f*i, 100.f));
+		Robo* r1 = new Robo(sf::Vector2f(-600.f + 100.f*i, 100.f));
 		Entidade* e1 = static_cast <Entidade*>(r1);
 		LEnt.addEntidade(e1);
 		Inimigo* i1 = static_cast <Inimigo*>(r1);

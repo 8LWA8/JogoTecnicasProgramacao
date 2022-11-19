@@ -12,7 +12,7 @@ namespace Entidades
             float comprimento;
         public:
             Espinhos();
-            Espinhos(const sf::Vector2f pos);
+            Espinhos(const sf::Vector2f pos, const sf::Vector2f tam, float comp);
             ~Espinhos();
             const bool getCausa_dano();
             void danar(Entidade* ent);

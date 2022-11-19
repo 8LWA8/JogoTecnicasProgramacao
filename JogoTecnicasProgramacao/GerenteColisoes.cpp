@@ -175,8 +175,7 @@ namespace Gerenciadores {
 			{
 				if (Jogador* j = dynamic_cast <Jogador*>(ent))
 				{
-					j->getCorpo()->setFillColor(sf::Color::Red); //ESSA LINHA PODE IR DENTRO DA FUNÇÃO DO JOGADOR LEVAR DANO
-					//COLOCAR AQUI FUNÇÃO DO JOGADOR LEVAR DANO
+					(*it)->danar(ent);
 				}
 			}
 		}
@@ -187,7 +186,23 @@ namespace Gerenciadores {
 		for (it = LIs.begin(); it != LIs.end(); it++)
 		{
 			colideCanto(*it);
-			verificaColisao(ent, *it);
+			if ((*it)->getVivo() == true)
+			{
+				if (verificaColisao(ent, *it))
+				{
+					if (Jogador* j = dynamic_cast <Jogador*>(ent))
+					{
+						if (j->getEmpoderado() == true)
+						{
+							(*it)->setVivo(false);
+						}
+						else
+						{
+							(*it)->danar(ent);
+						}
+					}
+				}
+			}
 		}
 	}
 	void GerenteColisoes::checaColisaoEsfera(Jogador* jog)

@@ -6,6 +6,7 @@ using namespace Entidades::Personagens;
 
 Jogador::Jogador(): pontuacao(0), empoderado(false)
 {
+    num_vidas = 500.0f;
     setTextura("astronauta.png");
     corpo.setSize(sf::Vector2f(35.f, 70.f));
     corpo.setPosition(sf::Vector2f(0.f, 100.f));
@@ -23,6 +24,26 @@ void Jogador::executar()
 	this->imprimir();
     this->mover();
     this->resetColl();
+    if (empoderado == true)
+    {
+        float dt = relogio.getElapsedTime().asSeconds();
+        if (dt >= 3.0f)
+        {
+            empoderado = false;
+            corpo.setFillColor(sf::Color::White);
+            relogio.restart();
+        }
+    }
+
+    if (corpo.getFillColor() == sf::Color::Red)
+    {
+        float dt = relogio.getElapsedTime().asSeconds();
+        if (dt >= 1.0f)
+        {
+            corpo.setFillColor(sf::Color::White);
+            relogio.restart();
+        }
+    }
 }
 
 
@@ -76,16 +97,13 @@ int Jogador::getPontuacao()
 void Jogador::ficarEmpoderado()
 {
     relogio.restart();
-    float dt = relogio.getElapsedTime().asSeconds();
-    cout << dt << endl;
-    
-    if (dt >= 3.0f)
-    {
-        float dt = relogio.getElapsedTime().asSeconds();
-        empoderado = false;
-        corpo.setFillColor(sf::Color::Blue);
-        relogio.restart();
-    }
+    empoderado = true;
+    corpo.setFillColor(sf::Color::Blue);
+}
+
+bool Entidades::Personagens::Jogador::getEmpoderado()
+{
+    return empoderado;
 }
 
 
@@ -94,4 +112,6 @@ void Jogador::ficarEmpoderado()
 void Jogador::levarDano(float dano)
 {
     this->num_vidas = this->num_vidas - dano;
+    std::cout << num_vidas << std::endl;
+    corpo.setFillColor(sf::Color::Red);
 }

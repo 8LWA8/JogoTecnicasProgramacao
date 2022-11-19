@@ -13,12 +13,13 @@ Espinhos::Espinhos()
 	setTextura("espinhos.png");
 }
 
-Espinhos::Espinhos(const sf::Vector2f pos)
+Espinhos::Espinhos(const sf::Vector2f pos, const sf::Vector2f tam, float comp)
 {
+	comprimento = comp;
 	causa_dano = true;
-	this->dano = comprimento * 0.5;
+	this->dano = comprimento/50;
 
-	corpo.setSize(sf::Vector2f(35.f, 35.f));
+	corpo.setSize(sf::Vector2f(tam));
 	corpo.setPosition(pos);
 	setTextura("espinhos.png");
 }
