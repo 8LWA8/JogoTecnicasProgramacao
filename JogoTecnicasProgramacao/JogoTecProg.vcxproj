@@ -20,7 +20,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Alienigena.cpp" />
-    <ClCompile Include="Chefao.cpp" />
+    <ClCompile Include="ConstrutorFase.cpp" />
     <ClCompile Include="Coord.cpp" />
     <ClCompile Include="Ente.cpp" />
     <ClCompile Include="Entidade.cpp" />
@@ -51,7 +51,7 @@
   <ItemGroup>
     <ClInclude Include="Alienigena.h" />
     <ClInclude Include="baseInclude.h" />
-    <ClInclude Include="Chefao.h" />
+    <ClInclude Include="ConstrutorFase.h" />
     <ClInclude Include="Coord.h" />
     <ClInclude Include="Ente.h" />
     <ClInclude Include="Entidade.h" />
@@ -63,6 +63,7 @@
     <ClInclude Include="Fase_Segunda.h" />
     <ClInclude Include="GerenteColisoes.h" />
     <ClInclude Include="GerenteGrafico.h" />
+    <ClInclude Include="IDs.h" />
     <ClInclude Include="Inimigo.h" />
     <ClInclude Include="Jogador.h" />
     <ClInclude Include="Jogo.h" />
@@ -159,12 +160,12 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\bruno\OneDrive\Documents\GitHub\JogoTecnicasProgramacao\SFML-2.5.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\letic\Desktop\UTFPR\UTFPR - 2022.2\Técnicas de Programação\JOGO\SFML-2.5.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Users\bruno\OneDrive\Documents\GitHub\JogoTecnicasProgramacao\SFML-2.5.1\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\letic\Desktop\UTFPR\UTFPR - 2022.2\Técnicas de Programação\JOGO\SFML-2.5.1\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>sfml-graphics-d.lib;sfml-window-d.lib;sfml-audio-d.lib;sfml-network-d.lib;sfml-system-d.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -176,14 +177,14 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\bruno\OneDrive\Documents\GitHub\JogoTecnicasProgramacao\SFML-2.5.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\letic\Desktop\UTFPR\UTFPR - 2022.2\Técnicas de Programação\JOGO\SFML-2.5.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Users\bruno\OneDrive\Documents\GitHub\JogoTecnicasProgramacao\SFML-2.5.1\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\letic\Desktop\UTFPR\UTFPR - 2022.2\Técnicas de Programação\JOGO\SFML-2.5.1\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>sfml-graphics.lib;sfml-window.lib;sfml-audio.lib;sfml-network.lib;sfml-system.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>

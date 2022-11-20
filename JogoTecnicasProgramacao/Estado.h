@@ -1,42 +1,19 @@
 #pragma once
+#include "Ente.h"
+#include "IDs.h"
 
-//Código inspirado nos vídeos do monitor Matheus Augusto Burda (Burda Canal no youtube)
+//Código inspirado nos vídeos do monitor Giovane (Gege++ no youtube) e no seu Github (https://github.com/Giovanenero/JogoPlataforma2D-Jungle)
 namespace Estados
 {
-	class MaquinaEstados;
-
-    enum IDestado {
-        desconhecido = -1,
-        menuPrincipal = 0,
-        novoJogo,
-        Jogando,
-        menuPausa,
-        //config,
-        ranking
-        //salvar
-    };
-
-	class Estado
-	{
-    protected:
-        MaquinaEstados* pME;
-        IDestado id;
-
+    class Estado : public Ente {
+    private:
+        bool remover;
     public:
-        Estado(MaquinaEstados* pME = nullptr, IDestado id = desconhecido);
-
-        virtual ~Estado();
-
-        void setMaquinaEstados(MaquinaEstados* pME);
-
-        void mudarEstado(IDestado id);
-
-        IDestado getID() const;
-
-        virtual void update(const float dt) = 0;
-
-        virtual void render() = 0;
-
-        virtual void resetEstado() = 0;
-	};
+        Estado();
+        ~Estado();
+        virtual void executar() = 0;
+        virtual void desenhar();
+        void setRemover(const bool remover = true);
+        const bool getRemover() const;
+    };
 }

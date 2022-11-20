@@ -1,29 +1,29 @@
 #include "Estado.h"
+#include "IDs.h"
 #include "MaquinaEstados.h"
 
 using namespace Estados;
 
-//Código inspirado nos vídeos do monitor Matheus Augusto Burda (Burda Canal no youtube)
-Estados::Estado::Estado(MaquinaEstados* pME, IDestado id): pME(pME), id(id)
+//Código inspirado nos vídeos do monitor Giovane (Gege++ no youtube) e no seu Github (https://github.com/Giovanenero/JogoPlataforma2D-Jungle)
+
+
+
+Estado::Estado(): remover(false)
 {
 }
 
-Estados::Estado::~Estado()
-{
-	pME = nullptr;
+Estado::~Estado() {
+
 }
 
-void Estados::Estado::setMaquinaEstados(MaquinaEstados* pME)
-{
-	this->pME = pME;
+void Estado::desenhar() {
+
 }
 
-void Estados::Estado::mudarEstado(IDestado id)
-{
-	pME->mudaEstadoAtual(id);
+void Estado::setRemover(const bool remover) {
+    this->remover = remover;
 }
 
-IDestado Estados::Estado::getID() const
-{
-	return id;
+const bool Estado::getRemover() const {
+    return remover;
 }

@@ -1,34 +1,34 @@
 #pragma once
 
 #include "Estado.h"
-#include <map>
+#include "GerenteGrafico.h"
+#include "IDs.h"
+#include <stack>
 
-//Código inspirado nos vídeos do monitor Matheus Augusto Burda (Burda Canal no youtube)
+//Código inspirado nos vídeos do monitor Giovane (Gege++ no youtube) e no seu Github (https://github.com/Giovanenero/JogoPlataforma2D-Jungle)
 namespace Estados
 {
 	class MaquinaEstados
 	{
-    protected:
-        IDestado IDatual;
-        IDestado IDultimo;
+    private:
 
-        std::map<IDestado, Estado*> mapaEstados;
+        std::stack<Estado*> pilhaEstados;
 
-    public:
+        //Singleton
+        static MaquinaEstados* pMaquinaEstados;
         MaquinaEstados();
 
-        virtual ~MaquinaEstados();
+    public:
+        ~MaquinaEstados();
 
-        void mudaEstadoAtual(IDestado id);
+        static MaquinaEstados* getMaquinaEstados();
 
-        void updateEstadoAtual(const float dt);
+        void executar();
 
-        void renderEstadoAtual();
+        void addEstado(const IDs::IDs ID);
 
-        IDestado getIDatual() const;
+        void removerEstado();
 
-        void insereEstado(Estado* pEstado);
-
-        IDestado getIDultimo() const;
+        Estado* getEstadoAtual();
 	};
 }

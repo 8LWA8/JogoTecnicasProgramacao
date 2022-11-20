@@ -2,55 +2,69 @@
 #include "Estado.h"
 #include <iostream>
 
+//Código inspirado nos vídeos do monitor Giovane (Gege++ no youtube) e no seu Github (https://github.com/Giovanenero/JogoPlataforma2D-Jungle)
+
 using namespace Estados;
 
-Estados::MaquinaEstados::MaquinaEstados()
+MaquinaEstados* MaquinaEstados::pMaquinaEstados = nullptr;
+
+MaquinaEstados::MaquinaEstados() :
+    pilhaEstados()
 {
-	IDultimo = IDestado::desconhecido;
-	IDatual = IDestado::desconhecido;
+
 }
 
-Estados::MaquinaEstados::~MaquinaEstados()
-{
-	std::map<IDestado, Estado*>::iterator it;
-
-	for (it = mapaEstados.begin(); it != mapaEstados.end(); ++it) {
-		delete (it->second);
-	}
+MaquinaEstados* MaquinaEstados::getMaquinaEstados() {
+    if (pMaquinaEstados == nullptr) {
+        pMaquinaEstados = new MaquinaEstados();
+    }
+    return pMaquinaEstados;
 }
 
-void Estados::MaquinaEstados::mudaEstadoAtual(IDestado id)
-{
-	IDultimo = IDatual;
-	IDatual = id;
-	mapaEstados[IDatual]->resetEstado();
+MaquinaEstados::~MaquinaEstados() {
+    //Deleta todos os estados da pilha
+    while (!pilhaEstados.empty()) {
+        delete(pilhaEstados.top());
+        pilhaEstados.top() = nullptr;
+        pilhaEstados.pop();
+    }
+
+    if (pMaquinaEstados) {
+        delete(pMaquinaEstados);
+        pMaquinaEstados = nullptr;
+    }
 }
 
-void Estados::MaquinaEstados::updateEstadoAtual(const float dt)
-{
-	mapaEstados[IDatual]->update(dt);
+void MaquinaEstados::addEstado(const IDs ID) {
+    Estado* estado = construtorEstado.criarEstado(ID);
+    if (estado == nullptr) {
+        std::cout << "ERROR::Jungle::Gerenciador::GerenciadorEstado::estado eh nullptr" << std::endl;
+        exit(1);
+    }
+    pilhaEstados.push(estado);
 }
 
-void Estados::MaquinaEstados::renderEstadoAtual()
-{
-	mapaEstados[IDatual]->render();
+void MaquinaEstados::removerEstado() {
+    if (pilhaEstados.top() != nullptr) {
+        delete(pilhaEstados.top());
+        pilhaEstados.top() = nullptr;
+        pilhaEstados.pop();
+    }
+
+    if (pilhaEstados.empty()) {
+        Gerenciadores::GerenteGrafico* pGrafico = pGrafico->getInstance();
+        pGrafico->closeWindow();
+    }
 }
 
-IDestado Estados::MaquinaEstados::getIDatual() const
-{
-	return IDatual;
+Estado* MaquinaEstados::getEstadoAtual() {
+    return pilhaEstados.top();
 }
 
-void Estados::MaquinaEstados::insereEstado(Estado* pEstado)
-{
-	if (pEstado == nullptr) {
-		std::cout << "ERROR pointer to State NULL on StateMachine::insertState()" << std::endl;
-		exit(1);
-	}
-	mapaEstados.insert(std::pair<IDestado, Estado*>(pEstado->getID(), pEstado));
-}
 
-IDestado Estados::MaquinaEstados::getIDultimo() const
-{
-	return IDultimo;
+void MaquinaEstados::executar() {
+    //executa o estado que está no topo da minha pilha
+    if (!pilhaEstados.empty()) {
+        pilhaEstados.top()->executar();
+    }
 }

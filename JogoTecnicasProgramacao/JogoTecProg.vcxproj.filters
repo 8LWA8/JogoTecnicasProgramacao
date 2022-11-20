@@ -84,9 +84,6 @@
     <ClCompile Include="Espinhos.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Chefao.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Coord.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -97,6 +94,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="EsferaPoder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ConstrutorFase.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -176,9 +176,6 @@
     <ClInclude Include="Espinhos.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Chefao.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Estado.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -186,6 +183,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="EsferaPoder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IDs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ConstrutorFase.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
