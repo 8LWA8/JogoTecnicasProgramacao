@@ -6,11 +6,11 @@ using namespace Entidades::Personagens;
 
 Jogador::Jogador(): pontuacao(0), empoderado(false)
 {
-    num_vidas = 500.0f;
+    num_vidas = 1000.0f;
     setTextura("astronauta.png");
     corpo.setSize(sf::Vector2f(35.f, 70.f));
     corpo.setPosition(sf::Vector2f(0.f, 100.f));
-    vel.setVal(1.0, 1.0);
+    vel.setVal(3.0, 1.0);
     mov = true;
 }
 
@@ -114,7 +114,7 @@ void Jogador::levarDano(float dano)
 {
     if (this->empoderado == false) {
         this->num_vidas = this->num_vidas - dano;
-        std::cout << num_vidas << std::endl;
+        //std::cout << num_vidas << std::endl;
         corpo.setFillColor(sf::Color::Red);
     }
     if (this->num_vidas <= 0.0) 

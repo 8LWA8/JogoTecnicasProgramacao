@@ -6,7 +6,7 @@ using namespace Entidades::Personagens;
 Espinhos::Espinhos()
 {
 	this->causa_dano = true;
-	this->setDano(comprimento*0.5);
+	this->setDano(comprimento * 0.1);
 	this->setId(4);
 	corpo.setSize(sf::Vector2f(35.f, 35.f));
 	corpo.setPosition(sf::Vector2f(-400.f, 200.f));
@@ -17,7 +17,7 @@ Espinhos::Espinhos(const sf::Vector2f pos, const sf::Vector2f tam, float comp)
 {
 	comprimento = comp;
 	causa_dano = true;
-	this->setDano(comprimento * 0.5);
+	this->setDano(comprimento * 0.1);
 	this->setId(4);
 
 	corpo.setSize(sf::Vector2f(tam));

@@ -51,7 +51,7 @@ void Fase::criaRochas()
 
 void Fase::criaPoderes()
 {
-	int n = 2 + rand() % 3;
+	int n = 3 + rand() % 4;
 	for (int i = 0; i < n; i++)
 	{
 		EsferaPoder* esfera = new EsferaPoder(sf::Vector2f(-550.f + 150.f * i, 150.f));

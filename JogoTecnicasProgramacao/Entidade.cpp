@@ -63,8 +63,8 @@ void Entidades::Entidade::sofrer_gravidade()
 	if (coll.getY() == 0.0)
 	{
 		//std::cout << "GRAVIDADE" << std::endl;
-		corpo.move(sf::Vector2f(0.f, 1.0));
-		coordenada.addY(1.0);
+		corpo.move(sf::Vector2f(0.f, 2.0));
+		coordenada.addY(2.0);
 	}
 }
 

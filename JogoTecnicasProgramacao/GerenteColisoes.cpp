@@ -195,6 +195,7 @@ namespace Gerenciadores {
 						if (j->getEmpoderado() == true)
 						{
 							(*it)->setVivo(false);
+							//SOMAR PONTUAÇÃO
 						}
 						else
 						{
