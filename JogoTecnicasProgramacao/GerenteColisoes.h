@@ -20,10 +20,11 @@ namespace Gerenciadores {
 	class GerenteColisoes
 	{
 		//ListaEntidades* pLista;
-	public:
+	protected:
 		vector <Inimigo*> LIs;
 		list <Obstaculo*> LOs;
 		vector <EsferaPoder*> LPs;
+		
 
 	public:
 		GerenteColisoes(/*ListaEntidades* pL*/);
@@ -34,6 +35,11 @@ namespace Gerenciadores {
 		bool colideEmcima(sf::FloatRect ent1Bounds, sf::FloatRect ent2Bounds);
 		bool colideDireita(sf::FloatRect ent1Bounds, sf::FloatRect ent2Bounds);
 		bool colideEsquerda(sf::FloatRect ent1Bounds, sf::FloatRect ent2Bounds);
+
+		vector <Inimigo*>* getVecInimigos();
+		vector <EsferaPoder*>* getVecPoder();
+		list <Obstaculo*>* getListObst();
+
 		void colideCanto(Entidade* ent);
 		//void checaColisaoLista(Entidade* ent1);
 		void checaColisaoObst(Entidade* ent);

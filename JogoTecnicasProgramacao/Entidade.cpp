@@ -10,8 +10,9 @@ dano(0.0),
 mov(false)
 {
 	coordenada.setVal(corpo.getGlobalBounds().left, corpo.getGlobalBounds().top);
-	//coordenada.setVal(corpo.getPosition().x, corpo.getPosition().y);
 	tam.setVal(corpo.getGlobalBounds().width, corpo.getGlobalBounds().height);
+
+	
 
 }
 
@@ -46,11 +47,7 @@ Coord* Entidade::getColl()
 
 void Entidade::imprimir() 
 {
-	//std::cout << "imprimiu ent" << std::endl;
-	GerenteGrafico* pGerenteGraf = GerenteGrafico::getInstance();
-	//pGerenteGraf->CenterView(pos);
-	pGerenteGraf->render(&corpo);
-
+	pGerenteGrafico->render(&corpo);
 }
 
 void Entidade::resetColl() 

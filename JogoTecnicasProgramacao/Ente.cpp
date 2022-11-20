@@ -1,6 +1,7 @@
 #include "Ente.h"
 
 Ente::Ente() : corpo(sf::Vector2f(100.f, 100.f)),
+textura(NULL),
 id(0)
 {
 	pGerenteGrafico = GerenteGrafico::getInstance();

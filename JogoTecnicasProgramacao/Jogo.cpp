@@ -7,7 +7,6 @@ using namespace Entidades::Personagens;
 #define WIDTH 1200
 
 Jogo::Jogo(): 
-jogador1(),
 pGerenteGrafico(pGerenteGrafico->getInstance()), fase1()
 {
 	pGerenteGrafico->CenterView(0.0, 0.0);
@@ -16,7 +15,6 @@ pGerenteGrafico(pGerenteGrafico->getInstance()), fase1()
 void Jogo::exec() 
 {
 	
-	pGerenteGrafico = pGerenteGrafico->getInstance();
 
     while (pGerenteGrafico->isWindowOpen())
     {
@@ -53,21 +51,9 @@ void Jogo::execEnt()
 	plat->getCorpo()->setSize(sf::Vector2f(WIDTH, 60.f));
 	plat->getCorpo()->setPosition(sf::Vector2f(-WIDTH/2, 300.f));
 
-	jogador1.executar();
-	fase1.executar();
-	fase1.chao.executar();
-
-	pGerenteGrafico->printVida(jogador1.getNumVidas());
-	pGerenteGrafico->printPont(jogador1.getPontuacao());
 	
-	//fase1.Ger.verificaColisao(&jogador1, &fase1.esfera1);
-	fase1.Ger.checaColisaoEsfera(&jogador1);
-	fase1.Ger.colideCanto(&jogador1);
-	fase1.Ger.checaColisaoObst(&jogador1);
-	fase1.Ger.checaColisaoObst(plat);
-	fase1.Ger.checaColisaoIni(&jogador1);
-	fase1.Ger.checaColisaoIni(plat);
-	fase1.Ger.verificaColisao(&jogador1, plat);
+	fase1.executar();
+	
 	
 }
 

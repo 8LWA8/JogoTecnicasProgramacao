@@ -7,7 +7,7 @@ using namespace Obstaculos;
 
 namespace Fases{
 
-	Fase::Fase() : pJogador1(nullptr), LEnt(), Ger(/*&LEnt*/)
+	Fase::Fase() : jogador1(), LEnt(), Ger(/*&LEnt*/)
 {
 	criaRobos();
 	criaRochas();
@@ -17,7 +17,7 @@ namespace Fases{
 Fase::~Fase()
 {
 	LEnt.limpaLista();
-	Ger.LIs.erase(Ger.LIs.begin(), Ger.LIs.end());
+	Ger.getVecInimigos()->erase(Ger.getVecInimigos()->begin(), Ger.getVecInimigos()->end());
 }
 
 
@@ -32,7 +32,7 @@ void Fase::criaRobos()
 		Entidade* e1 = static_cast <Entidade*>(r1);
 		LEnt.addEntidade(e1);
 		Inimigo* i1 = static_cast <Inimigo*>(r1);
-		Ger.LIs.push_back(i1);
+		Ger.getVecInimigos()->push_back(i1);
 	}
 }
 
@@ -45,7 +45,7 @@ void Fase::criaRochas()
 		Entidade* e1 = static_cast <Entidade*>(r1);
 		LEnt.addEntidade(e1);
 		Obstaculo* o1 = static_cast <Obstaculo*>(r1);
-		Ger.LOs.push_back(o1);
+		Ger.getListObst()->push_back(o1);
 	}
 }
 
@@ -57,7 +57,7 @@ void Fase::criaPoderes()
 		EsferaPoder* esfera = new EsferaPoder(sf::Vector2f(-550.f + 150.f * i, 150.f));
 		Entidade* e1 = static_cast <Entidade*>(esfera);
 		LEnt.addEntidade(e1);
-		Ger.LPs.push_back(esfera);
+		Ger.getVecPoder()->push_back(esfera);
 	}
 }
 

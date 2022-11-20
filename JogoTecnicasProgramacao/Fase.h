@@ -15,12 +15,14 @@ namespace Fases
     class Fase :
         public Ente
     {
-	public:
-		Listas::ListaEntidades LEnt;
-		Gerenciadores::GerenteColisoes Ger;
-		EsferaPoder esfera1;
 	protected:
-		Entidades::Personagens::Jogador* pJogador1;
+		Jogador jogador1;
+		Gerenciadores::GerenteColisoes Ger;
+		Listas::ListaEntidades LEnt;
+		EsferaPoder esfera1;
+		
+	
+	
 
 		//Entidades::Personagens::Inimigo* pInimigo1;
 	public:

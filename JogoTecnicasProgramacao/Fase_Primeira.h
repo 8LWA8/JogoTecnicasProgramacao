@@ -19,6 +19,7 @@ namespace Fases
         public Fase
     {
     private:
+ 
     public:
         Plataforma chao;
 

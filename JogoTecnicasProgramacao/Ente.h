@@ -10,7 +10,7 @@ protected:
 	int id;
 	sf::Texture* textura;
 	sf::RectangleShape corpo;
-	GerenteGrafico* pGerenteGrafico;
+	static GerenteGrafico* pGerenteGrafico;
 public:
 	Ente();
 	virtual ~Ente();

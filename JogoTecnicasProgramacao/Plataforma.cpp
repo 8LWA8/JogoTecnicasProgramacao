@@ -23,7 +23,16 @@ void Plataforma::executar()
 	
 	this->imprimir();
 	this->resetColl();
+	this->anularGravidade();
 
+}
+
+void Plataforma::anularGravidade() 
+{
+	if (flutua) 
+	{
+		corpo.move(sf::Vector2f(0.0f, 2.0f));
+	}
 }
 
 void Plataforma::setFlutua(bool f)

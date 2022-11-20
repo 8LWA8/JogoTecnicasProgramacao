@@ -8,6 +8,7 @@
 namespace Fases {
 	Fase_Primeira::Fase_Primeira()
 	{
+		this->setTextura("assets//textures//background.jpg");
 		criaVilgax();
 		criaEspinhos();
 
@@ -19,11 +20,28 @@ namespace Fases {
 
 	void Fases::Fase_Primeira::executar()
 	{
-		//cout << "fase1 exe" << endl;
 
-		
+
+		//INSTANCIAR DINAMICAMENTE JOGADOR E COLOCAR EM LISTA
+		jogador1.executar();
+		pGerenteGrafico->printVida(jogador1.getNumVidas());
+		pGerenteGrafico->printPont(jogador1.getPontuacao());
 		LEnt.executarTodos();
 
+		chao.executar();
+
+
+		//fase1.Ger.verificaColisao(&jogador1, &fase1.esfera1);
+		Ger.checaColisaoEsfera(&jogador1);
+		Ger.colideCanto(&jogador1);
+		Ger.checaColisaoObst(&jogador1);
+		Ger.checaColisaoObst(&chao);
+		Ger.checaColisaoIni(&jogador1);
+		Ger.checaColisaoIni(&chao);
+		Ger.verificaColisao(&jogador1, &chao);
+
+
+		this->imprimir();
 		
 		
 		//this->imprimir();
@@ -44,7 +62,7 @@ namespace Fases {
 			Entidade* e1 = static_cast <Entidade*>(v1);
 			LEnt.addEntidade(e1);
 			Inimigo* i1 = static_cast <Inimigo*>(v1);
-			Ger.LIs.push_back(i1);
+			Ger.getVecInimigos()->push_back(i1);
 		}
 	}
 
@@ -57,7 +75,7 @@ namespace Fases {
 			Entidade* e1 = static_cast <Entidade*>(es1);
 			LEnt.addEntidade(e1);
 			//Obstaculo* o1 = static_cast <Obstaculo*>(es1);
-			Ger.LOs.push_back(es1);
+			Ger.getListObst()->push_back(es1);
 		}
 	}
 }

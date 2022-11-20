@@ -195,7 +195,7 @@ namespace Gerenciadores {
 						if (j->getEmpoderado() == true)
 						{
 							(*it)->setVivo(false);
-							//SOMAR PONTUAÇÃO
+							j++;
 						}
 						else
 						{
@@ -220,6 +220,20 @@ namespace Gerenciadores {
 				}
 			}
 		}
+	}
+
+
+	vector <Inimigo*>* GerenteColisoes::getVecInimigos() 
+	{
+		return &LIs;
+	}
+	vector <EsferaPoder*>* GerenteColisoes::getVecPoder()
+	{
+		return &LPs;
+	}
+	list <Obstaculo*>* GerenteColisoes::getListObst()
+	{
+		return &LOs;
 	}
 }
 	

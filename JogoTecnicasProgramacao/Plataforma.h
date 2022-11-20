@@ -14,6 +14,7 @@ namespace Entidades
             Plataforma();
             ~Plataforma();
             void executar();
+            void anularGravidade();
             void setFlutua(bool f);
             bool getFlutua();
         };

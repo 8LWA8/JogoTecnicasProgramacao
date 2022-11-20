@@ -1,15 +1,16 @@
-﻿  Espinhos.cpp
-C:\Users\bruno\OneDrive\Documents\GitHub\JogoTecnicasProgramacao\JogoTecnicasProgramacao\Espinhos.cpp(9,27): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\bruno\OneDrive\Documents\GitHub\JogoTecnicasProgramacao\JogoTecnicasProgramacao\Espinhos.cpp(20,28): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-  Fase.cpp
+﻿  ConstrutorFase.cpp
   Fase_Primeira.cpp
-  Fase_Segunda.cpp
-  GerenteColisoes.cpp
   Jogo.cpp
   JogoTecProg.cpp
 C:\Users\bruno\OneDrive\Documents\GitHub\JogoTecnicasProgramacao\JogoTecnicasProgramacao\JogoTecProg.cpp(10,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  Obstaculo.cpp
+  MaquinaEstados.cpp
+C:\Users\bruno\OneDrive\Documents\GitHub\JogoTecnicasProgramacao\JogoTecnicasProgramacao\MaquinaEstados.cpp(38,42): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\bruno\OneDrive\Documents\GitHub\JogoTecnicasProgramacao\JogoTecnicasProgramacao\MaquinaEstados.cpp(38,42): error C2146: syntax error: missing ')' before identifier 'ID'
+C:\Users\bruno\OneDrive\Documents\GitHub\JogoTecnicasProgramacao\JogoTecnicasProgramacao\MaquinaEstados.cpp(38,42): error C3646: 'ID': unknown override specifier
+C:\Users\bruno\OneDrive\Documents\GitHub\JogoTecnicasProgramacao\JogoTecnicasProgramacao\MaquinaEstados.cpp(38,44): error C2059: syntax error: ')'
+C:\Users\bruno\OneDrive\Documents\GitHub\JogoTecnicasProgramacao\JogoTecnicasProgramacao\MaquinaEstados.cpp(38,46): error C2511: 'void Estados::MaquinaEstados::addEstado(const int)': overloaded member function not found in 'Estados::MaquinaEstados'
+C:\Users\bruno\OneDrive\Documents\GitHub\JogoTecnicasProgramacao\JogoTecnicasProgramacao\MaquinaEstados.h(11): message : see declaration of 'Estados::MaquinaEstados'
+C:\Users\bruno\OneDrive\Documents\GitHub\JogoTecnicasProgramacao\JogoTecnicasProgramacao\MaquinaEstados.cpp(39,22): error C2065: 'construtorEstado': undeclared identifier
+C:\Users\bruno\OneDrive\Documents\GitHub\JogoTecnicasProgramacao\JogoTecnicasProgramacao\MaquinaEstados.cpp(39,51): error C2065: 'ID': undeclared identifier
   Plataforma.cpp
-  Rocha.cpp
   Generating Code...
-  JogoTecProg.vcxproj -> C:\Users\bruno\OneDrive\Documents\GitHub\JogoTecnicasProgramacao\JogoTecnicasProgramacao\Debug\JogoTecProg.exe
