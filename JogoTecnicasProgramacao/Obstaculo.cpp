@@ -6,6 +6,7 @@ Obstaculo::Obstaculo() :
 	causa_dano(false)
 {
 	this->dano = 0.0;
+	this->setId(3);
 }
 
 Obstaculo::~Obstaculo()

@@ -65,9 +65,9 @@ namespace Gerenciadores {
 			if (colideEmbaixo(ent1Bounds, ent2Bounds) == true)
 			{
 				//FAZ O JOGADOR PULAR SE BATER COM UM INIMIGO POR CIMA
-				/*if (ent2->getId() == 2) {
+				if (ent2->getId() == 2) {
 					ent1->getCorpo()->move(sf::Vector2f(0.0f, -200.0f));
-				} */
+				} 
 				coll1->setValY(1.0); //colide embaixo
 				coll2->setValY(-1.0); //colide em cima
 			}

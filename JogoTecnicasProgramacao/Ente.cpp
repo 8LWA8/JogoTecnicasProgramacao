@@ -1,7 +1,6 @@
 #include "Ente.h"
 
 Ente::Ente() : corpo(sf::Vector2f(100.f, 100.f)),
-pGerenteGrafico(),
 id(0)
 {
 	pGerenteGrafico = GerenteGrafico::getInstance();
@@ -15,7 +14,8 @@ void Ente::setId(int id)
 {
 	this->id = id;
 }
-int Ente::getId() 
+
+int Ente::getId() const
 {
 	return id;
 }

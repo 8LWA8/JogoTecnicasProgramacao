@@ -3,7 +3,7 @@
 #include <cstring>
 #include <iostream>
 
-#define FONT_PATH "		" //<-- PEGAR UMA FONTE
+#define FONT_PATH "assets\\textures\\font.ttf" //<-- PEGAR UMA FONTE
 #define WIDTH 1200
 #define HEIGHT 720
 #define FRAME_RATE 100
@@ -21,6 +21,9 @@ using namespace Gerenciadores;
 		clock() 
 	{
 		font = NULL;
+		fontFile.loadFromFile(FONT_PATH);
+		tex.setFont(fontFile);
+		tex.setString("");
 	}
 	
 		
@@ -155,3 +158,31 @@ using namespace Gerenciadores;
 		clock.restart();
 	}
 
+	void GerenteGrafico::print(const char* text) 
+	{
+		sf::Text tex;
+		tex.setString(text);
+		GerenteGrafico::render(&tex);
+	}
+
+	void GerenteGrafico::printVida(float val) 
+	{
+		std::string str =  std::to_string(val);
+		tex.setString("Vida = "+str);
+		
+		
+		tex.setPosition(sf::Vector2f(-590.0f, -350.0f));
+
+		GerenteGrafico::render(&tex);
+	}
+
+
+	void GerenteGrafico::printPont(int val)
+	{
+		std::string str = std::to_string(val);
+		tex.setString("Pontuacao = " + str);
+		tex.setFillColor(sf::Color::Yellow);
+		tex.setPosition(sf::Vector2f(-580.0f, -300.0f));
+
+		GerenteGrafico::render(&tex);
+	}

@@ -26,6 +26,9 @@ namespace Entidades
             bool getEmpoderado();
             void levarDano(float dano);
 
+            Jogador operator++(int);
+            
+
         };
     }
 }

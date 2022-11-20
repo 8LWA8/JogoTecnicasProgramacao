@@ -5,9 +5,9 @@ using namespace Entidades::Personagens;
 
 Espinhos::Espinhos()
 {
-	causa_dano = true;
-	this->dano = comprimento * 0.5;
-
+	this->causa_dano = true;
+	this->setDano(comprimento*0.5);
+	this->setId(4);
 	corpo.setSize(sf::Vector2f(35.f, 35.f));
 	corpo.setPosition(sf::Vector2f(-400.f, 200.f));
 	setTextura("espinhos.png");
@@ -17,7 +17,8 @@ Espinhos::Espinhos(const sf::Vector2f pos, const sf::Vector2f tam, float comp)
 {
 	comprimento = comp;
 	causa_dano = true;
-	this->dano = comprimento/50;
+	this->setDano(comprimento * 0.5);
+	this->setId(4);
 
 	corpo.setSize(sf::Vector2f(tam));
 	corpo.setPosition(pos);
@@ -28,10 +29,7 @@ Espinhos::~Espinhos()
 {
 }
 
-const bool Espinhos::getCausa_dano()
-{
-	return causa_dano;
-}
+
 
 void Espinhos::danar(Entidade* ent) 
 {
@@ -40,4 +38,13 @@ void Espinhos::danar(Entidade* ent)
 		Personagem* per = dynamic_cast<Personagem*>(ent);
 		per->levarDano(this->getDano());
 	}
+}
+
+void Espinhos::setAltura(float l) 
+{
+	this->comprimento = l;
+}
+float Espinhos::getAltura() 
+{
+	return this->comprimento;
 }

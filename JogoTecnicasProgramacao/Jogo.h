@@ -21,7 +21,7 @@ private:
 
 public:
 	Jogo();
-
+	~Jogo();
 	void exec();
 	void execEnt();
 };

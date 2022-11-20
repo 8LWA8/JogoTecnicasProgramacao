@@ -20,9 +20,12 @@ namespace Fases {
 	void Fases::Fase_Primeira::executar()
 	{
 		//cout << "fase1 exe" << endl;
+
 		
 		LEnt.executarTodos();
 
+		
+		
 		//this->imprimir();
 	}
 

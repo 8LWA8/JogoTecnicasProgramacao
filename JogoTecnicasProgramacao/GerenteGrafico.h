@@ -13,6 +13,8 @@ namespace Gerenciadores {
 		std::map<const char*, sf::Texture*> texturesMap;
 		sf::Font* font;
 		sf::Clock clock;
+		sf::Text tex;
+		sf::Font fontFile;
 		static float dt;
 
 		static Gerenciadores::GerenteGrafico* instance;
@@ -23,7 +25,7 @@ namespace Gerenciadores {
 		
 		~GerenteGrafico();
 		
-		static GerenteGrafico* getInstance(); //const?
+		static GerenteGrafico* getInstance(); 
 		static void deleteInstance();
 
 		void render(sf::RectangleShape* body);
@@ -33,6 +35,9 @@ namespace Gerenciadores {
 		bool isWindowOpen() const;
 		void closeWindow();
 		void handleWindowResize();
+		void print(const char* text);
+		void printVida(float val);
+		void printPont(int val);
 
 		sf::RenderWindow* getWindow() const;
 		sf::Vector2u getWindowSize() const;

@@ -69,6 +69,7 @@ void Jogador::mover()
             //TESTE
             corpo.move(sf::Vector2f(0.f, -300 * vel.getY()));
             coordenada.addY(-300 * vel.getY());
+            
         }
         else 
         {
@@ -101,7 +102,7 @@ void Jogador::ficarEmpoderado()
     corpo.setFillColor(sf::Color::Blue);
 }
 
-bool Entidades::Personagens::Jogador::getEmpoderado()
+bool Jogador::getEmpoderado()
 {
     return empoderado;
 }
@@ -111,7 +112,20 @@ bool Entidades::Personagens::Jogador::getEmpoderado()
 
 void Jogador::levarDano(float dano)
 {
-    this->num_vidas = this->num_vidas - dano;
-    std::cout << num_vidas << std::endl;
-    corpo.setFillColor(sf::Color::Red);
+    if (this->empoderado == false) {
+        this->num_vidas = this->num_vidas - dano;
+        std::cout << num_vidas << std::endl;
+        corpo.setFillColor(sf::Color::Red);
+    }
+    if (this->num_vidas <= 0.0) 
+    {
+        Jogador::setVivo(false);
+    }
+}
+
+Jogador Jogador::operator++(int) 
+{
+    Jogador jog = *this;
+    this->pontuacao++;
+    return jog;
 }

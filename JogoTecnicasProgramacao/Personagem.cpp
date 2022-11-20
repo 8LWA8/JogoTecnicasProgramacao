@@ -2,7 +2,7 @@
 #include <iostream>
 using namespace Entidades::Personagens;
 
-Personagem::Personagem(): num_vidas(0), vivo(true)
+Personagem::Personagem(): num_vidas(0.0), vivo(true)
 {
 }
 

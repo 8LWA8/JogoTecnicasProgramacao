@@ -30,13 +30,14 @@ void Jogo::exec()
 		
 		pGerenteGrafico->clear();
 		execEnt();
-
 		
-
+		
 		
 		
 		//fase1.ini1.imprimir();
 		pGerenteGrafico->display();
+		
+		
 		
 		
 		//window.clear();
@@ -55,6 +56,9 @@ void Jogo::execEnt()
 	jogador1.executar();
 	fase1.executar();
 	fase1.chao.executar();
+
+	pGerenteGrafico->printVida(jogador1.getNumVidas());
+	pGerenteGrafico->printPont(jogador1.getPontuacao());
 	
 	//fase1.Ger.verificaColisao(&jogador1, &fase1.esfera1);
 	fase1.Ger.checaColisaoEsfera(&jogador1);
@@ -67,8 +71,7 @@ void Jogo::execEnt()
 	
 }
 
-/*Jogo::~Jogo() 
+Jogo::~Jogo() 
 {
-	pGerenteGrafico->~GerenteGrafico();
-	jogador1.~Jogador();
-}*/
+	pGerenteGrafico->deleteInstance();
+}

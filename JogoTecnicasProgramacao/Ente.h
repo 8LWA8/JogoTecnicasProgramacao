@@ -21,7 +21,7 @@ public:
 	sf::RectangleShape* getCorpo();
 
 	void setId(int id);
-	int getId();
+	int getId() const;
 	//virtual void update();
 };
 
