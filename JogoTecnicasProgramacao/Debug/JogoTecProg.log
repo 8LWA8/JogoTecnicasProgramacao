@@ -1,5 +1,13 @@
 ﻿  ConstrutorFase.cpp
+  Espinhos.cpp
+C:\Users\bruno\OneDrive\Documents\GitHub\JogoTecnicasProgramacao\JogoTecnicasProgramacao\Espinhos.cpp(9,28): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\bruno\OneDrive\Documents\GitHub\JogoTecnicasProgramacao\JogoTecnicasProgramacao\Espinhos.cpp(20,28): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  Fase.cpp
   Fase_Primeira.cpp
+  Fase_Segunda.cpp
+  GerenteColisoes.cpp
+  Jogador2.cpp
+C:\Users\bruno\OneDrive\Documents\GitHub\JogoTecnicasProgramacao\JogoTecnicasProgramacao\Jogador2.cpp(39): fatal error C1075: '{': no matching token found
   Jogo.cpp
   JogoTecProg.cpp
 C:\Users\bruno\OneDrive\Documents\GitHub\JogoTecnicasProgramacao\JogoTecnicasProgramacao\JogoTecProg.cpp(10,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
@@ -12,5 +20,8 @@ C:\Users\bruno\OneDrive\Documents\GitHub\JogoTecnicasProgramacao\JogoTecnicasPro
 C:\Users\bruno\OneDrive\Documents\GitHub\JogoTecnicasProgramacao\JogoTecnicasProgramacao\MaquinaEstados.h(11): message : see declaration of 'Estados::MaquinaEstados'
 C:\Users\bruno\OneDrive\Documents\GitHub\JogoTecnicasProgramacao\JogoTecnicasProgramacao\MaquinaEstados.cpp(39,22): error C2065: 'construtorEstado': undeclared identifier
 C:\Users\bruno\OneDrive\Documents\GitHub\JogoTecnicasProgramacao\JogoTecnicasProgramacao\MaquinaEstados.cpp(39,51): error C2065: 'ID': undeclared identifier
-  Plataforma.cpp
+  Personagem.cpp
+  Vilgax.cpp
+C:\Users\bruno\OneDrive\Documents\GitHub\JogoTecnicasProgramacao\JogoTecnicasProgramacao\Vilgax.cpp(6,20): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\bruno\OneDrive\Documents\GitHub\JogoTecnicasProgramacao\JogoTecnicasProgramacao\Vilgax.cpp(14,20): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
   Generating Code...

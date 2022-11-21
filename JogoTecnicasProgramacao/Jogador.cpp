@@ -6,8 +6,6 @@ using namespace Entidades::Personagens;
 
 Jogador::Jogador(): pontuacao(0), empoderado(false)
 {
-    num_vidas = 1000.0f;
-    setTextura("astronauta.png");
     corpo.setSize(sf::Vector2f(35.f, 70.f));
     corpo.setPosition(sf::Vector2f(0.f, 100.f));
     vel.setVal(3.0, 1.0);
@@ -48,43 +46,7 @@ void Jogador::executar()
 
 
 
-void Jogador::mover()
-{
-    if (mov == true)
-    {
 
-        if (sf::Keyboard::isKeyPressed(sf::Keyboard::D) && (coll.getX() != 1.0))
-        {
-            corpo.move(sf::Vector2f(vel.getX(), 0.f));
-            coordenada.addX(vel.getX());
-        }
-        if (sf::Keyboard::isKeyPressed(sf::Keyboard::A) && (coll.getX() != -1.0))
-        {
-            corpo.move(sf::Vector2f(-vel.getX(), 0.f));
-            coordenada.addX(-vel.getY());
-        }
-
-        if (sf::Keyboard::isKeyPressed(sf::Keyboard::W) && (coll.getY() != 0.0))
-        {
-            //TESTE
-            corpo.move(sf::Vector2f(0.f, -300 * vel.getY()));
-            coordenada.addY(-300 * vel.getY());
-            
-        }
-        else 
-        {
-            sofrer_gravidade();
-        }
-    }
-
-
-    
-    /*if (sf::Keyboard::isKeyPressed(sf::Keyboard::S) && coll.getY() != 1.0)
-    {
-        corpo.move(sf::Vector2f(0.f, vel.getY()));
-        coordenada.addY(vel.getY());
-    }*/
-}
 
 void Jogador::setPontuacao(int p)
 {
@@ -123,9 +85,4 @@ void Jogador::levarDano(float dano)
     }
 }
 
-Jogador Jogador::operator++(int) 
-{
-    Jogador jog = *this;
-    this->pontuacao++;
-    return jog;
-}
+

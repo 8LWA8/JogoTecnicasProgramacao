@@ -15,6 +15,7 @@ namespace Entidades
             Personagem();
             ~Personagem();
             float getNumVidas();
+            void setNumVidas(float vidas);
             void setVivo(bool v); 
             bool getVivo();
             virtual void executar();

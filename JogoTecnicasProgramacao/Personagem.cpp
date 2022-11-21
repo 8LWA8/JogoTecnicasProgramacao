@@ -32,5 +32,9 @@ float Personagem::getNumVidas()
 	return this->num_vidas;
 }
 
+void Personagem::setNumVidas(float vidas)
+{
+	this->num_vidas = vidas;
+}
 
 void Personagem::danar(Entidade* ent) {}

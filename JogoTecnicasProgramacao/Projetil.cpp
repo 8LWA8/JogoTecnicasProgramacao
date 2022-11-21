@@ -1,8 +1,9 @@
 #include "Projetil.h"
-
+#include "Personagem.h"
 using namespace Entidades;
+using namespace Entidades::Personagens;
 
-Entidades::Projetil::Projetil(): atingiu(false)
+Projetil::Projetil(): atingiu(false)
 {
 
 	corpo.setSize(sf::Vector2f(20.f, 5.f));
@@ -13,12 +14,12 @@ Entidades::Projetil::~Projetil()
 {
 }
 
-void Entidades::Projetil::setAtingiu(bool a)
+void Projetil::setAtingiu(bool a)
 {
 	atingiu = a;
 }
 
-bool Entidades::Projetil::getAtingiu()
+bool Projetil::getAtingiu()
 {
 	return atingiu;
 }
@@ -30,7 +31,11 @@ void Entidades::Projetil::executar()
 	
 }
 
-void Entidades::Projetil::danar(Entidade* ent)
+void Projetil::danar(Entidade* ent)
 {
-
+	if (ent != NULL)
+	{
+		Personagem* per = dynamic_cast<Personagem*>(ent);
+		per->levarDano(this->getDano());
+	}
 }

@@ -1,5 +1,5 @@
 #pragma once
-#include "Jogador.h"
+#include "Jogador1.h"
 #include "Inimigo.h"
 #include "Robo.h"
 #include "Rocha.h"
@@ -16,7 +16,7 @@ namespace Fases
         public Ente
     {
 	protected:
-		Jogador jogador1;
+		Jogador1 jogador1;
 		Gerenciadores::GerenteColisoes Ger;
 		Listas::ListaEntidades LEnt;
 		EsferaPoder esfera1;

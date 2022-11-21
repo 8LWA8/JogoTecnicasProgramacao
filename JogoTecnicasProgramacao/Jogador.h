@@ -17,16 +17,16 @@ namespace Entidades
             sf::Clock relogio; //auxiliar para contar o tempo
         public:
             Jogador();
-            ~Jogador();
+            virtual ~Jogador();
             void executar();
-            void mover();
+            virtual void mover() = 0;
             void setPontuacao(int p);
             int getPontuacao();
             void ficarEmpoderado();
             bool getEmpoderado();
             void levarDano(float dano);
 
-            Jogador operator++(int);
+            
             
 
         };
