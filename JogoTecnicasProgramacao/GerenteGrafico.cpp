@@ -123,13 +123,18 @@ using namespace Gerenciadores;
 		}
 
 		sf::Texture* tex = new sf::Texture();
-
-		if (!tex->loadFromFile(path)) 
-		{
-			std::cout << "ERRO CARREGANDO O ARQUIVO" << path << std::endl;
-			exit(1);
+		try {
+			if (tex->loadFromFile(path)) {
+				texturesMap.insert(std::pair<const char*, sf::Texture*>(path, tex));
+			}
+				//exit(1);	
 		}
-		texturesMap.insert(std::pair<const char*, sf::Texture*>(path, tex));
+		catch (std::exception const& e)
+		{
+			std::cout << "Erro cargando o arquivo" << std::endl;
+		}
+		
+		
 		return tex;
 	}
 

@@ -4,6 +4,7 @@ using namespace Entidades::Personagens;
 
 Jogador2::Jogador2()
 {
+    this->setId(1);
     this->setTextura("astronauta.png");
 }
 
@@ -40,3 +41,4 @@ Jogador2 Jogador2::operator++(int)
     Jogador2 jog2 = *this;
     this->setPontuacao(this->getPontuacao() + 1);
     return jog2;
+}

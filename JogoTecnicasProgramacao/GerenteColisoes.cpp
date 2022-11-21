@@ -1,6 +1,7 @@
 #include "GerenteColisoes.h"
 #include "Inimigo.h"
-#include "Jogador.h"
+#include "Jogador1.h"
+#include "Jogador2.h"
 
 #define WIDTH 1200
 
@@ -190,7 +191,7 @@ namespace Gerenciadores {
 			{
 				if (verificaColisao(ent, *it))
 				{
-					if (Jogador* j = dynamic_cast <Jogador*>(ent))
+					if (Jogador1* j = dynamic_cast <Jogador1*>(ent))
 					{
 						if (j->getEmpoderado() == true)
 						{

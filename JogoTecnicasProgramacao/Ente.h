@@ -1,6 +1,5 @@
 #pragma once
 #include <SFML/Graphics.hpp>
-
 #include "GerenteGrafico.h"
 using namespace Gerenciadores;
 
@@ -10,7 +9,7 @@ protected:
 	int id;
 	sf::Texture* textura;
 	sf::RectangleShape corpo;
-	static GerenteGrafico* pGerenteGrafico;
+	GerenteGrafico* pGerenteGrafico;
 public:
 	Ente();
 	virtual ~Ente();

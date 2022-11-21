@@ -55,13 +55,13 @@ void Entidade::resetColl()
 	coll.setVal(0.0, 0.0);
 }
 
-void Entidades::Entidade::sofrer_gravidade()
+void Entidade::sofrer_gravidade()
 {
 	if (coll.getY() == 0.0)
 	{
 		//std::cout << "GRAVIDADE" << std::endl;
-		corpo.move(sf::Vector2f(0.f, 2.0));
-		coordenada.addY(2.0);
+		corpo.move(sf::Vector2f(0.f, 0.5));
+		coordenada.addY(0.5);
 	}
 }
 

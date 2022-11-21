@@ -1,5 +1,6 @@
 #pragma once
-#include "Jogador.h"
+#include "Jogador1.h"
+#include "Jogador2.h"
 #include "Inimigo.h"
 #include "Robo.h"
 #include "Estado.h"
@@ -18,7 +19,7 @@ namespace Fases
         public Estado
     {
 	protected:
-		Jogador jogador1;
+		Jogador1 jogador1;
 		Gerenciadores::GerenteColisoes Ger;
 		Listas::ListaEntidades LEnt;
 		Plataforma chao;

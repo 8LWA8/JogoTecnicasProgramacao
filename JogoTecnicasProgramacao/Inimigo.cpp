@@ -5,8 +5,8 @@ using namespace Entidades::Personagens;
 Inimigo::Inimigo() : movAleatorio(-1)
 {
 	this->setId(2);
-	this->mov = true;
 	this->setDano(0.5);
+	this->setMov(true);
 
 	corpo.setPosition(sf::Vector2f(200.f, 200.f));	
 	vel.setVal(0.1, 0.1);

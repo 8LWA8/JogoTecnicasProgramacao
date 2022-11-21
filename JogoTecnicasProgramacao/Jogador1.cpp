@@ -4,7 +4,9 @@ using namespace Entidades::Personagens;
 
 Jogador1::Jogador1() 
 {
-    this->setTextura("astronauta.png");
+    this->setId(1);
+    this->setTextura("assets\\textures\\astronauta.png");
+    
 }
 
 void Jogador1::mover()
@@ -26,8 +28,8 @@ void Jogador1::mover()
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::W) && (coll.getY() != 0.0))
         {
             //TESTE
-            corpo.move(sf::Vector2f(0.f, -300 * vel.getY()));
-            coordenada.addY(-300 * vel.getY());
+            corpo.move(sf::Vector2f(0.f, -150 * vel.getY()));
+            coordenada.addY(-150 * vel.getY());
 
         }
         else
@@ -36,13 +38,6 @@ void Jogador1::mover()
         }
     }
 
-
-
-    /*if (sf::Keyboard::isKeyPressed(sf::Keyboard::S) && coll.getY() != 1.0)
-    {
-        corpo.move(sf::Vector2f(0.f, vel.getY()));
-        coordenada.addY(vel.getY());
-    }*/
 }
 
 Jogador1 Jogador1::operator++(int)

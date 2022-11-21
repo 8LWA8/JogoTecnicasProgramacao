@@ -5,9 +5,9 @@
 using namespace Entidades;
 using namespace Entidades::Personagens;
 
-Entidades::Projetil::Projetil(sf::Vector2f pos): atingiu(false), existe(true)
+Projetil::Projetil(sf::Vector2f pos): atingiu(false), existe(true)
 {
-	dano = 5.0f;
+	this->setDano(5.0f);
 	corpo.setSize(sf::Vector2f(20.f, 5.f));
 	corpo.setPosition(pos);
 	corpo.move(sf::Vector2f(0.f, 35.f));
