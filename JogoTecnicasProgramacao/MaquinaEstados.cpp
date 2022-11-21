@@ -47,8 +47,10 @@ void MaquinaEstados::addEstado(const IDs::IDs ID) {
         break;
     case IDs::IDs::jogar_fase2:
         estado = (Estado*) new Fases::Fase_Segunda();
+        break;
     case IDs::IDs::menu:
         estado = (Estado*) new Menu();
+        break;
     }
 
     if (estado == nullptr) {

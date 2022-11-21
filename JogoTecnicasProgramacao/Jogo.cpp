@@ -7,9 +7,9 @@ using namespace Entidades::Personagens;
 #define WIDTH 1200
 
 Jogo::Jogo(): 
-pGerenteGrafico(pGerenteGrafico->getInstance()), fase1()
+pGerenteGrafico(pGerenteGrafico->getInstance())
 {
-	MaquinaEstados::getMaquinaEstados()->addEstado(IDs::IDs::jogar_fase1);
+	MaquinaEstados::getMaquinaEstados()->addEstado(IDs::IDs::jogar_fase2);
 	pGerenteGrafico->CenterView(0.0, 0.0);
 }
 
@@ -46,17 +46,6 @@ void Jogo::exec()
         //ini1.desenhar();
         //window.display();
     }
-}
-
-void Jogo::execEnt()
-{
-	/*Plataforma plat = fase1.getChao();
-	plat.getCorpo()->setSize(sf::Vector2f(WIDTH, 60.f));*/
-
-	
-	fase1.executar();
-	//fase2.executar();
-	
 }
 
 Jogo::~Jogo() 

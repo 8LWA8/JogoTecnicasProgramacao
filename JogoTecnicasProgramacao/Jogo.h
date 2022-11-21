@@ -18,13 +18,12 @@ private:
 	//GerenteColisoes Ger;
 	//Inimigo ini1;
 
-	Fase_Primeira fase1;
-	Fase_Segunda fase2;
+	////Fase_Primeira fase1;
+	//Fase_Segunda fase2;
 
 public:
 	Jogo();
 	~Jogo();
 	void exec();
-	void execEnt();
 };
 

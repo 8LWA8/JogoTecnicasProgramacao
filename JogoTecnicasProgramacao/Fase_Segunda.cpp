@@ -37,7 +37,16 @@ void Fases::Fase_Segunda::executar()
 	{
 		if (Alienigena* a = dynamic_cast <Alienigena*>(*it))
 		{
-			//Ger.verificaColisao(&jogador1, );
+			Ger.colideCanto(a->getProj());
+			if (a->getProj()->getExiste() == true)
+			{
+				if (Ger.verificaColisao(&jogador1, a->getProj()))
+				{
+					//cout << "atingiu jog" << endl;
+					a->getProj()->danar(&jogador1);
+					a->getProj()->setAtingiu(true);
+				}
+			}
 		}
 	}
 
@@ -51,8 +60,7 @@ void Fases::Fase_Segunda::imprimir()
 
 void Fases::Fase_Segunda::criaAlienigenas()
 {
-	int n = 1;
-		//3 + rand() % 3;
+	int n = 3 + rand() % 3;
 	for (int i = 0; i < n; i++)
 	{
 		Alienigena* a1 = new Alienigena(sf::Vector2f(500.f - 50.f * i, 200.f));
@@ -65,10 +73,10 @@ void Fases::Fase_Segunda::criaAlienigenas()
 
 void Fases::Fase_Segunda::criaPlataformas()
 {
-	int n = 3 + rand() % 3;
+	int n = 3 + rand() % 2;
 	for (int i = 0; i < n; i++)
 	{
-		Plataforma* p1 = new Plataforma(sf::Vector2f(100.f - 300.f * i, -100.f + 100.f * i), sf::Vector2f(100.f + i * 100, 20.f));
+		Plataforma* p1 = new Plataforma(sf::Vector2f(200.f - 300.f * i, -250.f + 100.f * i), sf::Vector2f(100.f + i * 100, 20.f));
 		Entidade* e1 = static_cast <Entidade*>(p1);
 		LEnt.addEntidade(e1);
 		Ger.getListObst()->push_back(p1);

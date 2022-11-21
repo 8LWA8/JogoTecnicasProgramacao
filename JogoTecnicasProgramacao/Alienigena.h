@@ -10,16 +10,16 @@ namespace Entidades
             public Inimigo
         {
         private:
-            bool atirou;
+            //bool atirou;
             Projetil* proj;
         public:
             Alienigena(const sf::Vector2f pos);
             ~Alienigena();
             void executar();
             void atirar();
-            void setAtirou(bool estado);
-            void getProj();
-            bool getAtirou();
+            //void setAtirou(bool estado);
+            //bool getAtirou();
+            Projetil* getProj();
         };
     }
 }

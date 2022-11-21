@@ -99,12 +99,6 @@
     <ClCompile Include="ConstrutorFase.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Jogador1.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Jogador2.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Coord.h">
@@ -192,15 +186,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="IDs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ConstrutorFase.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="jogador1.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Jogador2.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

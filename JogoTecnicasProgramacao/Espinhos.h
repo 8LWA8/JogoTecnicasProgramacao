@@ -9,10 +9,10 @@ namespace Entidades
             public Obstaculo
         {
         private:
-            float comprimento;
+            float altura;
         public:
             Espinhos();
-            Espinhos(const sf::Vector2f pos, const sf::Vector2f tam, float comp);
+            Espinhos(const sf::Vector2f pos, const sf::Vector2f tam, float altu);
             ~Espinhos();
             void setAltura(float l);
             float getAltura();

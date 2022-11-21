@@ -12,7 +12,7 @@ namespace Estados
         Estado();
         ~Estado();
         virtual void executar() = 0;
-        virtual void desenhar();
+        //virtual void desenhar();
         void setRemover(const bool remover = true);
         const bool getRemover() const;
     };

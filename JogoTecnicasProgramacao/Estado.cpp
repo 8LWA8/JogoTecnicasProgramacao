@@ -16,9 +16,9 @@ Estado::~Estado() {
 
 }
 
-void Estado::desenhar() {
-
-}
+//void Estado::desenhar() {
+//
+//}
 
 void Estado::setRemover(const bool remover) {
     this->remover = remover;

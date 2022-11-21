@@ -1,7 +1,7 @@
 #include "Alienigena.h"
 using namespace Entidades::Personagens;
 
-Alienigena::Alienigena(const sf::Vector2f pos): atirou(false)
+Alienigena::Alienigena(const sf::Vector2f pos)//: atirou(false)
 {
 	setTextura("alien_parado.png");
 	corpo.setSize(sf::Vector2f(40.f, 80.f));
@@ -26,21 +26,34 @@ void Alienigena::executar()
 		this->atirar();
 		this->moveAleatorio();
 		this->resetColl();
-
+	}
+	else
+	{
+		proj->setExiste(false);
 	}
 }
 
 void Alienigena::atirar()
 {
+	//setAtirou(true);
+	proj->recebePosAlien(corpo.getPosition());
 	proj->executar();
 }
 
 
-void Alienigena::setAtirou(bool estado) 
+//void Alienigena::setAtirou(bool estado) 
+//{
+//	this->atirou = estado;
+//}
+
+Entidades::Projetil* Alienigena::getProj()
 {
-	this->atirou = estado;
+	return proj;
 }
-bool Alienigena::getAtirou() 
-{
-	return this->atirou;
-}
+
+
+//
+//bool Alienigena::getAtirou() 
+//{
+//	return this->atirou;
+//}

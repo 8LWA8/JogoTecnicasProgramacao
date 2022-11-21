@@ -21,7 +21,6 @@ namespace Fases
 		Jogador jogador1;
 		Gerenciadores::GerenteColisoes Ger;
 		Listas::ListaEntidades LEnt;
-		EsferaPoder esfera1;
 		Plataforma chao;
 	
 	
