@@ -1,37 +1,44 @@
 #include "Projetil.h"
 #include "Personagem.h"
+#include <iostream>
+
 using namespace Entidades;
 using namespace Entidades::Personagens;
 
-Projetil::Projetil(): atingiu(false)
+Entidades::Projetil::Projetil(sf::Vector2f pos): atingiu(false)
 {
-
 	corpo.setSize(sf::Vector2f(20.f, 5.f));
-	vel.setVal(1.0, 0.0);
+	corpo.setPosition(pos);
+	corpo.move(sf::Vector2f(0.f, 35.f));
+	corpo.setFillColor(sf::Color::Red);
+	vel.setVal(0.2, 0.0);
+	std::cout << "criou projetil" << std::endl;
 }
 
 Entidades::Projetil::~Projetil()
 {
 }
 
-void Projetil::setAtingiu(bool a)
+void Entidades::Projetil::setAtingiu(bool a)
 {
 	atingiu = a;
 }
 
-bool Projetil::getAtingiu()
+bool Entidades::Projetil::getAtingiu()
 {
 	return atingiu;
 }
 
 void Entidades::Projetil::executar()
 {
+
 	imprimir();
-	corpo.move(sf::Vector2f(-400 * vel.getY(), 0.f));
+	corpo.move(sf::Vector2f(-2 * vel.getX(), 0.f));
+
 	
 }
 
-void Projetil::danar(Entidade* ent)
+void Entidades::Projetil::danar(Entidade* ent)
 {
 	if (ent != NULL)
 	{

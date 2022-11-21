@@ -35,10 +35,24 @@ MaquinaEstados::~MaquinaEstados() {
     }
 }
 
-void MaquinaEstados::addEstado(const IDs ID) {
-    Estado* estado = construtorEstado.criarEstado(ID);
+void MaquinaEstados::addEstado(const IDs::IDs ID) {
+    Estado* estado = nullptr;
+
+    //switch case
+
+    switch (ID)
+    {
+    case IDs::IDs::jogar_fase1:
+        estado = (Estado*) new Fases::Fase_Primeira();
+        break;
+    case IDs::IDs::jogar_fase2:
+        estado = (Estado*) new Fases::Fase_Segunda();
+    case IDs::IDs::menu:
+        estado = (Estado*) new Menu();
+    }
+
     if (estado == nullptr) {
-        std::cout << "ERROR::Jungle::Gerenciador::GerenciadorEstado::estado eh nullptr" << std::endl;
+        std::cout << "estado eh nullptr" << std::endl;
         exit(1);
     }
     pilhaEstados.push(estado);

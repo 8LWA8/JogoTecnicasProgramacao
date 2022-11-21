@@ -1,5 +1,6 @@
 #pragma once
 #include "Inimigo.h"
+#include "Projetil.h"
 
 namespace Entidades
 {
@@ -10,11 +11,14 @@ namespace Entidades
         {
         private:
             bool atirou;
+            Projetil* proj;
         public:
-            Alienigena();
+            Alienigena(const sf::Vector2f pos);
             ~Alienigena();
-            //void executar();
+            void executar();
+            void atirar();
             void setAtirou(bool estado);
+            void getProj();
             bool getAtirou();
         };
     }

@@ -1,26 +1,28 @@
 #pragma once
-#include "Jogador1.h"
+#include "Jogador.h"
 #include "Inimigo.h"
 #include "Robo.h"
+#include "Estado.h"
+#include "Plataforma.h"
 #include "Rocha.h"
 #include "EsferaPoder.h"
 #include "Entidade.h"
 #include "ListaEntidades.h"
 #include "GerenteColisoes.h"
 
-
+using namespace Estados;
 
 namespace Fases
 {
     class Fase :
-        public Ente
+        public Estado
     {
 	protected:
-		Jogador1 jogador1;
+		Jogador jogador1;
 		Gerenciadores::GerenteColisoes Ger;
 		Listas::ListaEntidades LEnt;
 		EsferaPoder esfera1;
-		
+		Plataforma chao;
 	
 	
 
@@ -29,6 +31,7 @@ namespace Fases
 		Fase();
 		~Fase();
 		virtual void executar() = 0;
+		Plataforma getChao();
 		void criaRobos();
 		void criaRochas();
 		void criaPoderes();

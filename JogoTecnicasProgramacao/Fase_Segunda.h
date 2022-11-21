@@ -1,5 +1,9 @@
 #pragma once
 #include "Fase.h"
+#include "Plataforma.h"
+#include "Alienigena.h"
+
+using namespace Entidades;
 
 namespace Fases
 {
@@ -8,7 +12,11 @@ namespace Fases
     {
     private:
     public:
+        Fase_Segunda();
+        ~Fase_Segunda();
         void executar();
         void imprimir();
+        void criaAlienigenas();
+        void criaPlataformas();
     };
 }

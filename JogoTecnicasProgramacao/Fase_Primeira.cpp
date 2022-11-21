@@ -43,8 +43,6 @@ namespace Fases {
 
 		this->imprimir();
 		
-		
-		//this->imprimir();
 	}
 
 	void Fase_Primeira::imprimir()

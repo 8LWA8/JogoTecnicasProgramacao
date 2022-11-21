@@ -21,7 +21,6 @@ namespace Fases
     private:
  
     public:
-        Plataforma chao;
 
         Fase_Primeira();
         ~Fase_Primeira();

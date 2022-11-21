@@ -2,6 +2,9 @@
 
 #include "Estado.h"
 #include "GerenteGrafico.h"
+#include "Fase_Primeira.h"
+#include "Fase_Segunda.h"
+#include "Menu.h"
 #include "IDs.h"
 #include <stack>
 

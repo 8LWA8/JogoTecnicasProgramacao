@@ -20,7 +20,7 @@ namespace Gerenciadores {
 	class GerenteColisoes
 	{
 		//ListaEntidades* pLista;
-	protected:
+	private:
 		vector <Inimigo*> LIs;
 		list <Obstaculo*> LOs;
 		vector <EsferaPoder*> LPs;

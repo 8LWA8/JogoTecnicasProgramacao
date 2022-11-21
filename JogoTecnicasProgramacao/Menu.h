@@ -1,11 +1,14 @@
 #pragma once
 #include "Ente.h"
+#include "Estado.h"
 #include <SFML/Graphics.hpp>
 #include <iostream>
 
+using namespace Estados;
+
 //APAGAR//Código inspirado no vídeo: https://www.youtube.com/watch?v=h8-Q4eu3Qt4&t=148s e no Github: https://github.com/terroo/menu-sfml
 class Menu :
-    public Ente
+    public Estado
 {
     int pos;
     bool pressed, theselect;

@@ -9,6 +9,7 @@ using namespace Entidades::Personagens;
 Jogo::Jogo(): 
 pGerenteGrafico(pGerenteGrafico->getInstance()), fase1()
 {
+	MaquinaEstados::getMaquinaEstados()->addEstado(IDs::IDs::jogar_fase1);
 	pGerenteGrafico->CenterView(0.0, 0.0);
 }
 
@@ -27,7 +28,9 @@ void Jogo::exec()
 		
 		
 		pGerenteGrafico->clear();
-		execEnt();
+
+		MaquinaEstados::getMaquinaEstados()->executar();
+		//execEnt();
 		
 		
 		
@@ -47,13 +50,12 @@ void Jogo::exec()
 
 void Jogo::execEnt()
 {
-	Plataforma* plat = &fase1.chao;
-	plat->getCorpo()->setSize(sf::Vector2f(WIDTH, 60.f));
-	plat->getCorpo()->setPosition(sf::Vector2f(-WIDTH/2, 300.f));
+	/*Plataforma plat = fase1.getChao();
+	plat.getCorpo()->setSize(sf::Vector2f(WIDTH, 60.f));*/
 
 	
 	fase1.executar();
-	
+	//fase2.executar();
 	
 }
 

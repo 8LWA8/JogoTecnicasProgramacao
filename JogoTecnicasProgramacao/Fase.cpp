@@ -21,6 +21,11 @@ Fase::~Fase()
 }
 
 
+Plataforma Fase::getChao()
+{
+	return chao;
+}
+
 void Fase::criaRobos()
 {
 	//sorteia quantos inimigos (entre 3 e 5)
