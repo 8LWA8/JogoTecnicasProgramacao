@@ -7,9 +7,14 @@ namespace Entidades
 		public Entidade
 	{
 	private:
-		
+		bool atingiu;
 	public:
-		
+		Projetil();
+		~Projetil();
+		void setAtingiu(bool a);
+		bool getAtingiu();
+		void executar();
+		void danar(Entidade* ent);
 	};
 }
 
