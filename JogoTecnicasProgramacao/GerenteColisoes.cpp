@@ -1,7 +1,5 @@
 #include "GerenteColisoes.h"
-#include "Inimigo.h"
-#include "Jogador1.h"
-#include "Jogador2.h"
+
 
 #define WIDTH 1200
 
@@ -232,10 +230,52 @@ namespace Gerenciadores {
 	{
 		return &LPs;
 	}
+
+	vector <Jogador*>* GerenteColisoes::getVecJogs()
+	{
+		return &LJs;
+	}
+
 	list <Obstaculo*>* GerenteColisoes::getListObst()
 	{
 		return &LOs;
 	}
+
+
+	void GerenteColisoes::gerenciarColisoes() 
+	{
+		vector <Jogador*>::iterator it;
+		for (it = LJs.begin(); it != LJs.end(); it++)
+		{
+			if ((*it)->getVivo() == true)
+			{
+				this->checaColisaoEsfera(*it);
+				this->checaColisaoIni(*it);
+				this->checaColisaoObst(*it);
+			}
+		}
+		
+	}
+
+
+	void GerenteColisoes::incluirJogador(Jogador* jog) 
+	{
+		if (jog != NULL) 
+			LJs.push_back(jog);
+	}
+	void GerenteColisoes::incluirObstaculo(Obstaculo* obst) 
+	{
+		if (obst != NULL)
+			LOs.push_back(obst);
+	}
+
+	void GerenteColisoes::incluirInimigo(Inimigo* inim)
+	{
+		if (inim != NULL)
+			LIs.push_back(inim);
+	
+	}
+
 }
 	
 

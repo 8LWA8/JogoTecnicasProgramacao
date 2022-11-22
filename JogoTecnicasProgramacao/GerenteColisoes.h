@@ -1,7 +1,8 @@
 #pragma once
 #include "Entidade.h"
 #include "Inimigo.h"
-#include "Jogador.h"
+#include "Jogador1.h"
+#include "Jogador2.h"
 #include "EsferaPoder.h"
 #include "Obstaculo.h"
 #include "ListaEntidades.h"
@@ -24,6 +25,7 @@ namespace Gerenciadores {
 		vector <Inimigo*> LIs;
 		list <Obstaculo*> LOs;
 		vector <EsferaPoder*> LPs;
+		vector <Jogador*> LJs;
 		
 
 	public:
@@ -38,6 +40,7 @@ namespace Gerenciadores {
 
 		vector <Inimigo*>* getVecInimigos();
 		vector <EsferaPoder*>* getVecPoder();
+		vector <Jogador*>* getVecJogs();
 		list <Obstaculo*>* getListObst();
 
 		void colideCanto(Entidade* ent);
@@ -45,5 +48,11 @@ namespace Gerenciadores {
 		void checaColisaoObst(Entidade* ent);
 		void checaColisaoIni(Entidade* ent);
 		void checaColisaoEsfera(Jogador* jog);
+
+		void gerenciarColisoes();
+
+		void incluirJogador(Jogador* jog);
+		void incluirObstaculo(Obstaculo* obst);
+		void incluirInimigo(Inimigo* inim);
 	};
 }

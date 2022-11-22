@@ -8,9 +8,13 @@
 namespace Fases {
 	Fase_Primeira::Fase_Primeira()
 	{
+		this->getCorpo()->setSize(sf::Vector2f(2100.0f, 1900.0f));
+		this->getCorpo()->setPosition(sf::Vector2f(-700.0f, -500.0f));
 		this->setTextura("assets//textures//background.jpg");
 		criaVilgax();
 		criaEspinhos();
+		Ger.incluirJogador(&jogador1);
+		Ger.incluirObstaculo(&chao);
 
 	}
 
@@ -20,16 +24,21 @@ namespace Fases {
 
 	void Fases::Fase_Primeira::executar()
 	{
-
+		this->imprimir();
 
 		//INSTANCIAR DINAMICAMENTE JOGADOR E COLOCAR EM LISTA
+		
 		jogador1.executar();
-		pGerenteGrafico->printVida(jogador1.getNumVidas());
-		pGerenteGrafico->printPont(jogador1.getPontuacao());
 		LEnt.executarTodos();
-
 		chao.executar();
 
+		
+		pGerenteGrafico->printVida(jogador1.getNumVidas());
+		pGerenteGrafico->printPont(jogador1.getPontuacao());
+		
+		//Ger.gerenciarColisoes();
+		
+		
 
 		//fase1.Ger.verificaColisao(&jogador1, &fase1.esfera1);
 		Ger.checaColisaoEsfera(&jogador1);
@@ -39,9 +48,9 @@ namespace Fases {
 		Ger.checaColisaoIni(&jogador1);
 		Ger.checaColisaoIni(&chao);
 		Ger.verificaColisao(&jogador1, &chao);
+		
 
-
-		this->imprimir();
+		
 		
 	}
 

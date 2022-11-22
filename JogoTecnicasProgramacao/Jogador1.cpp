@@ -43,6 +43,6 @@ void Jogador1::mover()
 Jogador1 Jogador1::operator++(int)
 {
     Jogador1 jog1 = *this;
-    this->setPontuacao(this->getPontuacao() + 1);
+    setPontuacao(getPontuacao() + 1);
     return jog1;
 }
