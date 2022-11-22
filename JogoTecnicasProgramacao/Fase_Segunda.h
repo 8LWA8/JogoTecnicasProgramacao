@@ -16,7 +16,8 @@ namespace Fases
         ~Fase_Segunda();
         void executar();
         void imprimir();
-        void criaAlienigenas();
         void criaPlataformas();
+        void criaAlienigenas();
+        
     };
 }

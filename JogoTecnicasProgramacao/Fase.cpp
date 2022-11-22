@@ -7,17 +7,32 @@ using namespace Obstaculos;
 
 namespace Fases{
 
-	Fase::Fase() : jogador1(), LEnt(), Ger(/*&LEnt*/)
+	
+
+	Fase::Fase() :  jogador1(), jogador2(), LEnt(), Ger(/*&LEnt*/)
 {
+
+	this->getCorpo()->setSize(sf::Vector2f(2100.0f, 1900.0f));
+	this->getCorpo()->setPosition(sf::Vector2f(-700.0f, -500.0f));
+	this->setTextura("assets//textures//background.jpg");
+
 	criaRobos();
 	criaRochas();
 	criaPoderes();
+	/*
+	Ger.incluirJogador(&jogador1);
+	Ger.incluirJogador(&jogador2);
+	Ger.incluirObstaculo(&chao);
+	*/
 }
+	
+	
 
 Fase::~Fase()
 {
 	LEnt.limpaLista();
 	Ger.getVecInimigos()->erase(Ger.getVecInimigos()->begin(), Ger.getVecInimigos()->end());
+
 }
 
 
@@ -64,6 +79,20 @@ void Fase::criaPoderes()
 		LEnt.addEntidade(e1);
 		Ger.getVecPoder()->push_back(esfera);
 	}
+}
+
+void Fase::criaJogadores() 
+{
+	if (jogador1 == nullptr && jogador2 == nullptr) {
+		jogador1 = new Jogador1();
+		jogador2 = new Jogador2();
+
+		LEnt.addEntidade(jogador1);
+		LEnt.addEntidade(jogador2);
+		Ger.getVecJogs()->push_back(jogador1);
+		Ger.getVecJogs()->push_back(jogador2);
+	}
+
 }
 
 }

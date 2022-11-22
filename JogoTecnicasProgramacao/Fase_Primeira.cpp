@@ -8,13 +8,12 @@
 namespace Fases {
 	Fase_Primeira::Fase_Primeira()
 	{
-		this->getCorpo()->setSize(sf::Vector2f(2100.0f, 1900.0f));
-		this->getCorpo()->setPosition(sf::Vector2f(-700.0f, -500.0f));
-		this->setTextura("assets//textures//background.jpg");
-		criaVilgax();
-		criaEspinhos();
-		Ger.incluirJogador(&jogador1);
-		Ger.incluirObstaculo(&chao);
+		
+		this->criaVilgax();
+		this->criaEspinhos();
+		this->criaPlataformas();
+		this->criaJogadores();
+		
 
 	}
 
@@ -28,18 +27,18 @@ namespace Fases {
 
 		//INSTANCIAR DINAMICAMENTE JOGADOR E COLOCAR EM LISTA
 		
-		jogador1.executar();
+		
 		LEnt.executarTodos();
-		chao.executar();
-
-		
-		pGerenteGrafico->printVida(jogador1.getNumVidas());
-		pGerenteGrafico->printPont(jogador1.getPontuacao());
-		
-		//Ger.gerenciarColisoes();
-		
 		
 
+		
+		pGerenteGrafico->printVida(jogador1->getNumVidas());
+		pGerenteGrafico->printPont(jogador1->getPontuacao());
+		
+		Ger.gerenciarColisoes();
+		
+		
+		/*
 		//fase1.Ger.verificaColisao(&jogador1, &fase1.esfera1);
 		Ger.checaColisaoEsfera(&jogador1);
 		Ger.colideCanto(&jogador1);
@@ -50,7 +49,7 @@ namespace Fases {
 		Ger.verificaColisao(&jogador1, &chao);
 		
 
-		
+		*/
 		
 	}
 
@@ -84,5 +83,12 @@ namespace Fases {
 			//Obstaculo* o1 = static_cast <Obstaculo*>(es1);
 			Ger.getListObst()->push_back(es1);
 		}
+	}
+
+	void Fase_Primeira::criaPlataformas() 
+	{
+		Plataforma* plat = new Plataforma();
+		LEnt.addEntidade(plat);
+		Ger.getListObst()->push_back(plat);
 	}
 }

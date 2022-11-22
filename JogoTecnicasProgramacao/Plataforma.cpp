@@ -3,26 +3,29 @@ using namespace Entidades::Obstaculos;
 
 Plataforma::Plataforma()
 {
+	this->setId(5);
+	this->getCorpo()->setSize(sf::Vector2f(1200.f, 60.f));
+	this->getCorpo()->setPosition(sf::Vector2f(-600.f, 300.f));
+	this->setTextura("plataforma.png");
+	this->setMov(false);
 	
-	corpo.setSize(sf::Vector2f(1200.f, 60.f));
-	corpo.setPosition(sf::Vector2f(-600.f, 300.f));
-	
-	this->mov = false;
 	tam.setVal(corpo.getGlobalBounds().width, corpo.getGlobalBounds().height);
 	coordenada.setVal(corpo.getGlobalBounds().left, corpo.getGlobalBounds().top);
-	this->setTextura("plataforma.png");
+	
 
 }
 
 Plataforma::Plataforma(const sf::Vector2f pos, const sf::Vector2f tamanho)
 {
-	corpo.setSize(tamanho);
-	corpo.setPosition(pos);
+	this->setId(5);
+	this->getCorpo()->setSize(tamanho);
+	this->getCorpo()->setPosition(pos);
+	this->setTextura("plataforma.png");
+	this->setMov(false);
 
-	this->mov = false;
 	tam.setVal(corpo.getGlobalBounds().width, corpo.getGlobalBounds().height);
 	coordenada.setVal(corpo.getGlobalBounds().left, corpo.getGlobalBounds().top);
-	this->setTextura("plataforma.png");
+	
 }
 
 Plataforma::~Plataforma()

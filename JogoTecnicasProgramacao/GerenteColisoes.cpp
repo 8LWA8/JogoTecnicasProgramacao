@@ -172,9 +172,18 @@ namespace Gerenciadores {
 		{
 			if (verificaColisao(ent, *it) == true && (*it)->getCausa_dano() == true)
 			{
-				if (Jogador* j = dynamic_cast <Jogador*>(ent))
+				if (ent->getId() == 1) {
+					if (Jogador1* j = dynamic_cast <Jogador1*>(ent))
+					{
+						(*it)->danar(ent);
+					}
+				}
+				else if (ent->getId() == 2) 
 				{
-					(*it)->danar(ent);
+					if (Jogador2* j = dynamic_cast <Jogador2*>(ent))
+					{
+						(*it)->danar(ent);
+					}
 				}
 			}
 		}
@@ -189,25 +198,46 @@ namespace Gerenciadores {
 			{
 				if (verificaColisao(ent, *it))
 				{
-					if (Jogador1* j = dynamic_cast <Jogador1*>(ent))
-					{
-						if (j->getEmpoderado() == true)
+					if (ent->getId() == 1) {
+						if (Jogador1* j = dynamic_cast <Jogador1*>(ent))
 						{
-							(*it)->setVivo(false);
-							j++;
-						}
-						else
-						{
-							(*it)->danar(ent);
+							if (j->getEmpoderado() == true)
+							{
+								(*it)->setVivo(false);
+								j++;
+							}
+							else
+							{
+								(*it)->danar(ent);
+							}
 						}
 					}
+						else if (ent->getId() == 2) {
+							if (Jogador2* j2 = dynamic_cast <Jogador2*>(ent))
+							{
+								if (j2->getEmpoderado() == true)
+								{
+									(*it)->setVivo(false);
+									j2++;
+								}
+								else
+								{
+									(*it)->danar(ent);
+								}
+
+							}
+						}
+					
 				}
 			}
 		}
 	}
+
+
 	void GerenteColisoes::checaColisaoEsfera(Jogador* jog)
 	{
 		vector <EsferaPoder*>::iterator it;
+		vector <Jogador*>::iterator itJg;
 		for (it = LPs.begin(); it != LPs.end(); it++)
 		{
 			if ((*it)->getColetada() == false)
@@ -244,12 +274,27 @@ namespace Gerenciadores {
 
 	void GerenteColisoes::gerenciarColisoes() 
 	{
+
+		list <Obstaculo*>::iterator itOb;
+		
+		for (itOb = LOs.begin(); itOb != LOs.end(); itOb++) 
+		{
+			if ((*itOb)->getId() == 5) 
+			{
+				this->checaColisaoIni(*itOb);
+				this->checaColisaoObst(*itOb);
+			}
+
+		}
+
 		vector <Jogador*>::iterator it;
+
 		for (it = LJs.begin(); it != LJs.end(); it++)
 		{
 			if ((*it)->getVivo() == true)
 			{
 				this->checaColisaoEsfera(*it);
+				this->colideCanto(*it);
 				this->checaColisaoIni(*it);
 				this->checaColisaoObst(*it);
 			}
@@ -275,6 +320,8 @@ namespace Gerenciadores {
 			LIs.push_back(inim);
 	
 	}
+
+	
 
 }
 	

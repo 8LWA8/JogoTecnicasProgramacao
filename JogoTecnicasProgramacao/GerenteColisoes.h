@@ -54,5 +54,6 @@ namespace Gerenciadores {
 		void incluirJogador(Jogador* jog);
 		void incluirObstaculo(Obstaculo* obst);
 		void incluirInimigo(Inimigo* inim);
+		
 	};
 }

@@ -15,14 +15,14 @@ Fases::Fase_Segunda::~Fase_Segunda()
 void Fases::Fase_Segunda::executar()
 {
 	//INSTANCIAR DINAMICAMENTE JOGADOR E COLOCAR EM LISTA
-	jogador1.executar();
-	pGerenteGrafico->printVida(jogador1.getNumVidas());
-	pGerenteGrafico->printPont(jogador1.getPontuacao());
+	
+	pGerenteGrafico->printVida(jogador1->getNumVidas());
+	pGerenteGrafico->printPont(jogador1->getPontuacao());
 	LEnt.executarTodos();
 
-	chao.executar();
+	Ger.gerenciarColisoes();
 
-
+	/*
 	//fase1.Ger.verificaColisao(&jogador1, &fase1.esfera1);
 	Ger.checaColisaoEsfera(&jogador1);
 	Ger.colideCanto(&jogador1);
@@ -31,7 +31,7 @@ void Fases::Fase_Segunda::executar()
 	Ger.checaColisaoIni(&jogador1);
 	Ger.checaColisaoIni(&chao);
 	Ger.verificaColisao(&jogador1, &chao);
-
+	*/
 	vector <Inimigo*>::iterator it;
 	for (it = (Ger.getVecInimigos())->begin(); it != (Ger.getVecInimigos())->end(); it++)
 	{
@@ -40,10 +40,10 @@ void Fases::Fase_Segunda::executar()
 			Ger.colideCanto(a->getProj());
 			if (a->getProj()->getExiste() == true)
 			{
-				if (Ger.verificaColisao(&jogador1, a->getProj()))
+				if (Ger.verificaColisao(jogador1, a->getProj()))
 				{
 					//cout << "atingiu jog" << endl;
-					a->getProj()->danar(&jogador1);
+					a->getProj()->danar(jogador1);
 					a->getProj()->setAtingiu(true);
 				}
 			}
@@ -82,3 +82,4 @@ void Fases::Fase_Segunda::criaPlataformas()
 		Ger.getListObst()->push_back(p1);
 	}
 }
+

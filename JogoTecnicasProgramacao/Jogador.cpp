@@ -22,27 +22,29 @@ Jogador::~Jogador()
 
 void Jogador::executar()
 {
-	this->imprimir();
-    this->mover();
-    this->resetColl();
-    if (empoderado == true)
-    {
-        float dt = relogio.getElapsedTime().asSeconds();
-        if (dt >= 3.0f)
+    if (this->getVivo()) {
+        this->imprimir();
+        this->mover();
+        this->resetColl();
+        if (empoderado == true)
         {
-            empoderado = false;
-            corpo.setFillColor(sf::Color::White);
-            relogio.restart();
+            float dt = relogio.getElapsedTime().asSeconds();
+            if (dt >= 3.0f)
+            {
+                empoderado = false;
+                corpo.setFillColor(sf::Color::White);
+                relogio.restart();
+            }
         }
-    }
 
-    if (corpo.getFillColor() == sf::Color::Red)
-    {
-        float dt = relogio.getElapsedTime().asSeconds();
-        if (dt >= 1.0f)
+        if (corpo.getFillColor() == sf::Color::Red)
         {
-            corpo.setFillColor(sf::Color::White);
-            relogio.restart();
+            float dt = relogio.getElapsedTime().asSeconds();
+            if (dt >= 1.0f)
+            {
+                corpo.setFillColor(sf::Color::White);
+                relogio.restart();
+            }
         }
     }
 }
@@ -56,7 +58,10 @@ void Jogador::setPontuacao(int p)
 }
 int Jogador::getPontuacao()
 {
-    return pontuacao;
+    if (this != nullptr) {
+        return pontuacao;
+    }
+    return 0;
 }
 
 void Jogador::ficarEmpoderado()

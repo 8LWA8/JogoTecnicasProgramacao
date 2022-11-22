@@ -19,7 +19,8 @@ namespace Fases
         public Estado
     {
 	protected:
-		Jogador1 jogador1;
+		Jogador1* jogador1;
+		Jogador2* jogador2;
 		Gerenciadores::GerenteColisoes Ger;
 		Listas::ListaEntidades LEnt;
 		Plataforma chao;
@@ -35,5 +36,8 @@ namespace Fases
 		void criaRobos();
 		void criaRochas();
 		void criaPoderes();
+		virtual void criaPlataformas() = 0;
+		virtual void criaJogadores();
     };
+	
 }

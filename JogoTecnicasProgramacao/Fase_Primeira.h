@@ -31,6 +31,7 @@ namespace Fases
         void executar();
         void imprimir();
         void criaVilgax();
+        void criaPlataformas();
         void criaEspinhos();
     };
 }

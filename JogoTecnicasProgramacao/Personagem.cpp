@@ -29,12 +29,14 @@ void Personagem::executar()
 
 float Personagem::getNumVidas() 
 {
-	return this->num_vidas;
+	if (this != nullptr) {
+		return num_vidas; 
+	}
 }
 
 void Personagem::setNumVidas(float vidas)
 {
-	this->num_vidas = vidas;
+	num_vidas = vidas;
 }
 
 void Personagem::danar(Entidade* ent) {}
