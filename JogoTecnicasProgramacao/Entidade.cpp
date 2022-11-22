@@ -1,5 +1,6 @@
 #include "Entidade.h"
 #include <iostream>
+
 using namespace Entidades;
 
 Entidade::Entidade() : coordenada(0.0, 0.0),

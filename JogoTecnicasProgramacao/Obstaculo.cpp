@@ -28,3 +28,5 @@ const bool Obstaculo::getCausa_dano()
 {
 	return causa_dano;
 }
+
+void Obstaculo::salvar() {}

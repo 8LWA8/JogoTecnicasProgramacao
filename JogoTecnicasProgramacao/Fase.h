@@ -19,12 +19,10 @@ namespace Fases
         public Estado
     {
 	protected:
-		Jogador1* jogador1;
-		Jogador2* jogador2;
+		 Jogador1* jogador1;
+		 Jogador2* jogador2;
 		Gerenciadores::GerenteColisoes Ger;
 		Listas::ListaEntidades LEnt;
-		Plataforma chao;
-	
 	
 
 		//Entidades::Personagens::Inimigo* pInimigo1;
@@ -32,12 +30,14 @@ namespace Fases
 		Fase();
 		~Fase();
 		virtual void executar() = 0;
-		Plataforma getChao();
+		virtual void imprimir()= 0;
 		void criaRobos();
 		void criaRochas();
 		void criaPoderes();
 		virtual void criaPlataformas() = 0;
 		virtual void criaJogadores();
+		Jogador1* getJog1();
+		Jogador2* getJog2();
     };
 	
 }

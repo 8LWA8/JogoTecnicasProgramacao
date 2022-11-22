@@ -9,7 +9,7 @@ namespace Fases{
 
 	
 
-	Fase::Fase() :  jogador1(), jogador2(), LEnt(), Ger(/*&LEnt*/)
+	Fase::Fase() : jogador1(), jogador2(),  LEnt(), Ger(/*&LEnt*/)
 {
 
 	this->getCorpo()->setSize(sf::Vector2f(2100.0f, 1900.0f));
@@ -27,7 +27,7 @@ namespace Fases{
 }
 	
 	
-
+	
 Fase::~Fase()
 {
 	LEnt.limpaLista();
@@ -35,11 +35,6 @@ Fase::~Fase()
 
 }
 
-
-Plataforma Fase::getChao()
-{
-	return chao;
-}
 
 void Fase::criaRobos()
 {
@@ -95,4 +90,23 @@ void Fase::criaJogadores()
 
 }
 
+Jogador1* Fase::getJog1() 
+{
+	if (jogador1 != nullptr) 
+	{
+		return jogador1;
+	}
+	std::cout << "ERROR: ponteiro NULL" << std::endl;
+	return NULL;
 }
+Jogador2* Fase::getJog2() {
+	if (jogador2 != nullptr)
+	{
+		return jogador2;
+	}
+	std::cout << "ERROR: ponteiro NULL" << std::endl;
+	return NULL;
+}
+
+}
+

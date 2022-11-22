@@ -24,8 +24,7 @@ namespace Fases
 
         Fase_Primeira();
         ~Fase_Primeira();
-        //Alienigena alien1;
-        //Espinhos espi1;
+        
  
 
         void executar();

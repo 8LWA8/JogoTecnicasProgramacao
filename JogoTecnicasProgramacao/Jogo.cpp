@@ -27,10 +27,12 @@ void Jogo::exec()
         }
 		
 		
+
 		pGerenteGrafico->clear();
 
 		MaquinaEstados::getMaquinaEstados()->executar();
 		//execEnt();
+		
 		
 		
 		
@@ -40,12 +42,14 @@ void Jogo::exec()
 		
 		
 		
-		
-		//window.clear();
-        //jogador1.desenhar();
-        //ini1.desenhar();
-        //window.display();
     }
+
+	Estado* est = MaquinaEstados::getMaquinaEstados()->getEstadoAtual();
+	
+	Fase_Primeira* fas = dynamic_cast<Fase_Primeira*>(est);
+	fas->getJog1()->salvar();
+
+	
 }
 
 Jogo::~Jogo() 

@@ -1,11 +1,37 @@
 #include "Jogador1.h"
-
+#include <iostream>
 using namespace Entidades::Personagens;
 
 Jogador1::Jogador1() 
 {
     this->setId(1);
     this->setTextura("assets\\textures\\astronauta.png");
+    string text;
+    ifstream MyReadFile("assets\\file.txt");
+        if (MyReadFile) 
+        {
+            
+            while (getline(MyReadFile, text)) 
+            {
+                float vid = std::stof(text);
+                if (vid>0)
+                this->setNumVidas(vid);
+                int pont = std::stoi(text);
+                this->setPontuacao(pont);
+                std::cout << text << std::endl;
+                
+                /*
+                getline(MyReadFile, text);
+                
+                this->setPontuacao(pont);
+                getline(MyReadFile, text);
+                float x = std::stof(text);
+                getline(MyReadFile, text);
+                float y = std::stof(text);
+
+                this->getCorpo()->setPosition(sf::Vector2f(x, y));*/
+            }
+        }
     
 }
 

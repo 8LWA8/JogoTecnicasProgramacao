@@ -40,3 +40,5 @@ void Personagem::setNumVidas(float vidas)
 }
 
 void Personagem::danar(Entidade* ent) {}
+
+void Personagem::salvar() {}

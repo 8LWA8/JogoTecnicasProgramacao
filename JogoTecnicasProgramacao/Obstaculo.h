@@ -16,6 +16,10 @@ namespace Entidades
             virtual void executar();
             virtual void danar(Entidade* ent);
             virtual const bool getCausa_dano();
+            
+            
+            //VIRTUAL PURA TESTE
+            void salvar();
         };
     }
 }

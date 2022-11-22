@@ -21,6 +21,10 @@ namespace Entidades
             virtual void executar();
             virtual void danar(Entidade* ent);
             virtual void levarDano(float dano) = 0;
+            
+
+            //VIRTUAL PURA TESTE
+            void salvar();
         };
     }
 }

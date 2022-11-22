@@ -42,3 +42,5 @@ void EsferaPoder::executar()
 void EsferaPoder::danar(Entidade* ent)
 {
 }
+
+void EsferaPoder::salvar() {}

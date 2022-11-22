@@ -1,5 +1,6 @@
 #pragma once
 //#include "Inimigo.h"
+
 #include "Jogador.h"
 #include "IDs.h"
 #include "Fase_Primeira.h"

@@ -25,7 +25,7 @@ namespace Entidades
             void ficarEmpoderado();
             bool getEmpoderado();
             void levarDano(float dano);
-
+            virtual void salvar();
             
             
 

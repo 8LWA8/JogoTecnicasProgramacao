@@ -16,4 +16,8 @@ public:
     bool getColetada();
     void executar();
     void danar(Entidade* ent);
+
+
+    //TESTE VIRTUAL PURA
+    void salvar();
 };

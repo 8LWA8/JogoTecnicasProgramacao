@@ -56,6 +56,7 @@ void Fases::Fase_Segunda::executar()
 
 void Fases::Fase_Segunda::imprimir()
 {
+	this->pGerenteGrafico->render(this->getCorpo());
 }
 
 void Fases::Fase_Segunda::criaAlienigenas()
@@ -73,6 +74,10 @@ void Fases::Fase_Segunda::criaAlienigenas()
 
 void Fases::Fase_Segunda::criaPlataformas()
 {
+	Plataforma* plat = new Plataforma();
+	LEnt.addEntidade(plat);
+	Ger.getListObst()->push_back(plat);
+
 	int n = 3 + rand() % 2;
 	for (int i = 0; i < n; i++)
 	{

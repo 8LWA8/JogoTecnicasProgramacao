@@ -92,3 +92,10 @@ void Jogador::levarDano(float dano)
     }
 }
 
+void Jogador::salvar() 
+{
+    ofstream Myfile("assets\\file.txt");
+    
+    Myfile << this->getNumVidas() << " " << this->getPontuacao() << " " << this->getCoord()->getX() << " " << this->getCoord()->getY();
+    
+}

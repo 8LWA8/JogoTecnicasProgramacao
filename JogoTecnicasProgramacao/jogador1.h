@@ -12,7 +12,7 @@ namespace Entidades {
 			Jogador1();
 			void mover();
 			Jogador1 operator++(int);
-
+			
 		};
 
 

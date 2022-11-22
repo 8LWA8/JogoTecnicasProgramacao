@@ -22,6 +22,10 @@ namespace Entidades
 		bool getExiste();
 		void danar(Entidade* ent);
 		void recebePosAlien(sf::Vector2f posAli);
+		
+
+		//VIRTUAL PURA TESTE
+		void salvar();
 	};
 }
 
