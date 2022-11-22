@@ -3,10 +3,10 @@
 #include "Estado.h"
 #include <SFML/Graphics.hpp>
 #include <iostream>
-
+#include <cstring>
 using namespace Estados;
 
-//APAGAR//Código inspirado no vídeo: https://www.youtube.com/watch?v=h8-Q4eu3Qt4&t=148s e no Github: https://github.com/terroo/menu-sfml
+//Código inspirado no vídeo: https://www.youtube.com/watch?v=h8-Q4eu3Qt4&t=148s e no Github: https://github.com/terroo/menu-sfml
 class Menu :
     public Estado
 {
@@ -15,7 +15,7 @@ class Menu :
 
     sf::Vector2i pos_mouse;
     sf::Vector2i mouse_coord;
-    std::vector<const char*> options;
+    std::vector<std::string> options;
     std::vector<sf::Vector2f> coords;
     std::vector<sf::Text> texts;
     std::vector<std::size_t> sizes;

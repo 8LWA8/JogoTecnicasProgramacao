@@ -8,12 +8,13 @@ using namespace Entidades::Personagens;
 Projetil::Projetil(sf::Vector2f pos): atingiu(false), existe(true)
 {
 	this->setDano(5.0f);
-	corpo.setSize(sf::Vector2f(20.f, 5.f));
+	corpo.setSize(sf::Vector2f(20.f, 10.f));
 	corpo.setPosition(pos);
 	corpo.move(sf::Vector2f(0.f, 35.f));
-	corpo.setFillColor(sf::Color::Red);
+	setTextura("projetil.png");
+	//corpo.setFillColor(sf::Color::Red);
 	vel.setVal(0.2, 0.0);
-	std::cout << "criou projetil" << std::endl;
+	//std::cout << "criou projetil" << std::endl;
 }
 
 Entidades::Projetil::~Projetil()

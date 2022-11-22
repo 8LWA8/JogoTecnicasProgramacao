@@ -35,9 +35,10 @@ namespace Gerenciadores {
 		bool isWindowOpen() const;
 		void closeWindow();
 		void handleWindowResize();
-		void print(const char* text);
+		void print(sf::Vector2f pos);
 		void printVida(float val);
 		void printPont(int val);
+		void setText(std::string text);
 
 		sf::RenderWindow* getWindow() const;
 		sf::Vector2u getWindowSize() const;

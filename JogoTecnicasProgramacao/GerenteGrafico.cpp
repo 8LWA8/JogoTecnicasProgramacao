@@ -2,6 +2,7 @@
 
 #include <cstring>
 #include <iostream>
+#include <string>
 
 #define FONT_PATH "assets\\textures\\font.ttf" //<-- PEGAR UMA FONTE
 #define WIDTH 1200
@@ -163,11 +164,14 @@ using namespace Gerenciadores;
 		clock.restart();
 	}
 
-	void GerenteGrafico::print(const char* text) 
+	void GerenteGrafico::print(sf::Vector2f pos)
 	{
-		sf::Text tex;
-		tex.setString(text);
+		/*sf::Text tex;
+		tex.setString(text);*/
+		std::string s = tex.getString();
+		tex.setPosition(pos);
 		GerenteGrafico::render(&tex);
+		std::cout << "imprimiu texto" << std::endl;
 	}
 
 	void GerenteGrafico::printVida(float val) 
@@ -190,4 +194,9 @@ using namespace Gerenciadores;
 		tex.setPosition(sf::Vector2f(-580.0f, -300.0f));
 
 		GerenteGrafico::render(&tex);
+	}
+
+	void Gerenciadores::GerenteGrafico::setText(std::string text)
+	{
+		tex.setString(text);
 	}
