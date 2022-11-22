@@ -11,10 +11,10 @@ void Menu::set_values()
 	pos_mouse = { 0,0 };
 	mouse_coord = { 0,0 };
 
-	options = { "NomeJogo", "Fase 1", "Fase 2", "Ranking", "Sair" };
+	options = { "Exploradores Espaciais", "Fase 1", "Fase 2", "Ranking", "Sair" };
 	texts.resize(5);
 	//coords = { {0,-300},{0, -200},{0, -100},{0, 0},{0, 100} };
-	sizes = { 20,24,24,20,24 };
+	sizes = { 45,24,24,24,24 };
 
 	
 }
@@ -44,9 +44,12 @@ void Menu::imprimir()
 	//std::cout << "imprime menu" << std::endl;
 	pGerenteGrafico->render(&corpo);
 
-	for (int i = 0; i < texts.size(); i++) {
-		texts[i].setCharacterSize(sizes[i]);
+	pGerenteGrafico->setText(options[0]);
+	pGerenteGrafico->print(sf::Vector2f(-150.f, -250.f), 45);
+
+	for (int i = 1; i < texts.size(); i++) {
+		//texts[i].setCharacterSize(sizes[i]);
 		pGerenteGrafico->setText(options[i]);
-		pGerenteGrafico->print(sf::Vector2f(-10.f, -250.f + 100.f * i),);
+		pGerenteGrafico->print(sf::Vector2f(-10.f, -250.f + 100.f * i), 30);
 	}
 }
