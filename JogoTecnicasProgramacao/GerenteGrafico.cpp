@@ -164,14 +164,15 @@ using namespace Gerenciadores;
 		clock.restart();
 	}
 
-	void GerenteGrafico::print(sf::Vector2f pos)
+	void GerenteGrafico::print(sf::Vector2f pos, int tam)
 	{
 		/*sf::Text tex;
 		tex.setString(text);*/
 		std::string s = tex.getString();
 		tex.setPosition(pos);
+		tex.setCharacterSize(tam);
 		GerenteGrafico::render(&tex);
-		std::cout << "imprimiu texto" << std::endl;
+		//std::cout << "imprimiu texto" << std::endl;
 	}
 
 	void GerenteGrafico::printVida(float val) 

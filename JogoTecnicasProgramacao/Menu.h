@@ -18,7 +18,7 @@ class Menu :
     std::vector<std::string> options;
     std::vector<sf::Vector2f> coords;
     std::vector<sf::Text> texts;
-    std::vector<std::size_t> sizes;
+    std::vector<int> sizes;
 
 protected:
     void set_values();
