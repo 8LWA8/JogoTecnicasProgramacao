@@ -171,6 +171,8 @@ using namespace Gerenciadores;
 		std::string s = tex.getString();
 		tex.setPosition(pos);
 		tex.setCharacterSize(tam);
+		tex.setOutlineColor(sf::Color::Red);
+		//tex.setOutlineThickness(4);
 		GerenteGrafico::render(&tex);
 		//std::cout << "imprimiu texto" << std::endl;
 	}
@@ -200,4 +202,15 @@ using namespace Gerenciadores;
 	void Gerenciadores::GerenteGrafico::setText(std::string text)
 	{
 		tex.setString(text);
+	}
+
+	sf::Text Gerenciadores::GerenteGrafico::getText()
+	{
+		return tex;
+	}
+
+	void Gerenciadores::GerenteGrafico::setTextOutline(float value)
+	{
+		tex.setOutlineThickness(value);
+		//std::cout << "menu outline" << tex.getOutlineThickness() << std::endl;
 	}
