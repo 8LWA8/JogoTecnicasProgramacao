@@ -39,6 +39,8 @@ namespace Gerenciadores {
 		void printVida(float val);
 		void printPont(int val);
 		void setText(std::string text);
+		sf::Text getText();
+		void setTextOutline(float value);
 
 		sf::RenderWindow* getWindow() const;
 		sf::Vector2u getWindowSize() const;
