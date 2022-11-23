@@ -36,9 +36,3 @@ void Jogador2::mover()
     }
 }
 
-Jogador2 Jogador2::operator++(int)
-{
-    Jogador2 jog2 = *this;
-    setPontuacao(getPontuacao() + 1);
-    return jog2;
-}

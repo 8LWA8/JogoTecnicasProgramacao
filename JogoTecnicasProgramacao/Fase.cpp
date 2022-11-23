@@ -9,7 +9,7 @@ namespace Fases{
 
 	
 
-	Fase::Fase() : jogador1(), jogador2(),  LEnt(), Ger(/*&LEnt*/)
+	Fase::Fase() : jogador1(NULL), jogador2(NULL),  LEnt(), Ger(/*&LEnt*/)
 {
 
 	this->getCorpo()->setSize(sf::Vector2f(2100.0f, 1900.0f));
@@ -19,6 +19,7 @@ namespace Fases{
 	criaRobos();
 	criaRochas();
 	criaPoderes();
+	criaJogadores();
 	/*
 	Ger.incluirJogador(&jogador1);
 	Ger.incluirJogador(&jogador2);
@@ -78,7 +79,7 @@ void Fase::criaPoderes()
 
 void Fase::criaJogadores() 
 {
-	if (jogador1 == nullptr && jogador2 == nullptr) {
+	if (jogador1 == NULL && jogador2 == NULL) {
 		jogador1 = new Jogador1();
 		jogador2 = new Jogador2();
 
@@ -92,7 +93,7 @@ void Fase::criaJogadores()
 
 Jogador1* Fase::getJog1() 
 {
-	if (jogador1 != nullptr) 
+	if (jogador1 != NULL) 
 	{
 		return jogador1;
 	}
@@ -100,12 +101,26 @@ Jogador1* Fase::getJog1()
 	return NULL;
 }
 Jogador2* Fase::getJog2() {
-	if (jogador2 != nullptr)
+	if (jogador2 != NULL)
 	{
 		return jogador2;
 	}
 	std::cout << "ERROR: ponteiro NULL" << std::endl;
 	return NULL;
+}
+
+int Fase::getPontTotal() 
+{
+	
+	if (this->jogador1 != NULL && this->jogador2 != NULL) 
+	{
+		return (jogador1->getPontuacao() + jogador2->getPontuacao());
+
+	}
+	else if (this->jogador2 == NULL) 
+	{
+		return this->jogador1->getPontuacao();
+	}
 }
 
 }

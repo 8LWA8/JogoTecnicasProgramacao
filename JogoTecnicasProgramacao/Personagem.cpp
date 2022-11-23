@@ -29,9 +29,7 @@ void Personagem::executar()
 
 float Personagem::getNumVidas() 
 {
-	if (this != nullptr) {
-		return num_vidas; 
-	}
+	return this->num_vidas;
 }
 
 void Personagem::setNumVidas(float vidas)

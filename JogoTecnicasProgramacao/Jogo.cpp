@@ -9,8 +9,9 @@ using namespace Entidades::Personagens;
 Jogo::Jogo(): 
 pGerenteGrafico(pGerenteGrafico->getInstance())
 {
-	MaquinaEstados::getMaquinaEstados()->addEstado(IDs::IDs::jogar_fase1);
+	MaquinaEstados::getMaquinaEstados()->addEstado(IDs::IDs::jogar_fase2);
 	pGerenteGrafico->CenterView(0.0, 0.0);
+	
 }
 
 void Jogo::exec() 
@@ -19,7 +20,7 @@ void Jogo::exec()
 	Estado* est = MaquinaEstados::getMaquinaEstados()->getEstadoAtual();
 
 	Fase_Primeira* fas = dynamic_cast<Fase_Primeira*>(est);
-	fas->getJog1()->recuperar();
+	//fas->getJog1()->recuperar();	
 	//TESTE ---------------------------------------------------------------
 
     while (pGerenteGrafico->isWindowOpen())
@@ -50,7 +51,11 @@ void Jogo::exec()
     }
 
 	
-	fas->getJog1()->salvar();
+	//fas->getJog1()->salvar();
+
+
+    int i = 0;
+
 
 	
 }

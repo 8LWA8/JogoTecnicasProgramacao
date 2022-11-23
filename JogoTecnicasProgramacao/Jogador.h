@@ -30,7 +30,7 @@ namespace Entidades
             virtual void salvar();
             virtual void recuperar();
             
-            
+            virtual void operator++(int);
 
         };
     }

@@ -4,9 +4,8 @@ using namespace Entidades::Personagens;
 
 
 
-Jogador::Jogador(): empoderado(false)
+Jogador::Jogador(): empoderado(false), pontuacao(0)
 {
-    this->setPontuacao(0);
     this->setNumVidas(1000.0f);
     this->setMov(true);
     corpo.setSize(sf::Vector2f(35.f, 70.f));
@@ -58,10 +57,9 @@ void Jogador::setPontuacao(int p)
 }
 int Jogador::getPontuacao()
 {
-    if (this != nullptr) {
-        return pontuacao;
-    }
-    return 0;
+    
+        return this->pontuacao;
+    
 }
 
 void Jogador::ficarEmpoderado()
@@ -104,45 +102,64 @@ void Jogador::salvar()
 void Jogador::recuperar() 
 {
     fstream fin;
+    
+    
+    fin.open("assets//text.cvs");
 
-
-    fin.open("assets//text.cvs", ios::out);
-
+    if (fin.fail()) {
+        cout << "Error opening file" << endl;
+        return;
+    }
+    string l;
+   
+    
     vector<string> row;
     string line, word, temp;
+    stringstream s(l);
 
+    int i = 0;
+    while (getline(fin, l, ',')) {
 
-    while (fin >> temp){
-    row.clear();
-
-    // read an entire row and
-    // store it in a string variable 'line'
-    getline(fin, line);
+        row.push_back(l);
+        cout << row[i] << endl;
+           i++;
+    }
+    
 
         // used for breaking words
 
 
-        stringstream s(line);
+        /*
 
         // read every column data of a row and
         // store it in a string variable, 'word'
         while (getline(s, word, ',')) {
+            
 
             // add all the column data
             // of a row to a vector
             row.push_back(word);
+            cout << word << endl;
+            
         }
-    }
     
-    int i = 0;
+    */
+    
 
     for (i = 0; i < row.size(); i++)
     {
         if (i == 0) {
-            std::cout << "Hier" << std::endl;
+            
             std::cout << row[i] << std::endl;
             
         }
     }
 
 }
+
+
+void Jogador::operator++(int)
+{
+    this->setPontuacao(this->getPontuacao() + 1);
+}
+

@@ -4,8 +4,9 @@ using namespace Fases;
 #include <iostream>
 Fases::Fase_Segunda::Fase_Segunda()
 {
-	criaAlienigenas();
-	criaPlataformas();
+	this->criaAlienigenas();
+	this->criaPlataformas();
+	this->criaJogadores();
 }
 
 Fases::Fase_Segunda::~Fase_Segunda()
@@ -15,7 +16,7 @@ Fases::Fase_Segunda::~Fase_Segunda()
 void Fases::Fase_Segunda::executar()
 {
 	//INSTANCIAR DINAMICAMENTE JOGADOR E COLOCAR EM LISTA
-	
+	this->imprimir();
 	pGerenteGrafico->printVida(jogador1->getNumVidas());
 	pGerenteGrafico->printPont(jogador1->getPontuacao());
 	LEnt.executarTodos();
@@ -51,7 +52,7 @@ void Fases::Fase_Segunda::executar()
 	}
 
 
-	this->imprimir();
+	
 }
 
 void Fases::Fase_Segunda::imprimir()

@@ -173,14 +173,14 @@ namespace Gerenciadores {
 			if (verificaColisao(ent, *it) == true && (*it)->getCausa_dano() == true)
 			{
 				if (ent->getId() == 1) {
-					if (Jogador1* j = dynamic_cast <Jogador1*>(ent))
+					if (Jogador* j = dynamic_cast <Jogador*>(ent))
 					{
 						(*it)->danar(ent);
 					}
 				}
 				else if (ent->getId() == 2) 
 				{
-					if (Jogador2* j = dynamic_cast <Jogador2*>(ent))
+					if (Jogador* j = dynamic_cast <Jogador*>(ent))
 					{
 						(*it)->danar(ent);
 					}
@@ -199,12 +199,14 @@ namespace Gerenciadores {
 				if (verificaColisao(ent, *it))
 				{
 					if (ent->getId() == 1) {
-						if (Jogador1* j = dynamic_cast <Jogador1*>(ent))
+						if (Jogador* j = dynamic_cast <Jogador*>(ent))
 						{
 							if (j->getEmpoderado() == true)
 							{
 								(*it)->setVivo(false);
-								j++;
+								j->operator++(1);
+
+								
 							}
 							else
 							{
@@ -213,12 +215,12 @@ namespace Gerenciadores {
 						}
 					}
 						else if (ent->getId() == 2) {
-							if (Jogador2* j2 = dynamic_cast <Jogador2*>(ent))
+							if (Jogador* j2 = dynamic_cast <Jogador*>(ent))
 							{
 								if (j2->getEmpoderado() == true)
 								{
 									(*it)->setVivo(false);
-									j2++;
+									j2->operator++(1);
 								}
 								else
 								{
@@ -322,7 +324,7 @@ namespace Gerenciadores {
 	}
 
 	
-
+	
 }
 	
 

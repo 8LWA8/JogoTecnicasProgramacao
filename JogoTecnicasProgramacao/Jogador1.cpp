@@ -9,7 +9,9 @@ Jogador1::Jogador1()
     this->setTextura("assets\\textures\\astronauta.png");
     
     //string text;
-    //ifstream MyReadFile("assets\\file.txt");
+    ifstream MyReadFile("assets\\file.txt");
+    if (MyReadFile)
+        recuperar();
 
     
 
@@ -48,6 +50,7 @@ void Jogador1::mover()
 {
     if (mov == true)
     {
+        
 
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::D) && (coll.getX() != 1.0))
         {
@@ -75,10 +78,5 @@ void Jogador1::mover()
 
 }
 
-Jogador1 Jogador1::operator++(int)
-{
-    Jogador1 jog1 = *this;
-    setPontuacao(getPontuacao() + 1);
-    return jog1;
-}
+
 

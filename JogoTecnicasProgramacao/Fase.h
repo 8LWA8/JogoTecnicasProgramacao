@@ -38,6 +38,7 @@ namespace Fases
 		virtual void criaJogadores();
 		Jogador1* getJog1();
 		Jogador2* getJog2();
+		int getPontTotal();
     };
 	
 }

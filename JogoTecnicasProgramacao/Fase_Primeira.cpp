@@ -14,6 +14,7 @@ namespace Fases {
 		this->criaPlataformas();
 		this->criaJogadores();
 		
+		
 
 	}
 
@@ -25,15 +26,15 @@ namespace Fases {
 	{
 		this->imprimir();
 
-		//INSTANCIAR DINAMICAMENTE JOGADOR E COLOCAR EM LISTA
+		
 		
 		
 		LEnt.executarTodos();
 		
-
+		
 		
 		pGerenteGrafico->printVida(jogador1->getNumVidas());
-		pGerenteGrafico->printPont(jogador1->getPontuacao());
+		pGerenteGrafico->printPont(this->getPontTotal());
 		
 		Ger.gerenciarColisoes();
 		
@@ -61,6 +62,7 @@ namespace Fases {
 
 	void Fase_Primeira::criaVilgax()
 	{
+		
 		int n = 3 + rand() % 3;
 		for (int i = 0; i < n; i++)
 		{
