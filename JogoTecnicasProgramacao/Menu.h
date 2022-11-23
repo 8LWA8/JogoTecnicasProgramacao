@@ -1,5 +1,6 @@
 #pragma once
 #include "Ente.h"
+#include "IDs.h"
 #include "Estado.h"
 #include "MaquinaEstados.h"
 #include <SFML/Graphics.hpp>
@@ -13,27 +14,19 @@ class Menu :
 {
     int pos;
     int optionSelected;
-    bool pressed, theselect;
+    bool pressed;
 
     sf::Clock relogio;
 
-    sf::RectangleShape *bfase1;
-    sf::RectangleShape *bfase2;
-    sf::RectangleShape *branking;
-    sf::RectangleShape *bsair;
 
-    sf::Vector2i pos_mouse;
-    sf::Vector2i mouse_coord;
+    std::vector<sf::RectangleShape*> botoes;
+
     std::vector<std::string> options;
     std::vector<sf::Vector2f> coords;
     std::vector<sf::Text> texts;
     std::vector<int> sizes;
 
-    void set_values();
     void loop_events();
-    void moveUp();
-    void moveDown();
-    
 
 public:
     Menu();
