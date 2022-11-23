@@ -15,7 +15,12 @@ pGerenteGrafico(pGerenteGrafico->getInstance())
 
 void Jogo::exec() 
 {
-	
+	//TESTE ---------------------------------------------------------------
+	Estado* est = MaquinaEstados::getMaquinaEstados()->getEstadoAtual();
+
+	Fase_Primeira* fas = dynamic_cast<Fase_Primeira*>(est);
+	fas->getJog1()->recuperar();
+	//TESTE ---------------------------------------------------------------
 
     while (pGerenteGrafico->isWindowOpen())
     {
@@ -44,9 +49,7 @@ void Jogo::exec()
 		
     }
 
-	Estado* est = MaquinaEstados::getMaquinaEstados()->getEstadoAtual();
 	
-	Fase_Primeira* fas = dynamic_cast<Fase_Primeira*>(est);
 	fas->getJog1()->salvar();
 
 	

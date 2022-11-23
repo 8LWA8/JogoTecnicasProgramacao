@@ -1,6 +1,8 @@
 #pragma once
 #include "Personagem.h"
 #include <string>
+#include <sstream>
+
 //#include <SFML/Graphics.hpp>
 using namespace std;
 
@@ -26,6 +28,7 @@ namespace Entidades
             bool getEmpoderado();
             void levarDano(float dano);
             virtual void salvar();
+            virtual void recuperar();
             
             
 

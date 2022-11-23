@@ -94,8 +94,55 @@ void Jogador::levarDano(float dano)
 
 void Jogador::salvar() 
 {
-    ofstream Myfile("assets\\file.txt");
+    fstream Myfile;
+    Myfile.open("assets//text.cvs", ios::out | ios::app);
     
-    Myfile << this->getNumVidas() << " " << this->getPontuacao() << " " << this->getCoord()->getX() << " " << this->getCoord()->getY();
+    Myfile << this->getNumVidas() << "," << this->getPontuacao() << "," << this->getCoord()->getX() << "," << this->getCoord()->getY();
+    Myfile.close();
+}
+
+void Jogador::recuperar() 
+{
+    fstream fin;
+
+
+    fin.open("assets//text.cvs", ios::out);
+
+    vector<string> row;
+    string line, word, temp;
+
+
+    while (fin >> temp){
+    row.clear();
+
+    // read an entire row and
+    // store it in a string variable 'line'
+    getline(fin, line);
+
+        // used for breaking words
+
+
+        stringstream s(line);
+
+        // read every column data of a row and
+        // store it in a string variable, 'word'
+        while (getline(s, word, ',')) {
+
+            // add all the column data
+            // of a row to a vector
+            row.push_back(word);
+        }
+    }
     
+    int i = 0;
+
+    for (i = 0; i < row.size(); i++)
+    {
+        if (i == 0) {
+            std::cout << "Hier" << std::endl;
+            std::cout << row[i] << std::endl;
+            
+        }
+    }
+
 }

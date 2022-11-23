@@ -1,14 +1,22 @@
 #include "Jogador1.h"
-#include <iostream>
+
+
 using namespace Entidades::Personagens;
 
 Jogador1::Jogador1() 
 {
     this->setId(1);
     this->setTextura("assets\\textures\\astronauta.png");
-    string text;
-    ifstream MyReadFile("assets\\file.txt");
-        if (MyReadFile) 
+    
+    //string text;
+    //ifstream MyReadFile("assets\\file.txt");
+
+    
+
+        
+    
+        
+    /*if (MyReadFile)
         {
             
             while (getline(MyReadFile, text)) 
@@ -29,9 +37,10 @@ Jogador1::Jogador1()
                 getline(MyReadFile, text);
                 float y = std::stof(text);
 
-                this->getCorpo()->setPosition(sf::Vector2f(x, y));*/
+                this->getCorpo()->setPosition(sf::Vector2f(x, y));
+                
             }
-        }
+        }*/
     
 }
 
@@ -72,3 +81,4 @@ Jogador1 Jogador1::operator++(int)
     setPontuacao(getPontuacao() + 1);
     return jog1;
 }
+
