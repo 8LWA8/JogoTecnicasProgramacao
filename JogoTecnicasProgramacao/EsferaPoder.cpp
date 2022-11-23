@@ -36,11 +36,19 @@ void EsferaPoder::executar()
 	if (coletada == false)
 	{
 		imprimir();
+		sofrer_gravidade();
+		anularGravidade();
 	}
 }
 
 void EsferaPoder::danar(Entidade* ent)
 {
+}
+
+void EsferaPoder::anularGravidade()
+{
+	corpo.move(sf::Vector2f(0.f, -0.5));
+	coordenada.addY(-0.5);
 }
 
 void EsferaPoder::salvar() {}

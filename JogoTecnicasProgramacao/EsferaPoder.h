@@ -16,7 +16,7 @@ public:
     bool getColetada();
     void executar();
     void danar(Entidade* ent);
-
+    void anularGravidade();
 
     //TESTE VIRTUAL PURA
     void salvar();

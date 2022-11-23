@@ -15,8 +15,6 @@ void Menu::set_values()
 	texts.resize(5);
 	coords = { {-150,-250},{-10, -150},{-10, -50},{-10, 50},{-10, 150} };
 	sizes = { 45,30,30,30,30 };
-	
-	
 
 	bfase1->setSize(sf::Vector2f(23, 26));
 	bfase1->setPosition(0, 0);
@@ -102,10 +100,10 @@ void Menu::imprimir()
 		}
 	}
 
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::F))
+	/*if (sf::Keyboard::isKeyPressed(sf::Keyboard::F))
 	{
 		MaquinaEstados::getMaquinaEstados()->addEstado(IDs::IDs::jogar_fase1);
-	}
+	}*/
 
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down) && !pressed)
 	{
