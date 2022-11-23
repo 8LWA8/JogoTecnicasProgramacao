@@ -276,12 +276,13 @@ namespace Gerenciadores {
 
 	void GerenteColisoes::gerenciarColisoes() 
 	{
-
+		vector <Inimigo*>::iterator itE;
+		vector <Jogador*>::iterator it;
 		list <Obstaculo*>::iterator itOb;
 		
 		for (itOb = LOs.begin(); itOb != LOs.end(); itOb++) 
 		{
-			if ((*itOb)->getId() == 5) 
+			if ((*itOb)->getId() == 5) //id 5 -- > Plataforma
 			{
 				this->checaColisaoIni(*itOb);
 				this->checaColisaoObst(*itOb);
@@ -289,7 +290,29 @@ namespace Gerenciadores {
 
 		}
 
-		vector <Jogador*>::iterator it;
+		
+		for (itE = LIs.begin(); itE != LIs.end(); itE++)
+		{
+			if ((*itE)->getId() == 6)//id 6 --> Alienigena
+			{
+				this->colideCanto((*itE));
+				Alienigena* a = dynamic_cast<Alienigena*>(*itE);
+				if (a->getProj()->getExiste())
+				{
+					for (it = LJs.begin(); it != LJs.end(); it++)
+					{
+						if ((*it)->getVivo() == true && this->verificaColisao((*it), a->getProj()))
+						{
+
+							a->getProj()->danar(*it);
+							a->getProj()->setAtingiu(true);
+						}
+					}
+				}
+			}
+		}
+
+		
 
 		for (it = LJs.begin(); it != LJs.end(); it++)
 		{

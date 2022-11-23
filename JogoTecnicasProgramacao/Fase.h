@@ -23,7 +23,7 @@ namespace Fases
 		 Jogador2* jogador2;
 		Gerenciadores::GerenteColisoes Ger;
 		Listas::ListaEntidades LEnt;
-	
+		int pontTotal;
 
 		//Entidades::Personagens::Inimigo* pInimigo1;
 	public:
@@ -39,6 +39,8 @@ namespace Fases
 		Jogador1* getJog1();
 		Jogador2* getJog2();
 		int getPontTotal();
+		void setPontTotal();
+		
     };
 	
 }

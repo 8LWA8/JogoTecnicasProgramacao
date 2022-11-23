@@ -9,7 +9,7 @@ namespace Fases{
 
 	
 
-	Fase::Fase() : jogador1(NULL), jogador2(NULL),  LEnt(), Ger(/*&LEnt*/)
+	Fase::Fase() : jogador1(NULL), jogador2(NULL),  LEnt(), Ger(), pontTotal(0)
 {
 
 	this->getCorpo()->setSize(sf::Vector2f(2100.0f, 1900.0f));
@@ -121,6 +121,11 @@ int Fase::getPontTotal()
 	{
 		return this->jogador1->getPontuacao();
 	}
+}
+
+void Fase::setPontTotal() 
+{
+	this->pontTotal = getPontTotal();
 }
 
 }

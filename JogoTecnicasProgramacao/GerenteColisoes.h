@@ -1,6 +1,6 @@
 #pragma once
-#include "Entidade.h"
-#include "Inimigo.h"
+
+#include "Alienigena.h"
 #include "Jogador1.h"
 #include "Jogador2.h"
 #include "EsferaPoder.h"

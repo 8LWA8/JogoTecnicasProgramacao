@@ -6,7 +6,7 @@
 //using namespace std;
 
 namespace Fases {
-	Fase_Primeira::Fase_Primeira()
+	Fase_Primeira::Fase_Primeira() 
 	{
 		
 		this->criaVilgax();
