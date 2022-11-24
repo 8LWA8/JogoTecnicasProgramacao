@@ -20,6 +20,7 @@ namespace Fases {
 
 	Fases::Fase_Primeira::~Fase_Primeira()
 	{
+		
 	}
 
 	void Fases::Fase_Primeira::executar()

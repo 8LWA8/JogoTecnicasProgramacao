@@ -16,13 +16,13 @@ pGerenteGrafico(pGerenteGrafico->getInstance())
 
 void Jogo::exec() 
 {
-	//TESTE ---------------------------------------------------------------
 	Estado* est = MaquinaEstados::getMaquinaEstados()->getEstadoAtual();
-
-	Fase_Primeira* fas = dynamic_cast<Fase_Primeira*>(est);
-	//fas->getJog1()->recuperar();	
-	//TESTE ---------------------------------------------------------------
-
+	if (est->getId() == 10)
+	{
+		Fase* fas = dynamic_cast<Fase*>(est);
+		fas->recuperar();
+	}
+	
     while (pGerenteGrafico->isWindowOpen())
     {
         sf::Event event;
@@ -51,8 +51,13 @@ void Jogo::exec()
     }
 
 	
-	//fas->getJog1()->salvar();
-
+	if (est->getId() == 10) 
+	{
+		Fase* fas = dynamic_cast<Fase*>(est);
+		fas->salvar();
+		cout << "if" << endl;
+	}
+	
 
     int i = 0;
 

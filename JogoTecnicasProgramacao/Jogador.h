@@ -1,7 +1,7 @@
 #pragma once
 #include "Personagem.h"
-#include <string>
-#include <sstream>
+
+
 
 //#include <SFML/Graphics.hpp>
 using namespace std;
@@ -27,7 +27,7 @@ namespace Entidades
             void ficarEmpoderado();
             bool getEmpoderado();
             void levarDano(float dano);
-            virtual void salvar();
+            virtual std::string salvar();
             virtual void recuperar();
             
             virtual void operator++(int);

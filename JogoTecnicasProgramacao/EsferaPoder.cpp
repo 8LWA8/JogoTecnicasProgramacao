@@ -51,4 +51,8 @@ void EsferaPoder::anularGravidade()
 	coordenada.addY(-0.5);
 }
 
-void EsferaPoder::salvar() {}
+std::string EsferaPoder::salvar() 
+{
+	std::string null;
+	return null;
+}

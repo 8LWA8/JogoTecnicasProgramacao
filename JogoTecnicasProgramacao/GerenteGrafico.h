@@ -1,6 +1,8 @@
+//Baseado no codigo: https://youtu.be/RXmFcBGD8T8
 #pragma once
 #include <SFML/Graphics.hpp>
 #include "Coord.h"
+#include <string>
 #include <map>
 
 

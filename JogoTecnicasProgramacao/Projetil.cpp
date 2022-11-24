@@ -76,5 +76,8 @@ void Entidades::Projetil::recebePosAlien(sf::Vector2f posAli)
 	posAlien = posAli;
 }
 
-void Projetil::salvar() 
-{}
+std::string Projetil::salvar() 
+{
+	std::string null;
+	return null;
+}

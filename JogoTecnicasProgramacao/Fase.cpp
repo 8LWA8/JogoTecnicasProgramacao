@@ -1,6 +1,5 @@
 #include "Fase.h"
-#include <vector>
-#include <list>
+
 
 using namespace Personagens;
 using namespace Obstaculos;
@@ -11,7 +10,7 @@ namespace Fases{
 
 	Fase::Fase() : jogador1(NULL), jogador2(NULL),  LEnt(), Ger(), pontTotal(0)
 {
-
+	this->setId(10);
 	this->getCorpo()->setSize(sf::Vector2f(2100.0f, 1900.0f));
 	this->getCorpo()->setPosition(sf::Vector2f(-700.0f, -500.0f));
 	this->setTextura("assets//textures//background.jpg");
@@ -31,9 +30,10 @@ namespace Fases{
 	
 Fase::~Fase()
 {
+	this->salvar();
 	LEnt.limpaLista();
 	Ger.getVecInimigos()->erase(Ger.getVecInimigos()->begin(), Ger.getVecInimigos()->end());
-
+	
 }
 
 
@@ -126,6 +126,64 @@ int Fase::getPontTotal()
 void Fase::setPontTotal() 
 {
 	this->pontTotal = getPontTotal();
+}
+
+
+void Fase::salvar() 
+{
+	std::string info = this->getJog1()->salvar();
+
+	fstream file;
+	file.open("file.csv", ios::out);
+
+	if (file.fail()) 
+	{
+		cout << "Error file" << endl;
+		return;
+	}
+	cout << "file" << endl;
+	file << info << endl;
+	file << info << endl;
+
+	file.close();
+	
+	
+
+}
+
+void Fase::recuperar() 
+{
+	fstream file;
+	file.open("file.csv", ios::out);
+
+	if (file.fail()) {
+		cout << "Error opening file" << endl;
+		return;
+	}
+	string l;
+
+
+	vector<string> row;
+	string line, word, temp;
+	stringstream s(l);
+
+	int i = 0;
+	while (getline(file, l, ',')) {
+
+		row.push_back(l);
+		cout << row[i] << endl;
+		i++;
+	}
+
+	/*
+	for (i = 0; i < row.size(); i++)
+	{
+
+			std::cout << row[i] << std::endl;
+		
+	}*/
+
+	file.clear();
 }
 
 }

@@ -7,16 +7,6 @@ Jogador1::Jogador1()
 {
     this->setId(1);
     this->setTextura("assets\\textures\\astronauta.png");
-    
-    //string text;
-    ifstream MyReadFile("assets\\file.txt");
-    if (MyReadFile)
-        recuperar();
-
-    
-
-        
-    
         
     /*if (MyReadFile)
         {

@@ -23,8 +23,7 @@ namespace Entidades
             virtual void levarDano(float dano) = 0;
             
 
-            //VIRTUAL PURA TESTE
-            void salvar();
+            
         };
     }
 }

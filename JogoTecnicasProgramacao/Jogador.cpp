@@ -1,5 +1,5 @@
 #include "Jogador.h"
-#include <iostream>
+
 using namespace Entidades::Personagens;
 
 
@@ -90,21 +90,20 @@ void Jogador::levarDano(float dano)
     }
 }
 
-void Jogador::salvar() 
-{
-    fstream Myfile;
-    Myfile.open("assets//text.cvs", ios::out | ios::app);
-    
-    Myfile << this->getNumVidas() << "," << this->getPontuacao() << "," << this->getCoord()->getX() << "," << this->getCoord()->getY();
-    Myfile.close();
+std::string Jogador::salvar() 
+{   
+
+    string info;
+    info = std::to_string(this->getId()) + "," + std::to_string(this->getNumVidas()) + "," + std::to_string(this->getPontuacao()) + "," + std::to_string(this->getCoord()->getX()) + "," + std::to_string(this->getCoord()->getY());
+    return info;
 }
 
 void Jogador::recuperar() 
-{
+{/*
     fstream fin;
     
     
-    fin.open("assets//text.cvs");
+    fin.open("text.csv");
 
     if (fin.fail()) {
         cout << "Error opening file" << endl;
@@ -129,7 +128,7 @@ void Jogador::recuperar()
         // used for breaking words
 
 
-        /*
+        
 
         // read every column data of a row and
         // store it in a string variable, 'word'
@@ -143,7 +142,7 @@ void Jogador::recuperar()
             
         }
     
-    */
+    
     
 
     for (i = 0; i < row.size(); i++)
@@ -153,7 +152,7 @@ void Jogador::recuperar()
             std::cout << row[i] << std::endl;
             
         }
-    }
+    }*/
 
 }
 

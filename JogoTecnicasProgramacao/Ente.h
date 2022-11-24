@@ -1,6 +1,7 @@
 #pragma once
 #include <SFML/Graphics.hpp>
 #include "GerenteGrafico.h"
+
 using namespace Gerenciadores;
 
 class Ente
@@ -10,6 +11,7 @@ protected:
 	sf::Texture* textura;
 	sf::RectangleShape corpo;
 	GerenteGrafico* pGerenteGrafico;
+	
 public:
 	Ente();
 	virtual ~Ente();

@@ -29,4 +29,8 @@ const bool Obstaculo::getCausa_dano()
 	return causa_dano;
 }
 
-void Obstaculo::salvar() {}
+std::string Obstaculo::salvar() 
+{
+	std::string null;
+	return null;
+}

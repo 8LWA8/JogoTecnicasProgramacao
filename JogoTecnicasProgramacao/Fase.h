@@ -10,6 +10,10 @@
 #include "Entidade.h"
 #include "ListaEntidades.h"
 #include "GerenteColisoes.h"
+#include <sstream>
+#include <fstream>
+#include <vector>
+#include <list>
 
 using namespace Estados;
 
@@ -40,6 +44,8 @@ namespace Fases
 		Jogador2* getJog2();
 		int getPontTotal();
 		void setPontTotal();
+		void salvar();
+		virtual void recuperar();
 		
     };
 	

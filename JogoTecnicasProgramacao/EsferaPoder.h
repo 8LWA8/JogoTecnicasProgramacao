@@ -19,5 +19,5 @@ public:
     void anularGravidade();
 
     //TESTE VIRTUAL PURA
-    void salvar();
+    std::string salvar();
 };

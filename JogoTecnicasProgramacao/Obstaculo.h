@@ -19,7 +19,7 @@ namespace Entidades
             
             
             //VIRTUAL PURA TESTE
-            void salvar();
+            std::string salvar();
         };
     }
 }
