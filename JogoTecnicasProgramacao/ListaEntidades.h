@@ -20,5 +20,6 @@ namespace Listas
 		Entidade* operator[](int pos);
 		void limpaLista();
 		void executarTodos();
+		void salvarTodos();
 	};
 }

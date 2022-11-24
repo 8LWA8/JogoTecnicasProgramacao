@@ -12,6 +12,7 @@ namespace Entidades
             Rocha();
             Rocha(const sf::Vector2f pos);
             ~Rocha();
+            void salvar();
         };
     }
 }

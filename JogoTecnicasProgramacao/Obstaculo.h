@@ -18,8 +18,7 @@ namespace Entidades
             virtual const bool getCausa_dano();
             
             
-            //VIRTUAL PURA TESTE
-            std::string salvar();
+            virtual void salvar() = 0;
         };
     }
 }

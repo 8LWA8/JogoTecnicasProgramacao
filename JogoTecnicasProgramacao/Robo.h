@@ -14,7 +14,7 @@ namespace Entidades
             Robo();
             Robo(const sf::Vector2f pos);
             ~Robo();
-            virtual std::string salvar();
+            void salvar();
             void setPersegue(bool per);
             bool getPersegue();
             //void executar();

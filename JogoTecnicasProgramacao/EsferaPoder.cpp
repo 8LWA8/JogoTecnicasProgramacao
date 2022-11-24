@@ -51,8 +51,25 @@ void EsferaPoder::anularGravidade()
 	coordenada.addY(-0.5);
 }
 
-std::string EsferaPoder::salvar() 
+void EsferaPoder::salvar() 
 {
-	std::string null;
-	return null;
+	std::ofstream dadosEsfera;
+
+	dadosEsfera.open("salvar/salvarEsfera.txt", std::ios::app);
+
+	if (!dadosEsfera.is_open())
+	{
+		std::cout << "ERRO ABRINDO salvarEspi.txt" << std::endl;
+		exit(1);
+	}
+
+	std::cout << "entrou salvar esferas" << std::endl;
+
+	dadosEsfera << this->getId() << " ";
+	dadosEsfera << corpo.getPosition().x << " ";
+	dadosEsfera << corpo.getPosition().y << " ";
+	dadosEsfera << getColetada() << " ";
+
+	dadosEsfera << std::endl;
+	dadosEsfera.close();
 }

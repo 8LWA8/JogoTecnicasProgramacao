@@ -22,9 +22,30 @@ Vilgax::~Vilgax()
 
 }
 
-std::string Entidades::Personagens::Vilgax::salvar()
+void Vilgax::salvar()
 {
-	return "";
+    std::ofstream dadosVilgax;
+
+    dadosVilgax.open("salvar/salvarVilgax.txt", std::ios::app);
+
+    if (!dadosVilgax.is_open())
+    {
+        std::cout << "ERRO ABRINDO salvarVilgax.txt" << std::endl;
+        exit(1);
+    }
+
+    std::cout << "entrou salvar vilgax" << std::endl;
+
+    dadosVilgax << getId() << " ";
+    dadosVilgax << corpo.getPosition().x << " ";
+    dadosVilgax << corpo.getPosition().y << " ";
+    //dadosVilgax << num_vidas << " ";
+    dadosVilgax << getVivo() << " ";
+    /*dadosJogador << getColl()->getX() << " ";
+    dadosJogador << getColl()->getY() << " ";*/
+
+    dadosVilgax << std::endl;
+    dadosVilgax.close();
 }
 
 void Vilgax::setPoderDano(float d)

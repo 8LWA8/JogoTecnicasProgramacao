@@ -40,6 +40,30 @@ void Espinhos::danar(Entidade* ent)
 	}
 }
 
+void Entidades::Obstaculos::Espinhos::salvar()
+{
+	std::ofstream dadosEspi;
+
+	dadosEspi.open("salvar/salvarEspi.txt", std::ios::app);
+
+	if (!dadosEspi.is_open())
+	{
+		std::cout << "ERRO ABRINDO salvarEspi.txt" << std::endl;
+		exit(1);
+	}
+
+	std::cout << "entrou salvar espinhos" << std::endl;
+
+	dadosEspi << getId() << " ";
+	dadosEspi << corpo.getPosition().x << " ";
+	dadosEspi << corpo.getPosition().y << " ";
+	dadosEspi << getAltura() << " ";
+
+	dadosEspi << std::endl;
+	dadosEspi.close();
+
+}
+
 void Espinhos::setAltura(float l) 
 {
 	this->altura = l;

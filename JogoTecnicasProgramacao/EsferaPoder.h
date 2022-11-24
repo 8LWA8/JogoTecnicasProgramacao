@@ -18,6 +18,5 @@ public:
     void danar(Entidade* ent);
     void anularGravidade();
 
-    //TESTE VIRTUAL PURA
-    std::string salvar();
+    void salvar();
 };

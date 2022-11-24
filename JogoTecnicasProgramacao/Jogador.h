@@ -27,7 +27,7 @@ namespace Entidades
             void ficarEmpoderado();
             bool getEmpoderado();
             void levarDano(float dano);
-            virtual std::string salvar();
+            void salvar();
             virtual void recuperar();
             
             virtual void operator++(int);

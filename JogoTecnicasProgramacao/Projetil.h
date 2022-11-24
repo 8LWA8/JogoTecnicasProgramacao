@@ -24,8 +24,7 @@ namespace Entidades
 		void recebePosAlien(sf::Vector2f posAli);
 		
 
-		//VIRTUAL PURA TESTE
-		std::string salvar();
+		void salvar();
 	};
 }
 

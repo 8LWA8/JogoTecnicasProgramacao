@@ -57,3 +57,7 @@ bool Plataforma::getFlutua()
 {
 	return flutua;
 }
+
+void Entidades::Obstaculos::Plataforma::salvar()
+{
+}

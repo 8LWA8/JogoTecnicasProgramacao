@@ -18,6 +18,7 @@ namespace Entidades
             void anularGravidade();
             void setFlutua(bool f);
             bool getFlutua();
+            void salvar();
         };
     }
 }

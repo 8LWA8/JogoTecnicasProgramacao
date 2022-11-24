@@ -6,9 +6,9 @@
 //using namespace std;
 
 namespace Fases {
-	Fase_Primeira::Fase_Primeira() 
+	Fase_Primeira::Fase_Primeira()
 	{
-		
+		this->pressed = false;
 		this->criaVilgax();
 		this->criaEspinhos();
 		this->criaPlataformas();
@@ -33,6 +33,27 @@ namespace Fases {
 		LEnt.executarTodos();
 		
 		
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::S) && !pressed)
+		{
+			pressed = true;
+
+			limpaTdsArq();
+
+			LEnt.salvarTodos();
+		}
+
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::L) && !pressed)
+		{
+			pressed = true;
+			//LEnt.salvarTodos();
+		}
+
+		float dt = relogio.getElapsedTime().asSeconds();
+		if (dt >= 2.0f)
+		{
+			pressed = false;
+			relogio.restart();
+		}
 		
 		pGerenteGrafico->printVida(jogador1->getNumVidas());
 		pGerenteGrafico->printPont(this->getPontTotal());

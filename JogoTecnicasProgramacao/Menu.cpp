@@ -32,6 +32,16 @@ void Menu::loop_events()
 		botoes[optionSelected]->setFillColor(sf::Color::Magenta);
 	}
 
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Num1) && !pressed)
+	{
+		Fases::Fase::setNumJog(1);
+	}
+
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Num2) && !pressed)
+	{
+		Fases::Fase::setNumJog(2);
+	}
+
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Enter) && !pressed)
 	{
 		//std::cout << optionSelected << std::endl;

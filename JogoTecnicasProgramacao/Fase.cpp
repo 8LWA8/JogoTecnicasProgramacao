@@ -6,9 +6,62 @@ using namespace Obstaculos;
 
 namespace Fases{
 
-	
+	int Fase::num_jog = 2;
 
-	Fase::Fase() : jogador1(NULL), jogador2(NULL),  LEnt(), Ger(), pontTotal(0), num_jog(2)
+	void Fase::limpaTdsArq()
+	{
+		std::ofstream arquivo;
+
+		arquivo.open("salvar/salvarJog.txt");
+		if (!arquivo.is_open())
+		{
+			std::cout << "ERRO ABRINDO salvarJog.txt" << std::endl;
+			exit(1);
+		}
+		arquivo.close();
+
+		arquivo.open("salvar/salvarRobo.txt");
+		if (!arquivo.is_open())
+		{
+			std::cout << "ERRO ABRINDO salvarRobo.txt" << std::endl;
+			exit(1);
+		}
+		arquivo.close();
+
+		arquivo.open("salvar/salvarRocha.txt");
+		if (!arquivo.is_open())
+		{
+			std::cout << "ERRO ABRINDO salvarRocha.txt" << std::endl;
+			exit(1);
+		}
+		arquivo.close();
+
+		arquivo.open("salvar/salvarVilgax.txt");
+		if (!arquivo.is_open())
+		{
+			std::cout << "ERRO ABRINDO salvarVilgax.txt" << std::endl;
+			exit(1);
+		}
+		arquivo.close();
+
+		arquivo.open("salvar/salvarEspi.txt");
+		if (!arquivo.is_open())
+		{
+			std::cout << "ERRO ABRINDO salvarEspi.txt" << std::endl;
+			exit(1);
+		}
+		arquivo.close();
+
+		arquivo.open("salvar/salvarEsfera.txt");
+		if (!arquivo.is_open())
+		{
+			std::cout << "ERRO ABRINDO salvarEsfera.txt" << std::endl;
+			exit(1);
+		}
+		arquivo.close();
+	}
+
+	Fase::Fase() : jogador1(NULL), jogador2(NULL),  LEnt(), Ger(), pontTotal(0)
 {
 	this->setId(10);
 	this->getCorpo()->setSize(sf::Vector2f(2100.0f, 1900.0f));
@@ -67,7 +120,7 @@ void Fase::criaRochas()
 
 void Fase::criaPoderes()
 {
-	int n = 10 + rand() % 4;
+	int n = 5 + rand() % 3;
 	for (int i = 0; i < n; i++)
 	{
 		EsferaPoder* esfera = new EsferaPoder(sf::Vector2f(-550.f + 150.f * i, 150.f));
@@ -134,7 +187,7 @@ void Fase::setPontTotal()
 
 
 void Fase::salvar() 
-{
+{/*
 	std::string info = this->getJog1()->salvar();
 
 	fstream file;
@@ -150,13 +203,13 @@ void Fase::salvar()
 	file << info << endl;
 
 	file.close();
-	
+	*/
 	
 
 }
 
 void Fase::recuperar() 
-{
+{/*
 	fstream file;
 	file.open("file.csv", ios::out);
 
@@ -177,7 +230,7 @@ void Fase::recuperar()
 		row.push_back(l);
 		cout << row[i] << endl;
 		i++;
-	}
+	}*/
 
 	/*
 	for (i = 0; i < row.size(); i++)
@@ -187,7 +240,7 @@ void Fase::recuperar()
 		
 	}*/
 
-	file.clear();
+	//file.clear();
 }
 
 bool Fase::venceuFase()
@@ -209,10 +262,10 @@ void Fase::setNumJog(int n)
 	num_jog = n;
 }
 
-int Fase::getNumJog()
-{
-	return num_jog;
-}
-
+//int Fase::getNumJog()
+//{
+//	return num_jog;
+//}
+//
 }
 

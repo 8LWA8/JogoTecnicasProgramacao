@@ -9,7 +9,7 @@
 #include <cstring>
 using namespace Estados;
 
-//Código inspirado no vídeo: https://www.youtube.com/watch?v=h8-Q4eu3Qt4&t=148s e no Github: https://github.com/terroo/menu-sfml
+//Código parcialmente inspirado no vídeo: https://www.youtube.com/watch?v=h8-Q4eu3Qt4&t=148s e no Github: https://github.com/terroo/menu-sfml
 class Menu :
     public Estado
 {

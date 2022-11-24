@@ -17,6 +17,7 @@ namespace Entidades
             void setAltura(float l);
             float getAltura();
             void danar(Entidade* ent);
+            void salvar();
         };
     }
 }

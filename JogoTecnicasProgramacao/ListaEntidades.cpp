@@ -53,3 +53,14 @@ void Listas::ListaEntidades::executarTodos()
 		aux->executar();
 	}
 }
+
+void Listas::ListaEntidades::salvarTodos()
+{
+	int tam = LEs.getTam();
+	Entidade* aux = nullptr;
+	for (int i = 0; i < tam; i++)
+	{
+		aux = LEs.operator[](i);
+		aux->salvar();
+	}
+}

@@ -16,7 +16,7 @@ namespace Entidades
 			Inimigo();
 			~Inimigo();
 			virtual void executar();
-			virtual std::string salvar();
+			virtual void salvar() = 0;
 			void moveAleatorio();
 			void danar(Entidade* ent);
 			void levarDano(float dano);

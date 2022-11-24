@@ -1,13 +1,14 @@
 #pragma once
 #include "Ente.h"
-
+#include <iostream>
+#include <fstream>
 
 namespace Entidades
 { 
 	class Entidade : public Ente
 	{
 	protected:
-		Coord  coordenada;
+		Coord coordenada;
 		Coord tam;
 		Coord vel;
 		Coord coll;
@@ -19,7 +20,7 @@ namespace Entidades
 		Entidade();
 		~Entidade();
 		virtual void executar()=0;
-		virtual std::string salvar() = 0;
+		virtual void salvar() = 0;
 		virtual void imprimir();
 		void resetColl();
 		void sofrer_gravidade();

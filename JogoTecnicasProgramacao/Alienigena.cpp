@@ -41,6 +41,10 @@ void Alienigena::atirar()
 	proj->executar();
 }
 
+void Entidades::Personagens::Alienigena::salvar()
+{
+}
+
 
 //void Alienigena::setAtirou(bool estado) 
 //{

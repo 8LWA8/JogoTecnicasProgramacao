@@ -29,9 +29,8 @@ void Inimigo::executar()
 	}
 }
 
-std::string Entidades::Personagens::Inimigo::salvar()
+void Inimigo::salvar()
 {
-	return "";
 }
 
 void Inimigo::moveAleatorio() 

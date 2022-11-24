@@ -12,7 +12,6 @@ namespace Entidades {
 			Jogador1();
 			void mover();
 			
-			
 		};
 
 

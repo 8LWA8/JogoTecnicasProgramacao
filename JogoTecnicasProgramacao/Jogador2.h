@@ -8,7 +8,6 @@ namespace Entidades {
 		public:
 			Jogador2();
 			void mover();
-			
 
 		private:
 
