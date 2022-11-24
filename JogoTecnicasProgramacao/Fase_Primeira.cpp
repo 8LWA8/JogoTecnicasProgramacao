@@ -28,7 +28,14 @@ namespace Fases {
 	{
 		this->imprimir();
 
-		
+		if (jogador2 == nullptr && jogador1->getVivo()==false)
+		{
+			MaquinaEstados::getMaquinaEstados()->addEstado(IDs::IDs::tela_final);
+		}
+		else if (jogador2 != nullptr && jogador1->getVivo() == false && jogador2->getVivo() == false)
+		{
+			MaquinaEstados::getMaquinaEstados()->addEstado(IDs::IDs::tela_final);
+		}
 		
 		
 		LEnt.executarTodos();

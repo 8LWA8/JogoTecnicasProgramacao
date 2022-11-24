@@ -105,6 +105,9 @@
     <ClCompile Include="Jogador2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="TelaFinal.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Coord.h">
@@ -200,6 +203,12 @@
     <ClInclude Include="Jogador2.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="ConstrutorFase.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TelaFinal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="alien_parado.png">
@@ -208,17 +217,48 @@
     <Image Include="Diagrama.png">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="fundomenu1.png">
-      <Filter>Resource Files</Filter>
-    </Image>
     <Image Include="vilgax.png">
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="EsferaPoder.png">
       <Filter>Resource Files</Filter>
     </Image>
+    <Image Include="projetil.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="fundo_menu.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="fundo2.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="astronauta.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="espinhos.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="fundo_menu.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="fundomenu1.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="plataforma.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="robo_parado.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="rocha.png">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="file.txt" />
+    <Text Include="filetest.txt" />
   </ItemGroup>
 </Project>

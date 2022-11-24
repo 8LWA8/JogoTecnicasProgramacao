@@ -5,6 +5,7 @@
 #include "Fase_Primeira.h"
 #include "Fase_Segunda.h"
 #include "Menu.h"
+#include "TelaFinal.h"
 #include "IDs.h"
 #include <stack>
 #include <fstream>

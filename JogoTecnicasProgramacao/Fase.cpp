@@ -62,6 +62,12 @@ namespace Fases{
 		arquivo.close();
 	}
 
+	void Fase::mostrarTelaFim()
+	{
+		std::cout << "tela final" << std::endl;
+		
+	}
+
 	Fase::Fase() : jogador1(NULL), jogador2(NULL),  LEnt(), Ger(), pontTotal(0)
 	{
 		if (carregar == false)

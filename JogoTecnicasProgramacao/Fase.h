@@ -6,7 +6,6 @@
 #include "Estado.h"
 #include "Plataforma.h"
 #include "Rocha.h"
-//#include "Menu.h"
 #include "EsferaPoder.h"
 #include "Entidade.h"
 #include "ListaEntidades.h"
@@ -35,6 +34,7 @@ namespace Fases
 		Listas::ListaEntidades LEnt;
 		int pontTotal;
 		void limpaTdsArq();
+		void mostrarTelaFim();
 
 		//Entidades::Personagens::Inimigo* pInimigo1;
 	public:

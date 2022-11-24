@@ -1,8 +1,8 @@
 #include "Menu.h"
 #include <iostream>
 #define WIDTH 1200
-#define N_BUTTONS 4
 #define HEIGHT 720
+#define N_BUTTONS 4
 #define FONT_PATH "assets\\textures\\font.ttf"
 
 
