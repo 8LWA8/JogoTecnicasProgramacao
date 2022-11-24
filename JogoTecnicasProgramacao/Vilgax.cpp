@@ -22,7 +22,12 @@ Vilgax::~Vilgax()
 
 }
 
-void Vilgax::setPoderDano(float d) 
+std::string Entidades::Personagens::Vilgax::salvar()
+{
+	return "";
+}
+
+void Vilgax::setPoderDano(float d)
 {
 	this->poder_dano = d;
 }

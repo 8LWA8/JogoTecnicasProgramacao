@@ -8,7 +8,7 @@ namespace Fases{
 
 	
 
-	Fase::Fase() : jogador1(NULL), jogador2(NULL),  LEnt(), Ger(), pontTotal(0)
+	Fase::Fase() : jogador1(NULL), jogador2(NULL),  LEnt(), Ger(), pontTotal(0), num_jog(2)
 {
 	this->setId(10);
 	this->getCorpo()->setSize(sf::Vector2f(2100.0f, 1900.0f));
@@ -67,7 +67,7 @@ void Fase::criaRochas()
 
 void Fase::criaPoderes()
 {
-	int n = 3 + rand() % 4;
+	int n = 10 + rand() % 4;
 	for (int i = 0; i < n; i++)
 	{
 		EsferaPoder* esfera = new EsferaPoder(sf::Vector2f(-550.f + 150.f * i, 150.f));
@@ -79,10 +79,14 @@ void Fase::criaPoderes()
 
 void Fase::criaJogadores() 
 {
-	if (jogador1 == NULL && jogador2 == NULL) {
+	if (jogador1 == NULL && num_jog == 1)
+	{
+		jogador1 = new Jogador1();
+		LEnt.addEntidade(jogador1);
+		Ger.getVecJogs()->push_back(jogador1);
+	} else if (jogador1 == NULL && jogador2 == NULL) {
 		jogador1 = new Jogador1();
 		jogador2 = new Jogador2();
-
 		LEnt.addEntidade(jogador1);
 		LEnt.addEntidade(jogador2);
 		Ger.getVecJogs()->push_back(jogador1);
@@ -184,6 +188,30 @@ void Fase::recuperar()
 	}*/
 
 	file.clear();
+}
+
+bool Fase::venceuFase()
+{
+	vector <Inimigo*>::iterator it;
+	for (it = Ger.getVecInimigos()->begin(); it != Ger.getVecInimigos()->end(); it++)
+	{
+		if ((*it)->getVivo())
+		{
+			return false;
+		}
+	}
+
+	return true;
+}
+
+void Fase::setNumJog(int n)
+{
+	num_jog = n;
+}
+
+int Fase::getNumJog()
+{
+	return num_jog;
 }
 
 }

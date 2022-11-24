@@ -14,6 +14,7 @@ namespace Entidades
             Vilgax(const sf::Vector2f pos);
             ~Vilgax();
 
+            virtual std::string salvar();
             void setPoderDano(float d);
             float getPoderDano();
 

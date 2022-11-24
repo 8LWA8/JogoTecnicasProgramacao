@@ -22,9 +22,12 @@ namespace Fases
     class Fase :
         public Estado
     {
+	private:
+		int num_jog;
 	protected:
-		 Jogador1* jogador1;
-		 Jogador2* jogador2;
+		Jogador1* jogador1;
+		Jogador2* jogador2;
+		sf::Clock relogio;
 		Gerenciadores::GerenteColisoes Ger;
 		Listas::ListaEntidades LEnt;
 		int pontTotal;
@@ -46,7 +49,9 @@ namespace Fases
 		void setPontTotal();
 		void salvar();
 		virtual void recuperar();
-		
+		bool venceuFase();
+		void setNumJog(int n);
+		int getNumJog();
     };
 	
 }

@@ -3,6 +3,7 @@
 #include "IDs.h"
 #include "Estado.h"
 #include "MaquinaEstados.h"
+#include "Fase.h"
 #include <SFML/Graphics.hpp>
 #include <iostream>
 #include <cstring>

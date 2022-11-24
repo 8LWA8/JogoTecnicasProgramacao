@@ -40,6 +40,12 @@ namespace Fases {
 		Ger.gerenciarColisoes();
 		
 		
+		if (venceuFase() == true)
+		{
+			std::cout << "venceu!!!!" << std::endl;
+			MaquinaEstados::getMaquinaEstados()->addEstado(IDs::IDs::jogar_fase2);
+		}
+		
 		/*
 		//fase1.Ger.verificaColisao(&jogador1, &fase1.esfera1);
 		Ger.checaColisaoEsfera(&jogador1);

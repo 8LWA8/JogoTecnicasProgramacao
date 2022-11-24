@@ -22,6 +22,11 @@ Entidades::Personagens::Robo::~Robo()
 {
 }
 
+std::string Entidades::Personagens::Robo::salvar()
+{
+	return "";
+}
+
 void Robo::setPersegue(bool per) 
 {
 	this->persegue = per;
