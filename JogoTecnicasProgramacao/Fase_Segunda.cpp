@@ -7,6 +7,7 @@ Fases::Fase_Segunda::Fase_Segunda()
 	this->criaAlienigenas();
 	this->criaPlataformas();
 	this->criaJogadores();
+	
 }
 
 Fases::Fase_Segunda::~Fase_Segunda()
@@ -22,25 +23,6 @@ void Fases::Fase_Segunda::executar()
 	LEnt.executarTodos();
 
 	Ger.gerenciarColisoes();
-
-	/*
-	vector <Inimigo*>::iterator it;
-	for (it = (Ger.getVecInimigos())->begin(); it != (Ger.getVecInimigos())->end(); it++)
-	{
-		if (Alienigena* a = dynamic_cast <Alienigena*>(*it))
-		{
-			Ger.colideCanto(a->getProj());
-			if (a->getProj()->getExiste() == true)
-			{
-				if (Ger.verificaColisao(jogador1, a->getProj()))
-				{
-					
-					a->getProj()->danar(jogador1);
-					a->getProj()->setAtingiu(true);
-				}
-			}
-		}
-	}*/
 
 
 	
@@ -73,10 +55,17 @@ void Fases::Fase_Segunda::criaPlataformas()
 	int n = 3 + rand() % 2;
 	for (int i = 0; i < n; i++)
 	{
-		Plataforma* p1 = new Plataforma(sf::Vector2f(200.f - 300.f * i, -250.f + 100.f * i), sf::Vector2f(100.f + i * 100, 20.f));
+		Plataforma* p1 = new Plataforma(sf::Vector2f(200.f - 400.f * i, -250.f + 100.f * i), sf::Vector2f(100.f + i * 100, 20.f));
 		Entidade* e1 = static_cast <Entidade*>(p1);
 		LEnt.addEntidade(e1);
 		Ger.getListObst()->push_back(p1);
+
+		EsferaPoder* esfera = new EsferaPoder(sf::Vector2f(p1->getCoord()->getX()+50.f, p1->getCoord()->getY() - 50.f));
+		e1 = static_cast <Entidade*>(esfera);
+		LEnt.addEntidade(e1);
+		Ger.getVecPoder()->push_back(esfera);
+
+		
 	}
 }
 

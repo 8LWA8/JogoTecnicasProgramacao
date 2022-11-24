@@ -65,7 +65,7 @@ namespace Gerenciadores {
 			{
 				//FAZ O JOGADOR PULAR SE BATER COM UM INIMIGO POR CIMA
 				if (ent2->getId() == 2) {
-					ent1->getCorpo()->move(sf::Vector2f(0.0f, -200.0f));
+					ent1->getCorpo()->move(sf::Vector2f(0.0f, -100.0f));
 				} 
 				coll1->setValY(1.0); //colide embaixo
 				coll2->setValY(-1.0); //colide em cima
@@ -143,27 +143,7 @@ namespace Gerenciadores {
 		}
 	}
 
-	/*void GerenteColisoes::checaColisaoLista(Entidade* ent1)
-	{
-		int tam = pLista->getTam();
-		Entidade* aux = nullptr;
-		for (int i = 0; i < tam; i++)
-		{
-			cout << "loop exetds" << endl;
-			aux = pLista->operator[](i);
-			if (Personagem* p = dynamic_cast <Personagem*>(aux))
-			{
-				if (p->getVivo() == true)
-				{
-					verificaColisao(ent1, aux);
-				}
-			}
-			else
-			{
-				verificaColisao(ent1, aux);
-			}
-		}
-	}*/
+	
 
 	void GerenteColisoes::checaColisaoObst(Entidade* ent)
 	{

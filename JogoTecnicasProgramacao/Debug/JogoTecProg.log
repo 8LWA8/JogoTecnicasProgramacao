@@ -1,2 +1,6 @@
-﻿  Jogo.cpp
+﻿  Fase.cpp
+  Fase_Primeira.cpp
+  Fase_Segunda.cpp
+  Generating Code...
+C:\Users\bruno\OneDrive\Documents\GitHub\JogoTecnicasProgramacao\JogoTecnicasProgramacao\Fase.cpp(183): warning C4715: 'Fases::Fase::getPontTotal': not all control paths return a value
   JogoTecProg.vcxproj -> C:\Users\bruno\OneDrive\Documents\GitHub\JogoTecnicasProgramacao\JogoTecnicasProgramacao\Debug\JogoTecProg.exe

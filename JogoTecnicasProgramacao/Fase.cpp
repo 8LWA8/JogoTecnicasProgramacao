@@ -171,18 +171,20 @@ int Fase::getPontTotal()
 	
 	if (this->jogador1 != NULL && this->jogador2 != NULL) 
 	{
+		this->setPontTotal(jogador1->getPontuacao() + jogador2->getPontuacao());
 		return (jogador1->getPontuacao() + jogador2->getPontuacao());
 
 	}
 	else if (this->jogador2 == NULL) 
 	{
+		this->setPontTotal(jogador1->getPontuacao());
 		return this->jogador1->getPontuacao();
 	}
 }
 
-void Fase::setPontTotal() 
+void Fase::setPontTotal(int p) 
 {
-	this->pontTotal = getPontTotal();
+	this->pontTotal = p;
 }
 
 

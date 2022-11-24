@@ -65,6 +65,17 @@ namespace Fases {
 		{
 			std::cout << "venceu!!!!" << std::endl;
 			MaquinaEstados::getMaquinaEstados()->addEstado(IDs::IDs::jogar_fase2);
+			Estado* est = MaquinaEstados::getMaquinaEstados()->getEstadoAtual();
+			Fase_Segunda* fas2 = dynamic_cast<Fase_Segunda*>(est);
+			if (fas2->getJog1() != NULL && fas2->getJog2() != NULL) {
+				fas2->getJog1()->setPontuacao(this->getJog1()->getPontuacao());
+				fas2->getJog2()->setPontuacao(this->getJog2()->getPontuacao());
+			}
+			else if (fas2->getJog1() != NULL) 
+			{
+				fas2->getJog1()->setPontuacao(this->getJog1()->getPontuacao());
+			}
+			
 		}
 		
 		/*

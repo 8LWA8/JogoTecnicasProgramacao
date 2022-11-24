@@ -49,7 +49,7 @@ namespace Fases
 		Jogador1* getJog1();
 		Jogador2* getJog2();
 		int getPontTotal();
-		void setPontTotal();
+		void setPontTotal(int p);
 		void salvar();
 		virtual void recuperar();
 		bool venceuFase();
