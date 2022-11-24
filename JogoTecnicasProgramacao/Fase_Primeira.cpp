@@ -8,13 +8,14 @@
 namespace Fases {
 	Fase_Primeira::Fase_Primeira()
 	{
-		this->pressed = false;
-		this->criaVilgax();
-		this->criaEspinhos();
-		this->criaPlataformas();
-		this->criaJogadores();
-		
-		
+		if (Fase::getCarregar() == false)
+		{
+			this->pressed = false;
+			this->criaVilgax();
+			this->criaEspinhos();
+			this->criaPlataformas();
+			this->criaJogadores();
+		}
 
 	}
 

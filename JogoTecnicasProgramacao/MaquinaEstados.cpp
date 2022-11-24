@@ -38,7 +38,7 @@ MaquinaEstados::~MaquinaEstados() {
 void MaquinaEstados::addEstado(const IDs::IDs ID) {
     Estado* estado = nullptr;
 
-    //switch case
+    std::ifstream arqFase;
 
     switch (ID)
     {
@@ -47,6 +47,12 @@ void MaquinaEstados::addEstado(const IDs::IDs ID) {
         break;
     case IDs::IDs::jogar_fase2:
         estado = (Estado*) new Fases::Fase_Segunda();
+        break;
+    case IDs::IDs::carregar_fase1:
+        estado = (Estado*) new Fases::Fase_Primeira();
+        break;
+    case IDs::IDs::carregar_fase2:
+        //estado = (Estado*) new Fases::Fase_Segunda(arqFase);
         break;
     case IDs::IDs::menu:
         estado = (Estado*) new Menu();

@@ -6,6 +6,7 @@
 #include "Estado.h"
 #include "Plataforma.h"
 #include "Rocha.h"
+//#include "Menu.h"
 #include "EsferaPoder.h"
 #include "Entidade.h"
 #include "ListaEntidades.h"
@@ -24,7 +25,7 @@ namespace Fases
     {
 	private:
 		static int num_jog;
-		
+		static bool carregar;
 	protected:
 		Jogador1* jogador1;
 		Jogador2* jogador2;
@@ -56,6 +57,8 @@ namespace Fases
 		void carregarTodos();
 		static void setNumJog(int n);
 		static int getNumJog();
+		static bool getCarregar();
+		static void setCarregar(bool c);
     };
 	
 }

@@ -45,18 +45,42 @@ void Menu::loop_events()
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Enter) && !pressed)
 	{
 		//std::cout << optionSelected << std::endl;
-		if (optionSelected == 0)
+		switch (optionSelected)
 		{
-			MaquinaEstados::getMaquinaEstados()->addEstado(IDs::IDs::jogar_fase1);
-		}
-		if (optionSelected == 1)
-		{
-			MaquinaEstados::getMaquinaEstados()->addEstado(IDs::IDs::jogar_fase2);
-		}
-		if (optionSelected == 3)
-		{
+		case 0:
+			if (!Fases::Fase::getCarregar())
+			{
+				MaquinaEstados::getMaquinaEstados()->addEstado(IDs::IDs::jogar_fase1);
+			}
+			else
+			{
+				MaquinaEstados::getMaquinaEstados()->addEstado(IDs::IDs::carregar_fase1);
+			}
+			break;
+		case 1:
+			if(!Fases::Fase::getCarregar())
+			{
+				MaquinaEstados::getMaquinaEstados()->addEstado(IDs::IDs::jogar_fase2);
+			}
+			else
+			{
+				MaquinaEstados::getMaquinaEstados()->addEstado(IDs::IDs::carregar_fase2);
+			}
+			break;
+		case 3:
 			pGerenteGrafico->getWindow()->close();
+			break;
 		}
+	}
+
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::R) && !pressed)
+	{
+		Fases::Fase::setCarregar(true);
+	}
+
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::N) && !pressed)
+	{
+		Fases::Fase::setCarregar(false);
 	}
 
 	float dt = relogio.getElapsedTime().asSeconds();
@@ -67,7 +91,7 @@ void Menu::loop_events()
 	}
 }
 
-Menu::Menu() : pos(0), pressed(false)
+Menu::Menu() : pos(1), pressed(false), optionSelected(0)
 {
 	//Créditos da imagem: https://www.freepik.com/free-vector/realistic-stars-galaxy-background_14063401.htm#query=outer%20space%20background&position=43&from_view=keyword
 	setTextura("fundo2.jpg");
@@ -86,9 +110,6 @@ Menu::Menu() : pos(0), pressed(false)
 
 	botoes[0]->setFillColor(sf::Color::Magenta);
 
-	pos = 1;
-	pressed = false;
-	optionSelected = 0;
 	options = { "Exploradores Espaciais", "Fase 1", "Fase 2", "Ranking", "Sair" };
 	texts.resize(5);
 	coords = { {-150,-250},{-10, -150},{-10, -50},{-10, 50},{-10, 150} };
@@ -125,5 +146,5 @@ void Menu::imprimir()
 	}
 
 	pGerenteGrafico->printJogSelec(Fases::Fase::getNumJog());
-	pGerenteGrafico->printCarregaSelec(Fases::Fase::getNumJog());
+	pGerenteGrafico->printCarregaSelec(Fases::Fase::getCarregar());
 }

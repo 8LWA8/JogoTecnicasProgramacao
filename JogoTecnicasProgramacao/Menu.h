@@ -16,7 +16,6 @@ class Menu :
     int pos;
     int optionSelected;
     bool pressed;
-
     sf::Clock relogio;
 
 

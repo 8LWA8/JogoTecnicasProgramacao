@@ -7,6 +7,7 @@ using namespace Obstaculos;
 namespace Fases{
 
 	int Fase::num_jog = 2;
+	bool Fase::carregar = false;
 
 	void Fase::limpaTdsArq()
 	{
@@ -62,22 +63,21 @@ namespace Fases{
 	}
 
 	Fase::Fase() : jogador1(NULL), jogador2(NULL),  LEnt(), Ger(), pontTotal(0)
-{
-	this->setId(10);
-	this->getCorpo()->setSize(sf::Vector2f(2100.0f, 1900.0f));
-	this->getCorpo()->setPosition(sf::Vector2f(-700.0f, -500.0f));
-	this->setTextura("assets//textures//background.jpg");
+	{
+		if (carregar == false)
+		{
+			this->setId(10);
+			this->getCorpo()->setSize(sf::Vector2f(2100.0f, 1900.0f));
+			this->getCorpo()->setPosition(sf::Vector2f(-700.0f, -500.0f));
+			this->setTextura("assets//textures//background.jpg");
 
-	criaRobos();
-	criaRochas();
-	criaPoderes();
-	criaJogadores();
-	/*
-	Ger.incluirJogador(&jogador1);
-	Ger.incluirJogador(&jogador2);
-	Ger.incluirObstaculo(&chao);
-	*/
-}
+			criaRobos();
+			criaRochas();
+			criaPoderes();
+			criaJogadores();
+		}
+	}
+
 	
 	
 	
@@ -267,6 +267,16 @@ void Fase::setNumJog(int n)
 int Fase::getNumJog()
 {
 	return num_jog;
+}
+
+bool Fase::getCarregar()
+{
+	return carregar;
+}
+
+void Fase::setCarregar(bool c)
+{
+	carregar = c;
 }
 
 }

@@ -221,10 +221,22 @@ using namespace Gerenciadores;
 		GerenteGrafico::render(&tex);
 	}
 
-	void Gerenciadores::GerenteGrafico::printCarregaSelec(int n)
+	void Gerenciadores::GerenteGrafico::printCarregaSelec(bool c)
 	{
-		/*std::string str = std::to_string(n);
-		tex.setString("Numero de jogadores = " + str);*/
+
+		std::string str;
+
+		if (c == true)
+		{
+			str = "Recuperar jogo";
+		}
+		else
+		{
+			str = "Novo jogo";
+		}
+		
+
+		tex.setString("Modo = " + str);
 
 		tex.setFillColor(sf::Color::White);
 		tex.setPosition(sf::Vector2f(-580.0f, 0.0f));
