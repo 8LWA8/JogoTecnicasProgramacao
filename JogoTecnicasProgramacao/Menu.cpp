@@ -123,4 +123,7 @@ void Menu::imprimir()
 		pGerenteGrafico->setTextOutline(0);
 		pGerenteGrafico->print(coords[i], sizes[i]);
 	}
+
+	pGerenteGrafico->printJogSelec(Fases::Fase::getNumJog());
+	pGerenteGrafico->printCarregaSelec(Fases::Fase::getNumJog());
 }

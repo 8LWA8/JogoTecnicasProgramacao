@@ -40,7 +40,10 @@ namespace Gerenciadores {
 		void print(sf::Vector2f pos, int tam);
 		void printVida(float val);
 		void printPont(int val);
+		void printJogSelec(int n);
+		void printCarregaSelec(int n);
 		void setText(std::string text);
+		
 		sf::Text getText();
 		void setTextOutline(float value);
 

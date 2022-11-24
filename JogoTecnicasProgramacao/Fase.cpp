@@ -262,10 +262,10 @@ void Fase::setNumJog(int n)
 	num_jog = n;
 }
 
-//int Fase::getNumJog()
-//{
-//	return num_jog;
-//}
-//
+int Fase::getNumJog()
+{
+	return num_jog;
+}
+
 }
 

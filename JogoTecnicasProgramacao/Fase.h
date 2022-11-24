@@ -55,6 +55,7 @@ namespace Fases
 		bool venceuFase();
 		void carregarTodos();
 		static void setNumJog(int n);
+		static int getNumJog();
     };
 	
 }

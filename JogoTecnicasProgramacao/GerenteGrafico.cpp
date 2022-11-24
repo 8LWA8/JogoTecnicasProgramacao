@@ -199,6 +199,50 @@ using namespace Gerenciadores;
 		GerenteGrafico::render(&tex);
 	}
 
+	void Gerenciadores::GerenteGrafico::printJogSelec(int n)
+	{
+		std::string str = std::to_string(n);
+		tex.setString("Numero de jogadores = " + str);
+
+		tex.setFillColor(sf::Color::White);
+		tex.setPosition(sf::Vector2f(-580.0f, -300.0f));
+		GerenteGrafico::render(&tex);
+
+		tex.setString("Pressione 1 ou 2 para");
+
+		tex.setFillColor(sf::Color::White);
+		tex.setPosition(sf::Vector2f(-580.0f, -240.0f));
+		GerenteGrafico::render(&tex);
+
+		tex.setString("mudar a quantidade");
+
+		tex.setFillColor(sf::Color::White);
+		tex.setPosition(sf::Vector2f(-580.0f, -210.0f));
+		GerenteGrafico::render(&tex);
+	}
+
+	void Gerenciadores::GerenteGrafico::printCarregaSelec(int n)
+	{
+		/*std::string str = std::to_string(n);
+		tex.setString("Numero de jogadores = " + str);*/
+
+		tex.setFillColor(sf::Color::White);
+		tex.setPosition(sf::Vector2f(-580.0f, 0.0f));
+		GerenteGrafico::render(&tex);
+
+		tex.setString("Pressione R para recuperar fase");
+
+		tex.setFillColor(sf::Color::White);
+		tex.setPosition(sf::Vector2f(-580.0f, 60.0f));
+		GerenteGrafico::render(&tex);
+
+		tex.setString("ou N para novo jogo");
+
+		tex.setFillColor(sf::Color::White);
+		tex.setPosition(sf::Vector2f(-580.0f, 90.0f));
+		GerenteGrafico::render(&tex);
+	}
+
 	void Gerenciadores::GerenteGrafico::setText(std::string text)
 	{
 		tex.setString(text);
