@@ -8,31 +8,51 @@ using namespace Estados;
 
 void TelaFinal::loop_events()
 {
-	/*if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape) && !pressed)
+	/*sf::Event eventNome;
+
+	while (pGerenteGrafico->getWindow()->pollEvent(eventNome))
+	{
+		if (eventNome.type == sf::Event::KeyPressed)
+		{
+			if (eventNome.KeyPressed == sf::Keyboard::K)
+			{
+				
+			}
+		}
+	}*/
+
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::K) && !pressed)
 	{
 		pressed = true;
-		pGerenteGrafico->getWindow()->close();
-	}*/
-	
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Enter) && !pedirNome)
+		nome.append("k");
+		pGerenteGrafico->setText("k");
+		pGerenteGrafico->print(sf::Vector2f(-100.f + pos, 0.f), 30);
+		pos += 10;
+		std::cout << "apertou k " <<std::endl;
+	}
+
+	pGerenteGrafico->print(sf::Vector2f(-100.f + pos, 0.f), 30);
+
+	float dt = relogio.getElapsedTime().asSeconds();
+	if (dt >= 2.f)
 	{
-		pedirNome = true;
-		std::cin >> nome;
-		std::cout << nome;
+		pressed = false;
+		relogio.restart();
 	}
 }
 
-TelaFinal::TelaFinal(): pressed(false), pedirNome(false)
+TelaFinal::TelaFinal(): pressed(false), pedirNome(false), pos(0)
 {
 	//Créditos da imagem: https://www.freepik.com/free-vector/realistic-stars-galaxy-background_14063401.htm#query=outer%20space%20background&position=43&from_view=keyword
 	setTextura("fundo2.jpg");
 	corpo.setPosition(sf::Vector2f(-600.f, -360.f));
 	corpo.setSize(sf::Vector2f(WIDTH, HEIGHT));
 
-	textos = { "Fim de jogo", "Pressione enter e digite seu nome", "Pressione esc para sair"};
+	textos = { "Fim de jogo", "Digite seu nome", "Pressione esc para sair"};
 	//texts.resize(3);
 	coords = { {-120,-250},{-300, -300},{-120, 280} };
 	sizes = { 80,40,40 };
+	nome = "";
 }
 
 TelaFinal::~TelaFinal()

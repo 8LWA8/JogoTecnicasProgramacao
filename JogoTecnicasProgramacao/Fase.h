@@ -43,6 +43,7 @@ namespace Fases
 		virtual void executar() = 0;
 		virtual void imprimir()= 0;
 		void criaRobos();
+		void criaRobos(float x, float y, bool estaVivo);
 		void criaRochas();
 		void criaPoderes();
 		virtual void criaPlataformas() = 0;

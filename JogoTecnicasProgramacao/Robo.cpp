@@ -36,7 +36,7 @@ void Robo::salvar()
 
     std::cout << "entrou salvar robo" << std::endl;
 
-    dadosRobo << getId() << " ";
+  /*  dadosRobo << getId() << " ";*/
     dadosRobo << corpo.getPosition().x << " ";
     dadosRobo << corpo.getPosition().y << " ";
     //dadosRobo << num_vidas << " ";

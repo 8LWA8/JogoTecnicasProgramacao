@@ -42,6 +42,7 @@ namespace Gerenciadores {
 		void printVidaJ2(float val);
 		void printPont(int val);
 		void printJogSelec(int n);
+		void printNome(char letra);
 		void printCarregaSelec(bool c);
 		void setText(std::string text);
 		

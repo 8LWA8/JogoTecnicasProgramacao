@@ -13,6 +13,7 @@ class TelaFinal :
     sf::Clock relogio;
     bool pressed;
     bool pedirNome;
+    float pos;
 
     std::string nome;
     std::vector<std::string> textos;

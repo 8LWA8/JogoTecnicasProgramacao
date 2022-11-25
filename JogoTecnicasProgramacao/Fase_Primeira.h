@@ -31,7 +31,9 @@ namespace Fases
         void executar();
         void imprimir();
         void criaVilgax();
+        void criaVilgax(float x, float y, bool estaVivo);
         void criaPlataformas();
         void criaEspinhos();
+        void criaEspinhos(float x, float y, float tamx, float tamy, float altura);
     };
 }

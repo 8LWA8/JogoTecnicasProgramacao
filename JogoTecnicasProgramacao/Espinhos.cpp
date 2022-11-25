@@ -54,9 +54,11 @@ void Entidades::Obstaculos::Espinhos::salvar()
 
 	std::cout << "entrou salvar espinhos" << std::endl;
 
-	dadosEspi << getId() << " ";
+	/*dadosEspi << getId() << " ";*/
 	dadosEspi << corpo.getPosition().x << " ";
 	dadosEspi << corpo.getPosition().y << " ";
+	dadosEspi << corpo.getSize().x << " ";
+	dadosEspi << corpo.getSize().y << " ";
 	dadosEspi << getAltura() << " ";
 
 	dadosEspi << std::endl;

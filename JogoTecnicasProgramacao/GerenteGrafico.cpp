@@ -231,6 +231,12 @@ using namespace Gerenciadores;
 		GerenteGrafico::render(&tex);
 	}
 
+	void Gerenciadores::GerenteGrafico::printNome(char letra)
+	{
+
+		tex.setString("" + letra);
+	}
+
 	void Gerenciadores::GerenteGrafico::printCarregaSelec(bool c)
 	{
 

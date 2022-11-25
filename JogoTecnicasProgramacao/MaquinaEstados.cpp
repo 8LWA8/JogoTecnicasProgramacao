@@ -57,9 +57,9 @@ void MaquinaEstados::addEstado(const IDs::IDs ID) {
     case IDs::IDs::menu:
         estado = (Estado*) new Menu();
         break;
-        /* case IDs::IDs::tela_final:
+    case IDs::IDs::tela_final:
         estado = (Estado*) new TelaFinal();
-        break; */
+        break; 
     }
 
     if (estado == nullptr) {

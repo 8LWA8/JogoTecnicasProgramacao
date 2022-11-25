@@ -70,17 +70,38 @@ namespace Fases{
 
 	Fase::Fase() : jogador1(NULL), jogador2(NULL),  LEnt(), Ger(), pontTotal(0)
 	{
+		this->getCorpo()->setSize(sf::Vector2f(2100.0f, 1900.0f));
+		this->getCorpo()->setPosition(sf::Vector2f(-700.0f, -500.0f));
+		this->setTextura("assets//textures//background.jpg");
+		this->setId(10);
+
 		if (carregar == false)
 		{
-			this->setId(10);
-			this->getCorpo()->setSize(sf::Vector2f(2100.0f, 1900.0f));
-			this->getCorpo()->setPosition(sf::Vector2f(-700.0f, -500.0f));
-			this->setTextura("assets//textures//background.jpg");
-
 			criaRobos();
 			criaRochas();
 			criaPoderes();
 			criaJogadores();
+		} else
+		{
+			float x;
+			float y;
+			bool estaVivo;
+
+			ifstream dados;
+
+			//dados.open("salvar/salvarVilgax.txt", ios::out);
+
+			//while (!dados.eof())
+			//{
+			//	/*dados >> id;*/
+			//	dados >> x;
+			//	dados >> y;
+			//	dados >> estaVivo;
+
+			//	this->criaVilgax(x, y, estaVivo);
+			//}
+
+			//dados.close();
 		}
 	}
 
@@ -109,6 +130,10 @@ void Fase::criaRobos()
 		Inimigo* i1 = static_cast <Inimigo*>(r1);
 		Ger.getVecInimigos()->push_back(i1);
 	}
+}
+
+void Fase::criaRobos(float x, float y, bool estaVivo)
+{
 }
 
 void Fase::criaRochas()
