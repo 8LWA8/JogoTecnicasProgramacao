@@ -18,10 +18,8 @@ void Fases::Fase_Segunda::executar()
 {
 	//INSTANCIAR DINAMICAMENTE JOGADOR E COLOCAR EM LISTA
 	this->imprimir();
-	pGerenteGrafico->printVida(jogador1->getNumVidas());
-	pGerenteGrafico->printPont(this->getPontTotal());
+	this->mostrarInfoFase();
 	LEnt.executarTodos();
-
 	Ger.gerenciarColisoes();
 
 

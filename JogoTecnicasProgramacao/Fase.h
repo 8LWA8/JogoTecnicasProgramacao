@@ -51,6 +51,7 @@ namespace Fases
 		Jogador2* getJog2();
 		int getPontTotal();
 		void setPontTotal(int p);
+		void mostrarInfoFase();
 		void salvar();
 		virtual void recuperar();
 		bool venceuFase();

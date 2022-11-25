@@ -38,7 +38,8 @@ namespace Gerenciadores {
 		void closeWindow();
 		void handleWindowResize();
 		void print(sf::Vector2f pos, int tam);
-		void printVida(float val);
+		void printVidaJ1(float val);
+		void printVidaJ2(float val);
 		void printPont(int val);
 		void printJogSelec(int n);
 		void printCarregaSelec(bool c);

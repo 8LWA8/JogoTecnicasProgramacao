@@ -57,7 +57,6 @@ void Jogador::setPontuacao(int p)
 }
 int Jogador::getPontuacao()
 {
-    
         return this->pontuacao;
     
 }

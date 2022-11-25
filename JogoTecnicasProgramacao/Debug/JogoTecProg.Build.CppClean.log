@@ -1,8 +1,5 @@
-c:\users\letic\desktop\utfpr\utfpr - 2022.2\técnicas de programação\jogo\jogotecprog\debug\vc142.pdb
-c:\users\letic\desktop\utfpr\utfpr - 2022.2\técnicas de programação\jogo\jogotecprog\debug\vc142.idb
 c:\users\bruno\onedrive\documents\github\jogotecnicasprogramacao\jogotecnicasprogramacao\debug\vc142.pdb
 c:\users\bruno\onedrive\documents\github\jogotecnicasprogramacao\jogotecnicasprogramacao\debug\vc142.idb
-c:\users\bruno\onedrive\documents\github\jogotecnicasprogramacao\jogotecnicasprogramacao\debug\personagem.obj
 c:\users\bruno\onedrive\documents\github\jogotecnicasprogramacao\jogotecnicasprogramacao\debug\obstaculo.obj
 c:\users\bruno\onedrive\documents\github\jogotecnicasprogramacao\jogotecnicasprogramacao\debug\menu.obj
 c:\users\bruno\onedrive\documents\github\jogotecnicasprogramacao\jogotecnicasprogramacao\debug\listaentidades.obj
@@ -27,19 +24,29 @@ c:\users\bruno\onedrive\documents\github\jogotecnicasprogramacao\jogotecnicaspro
 c:\users\bruno\onedrive\documents\github\jogotecnicasprogramacao\jogotecnicasprogramacao\debug\robo.obj
 c:\users\bruno\onedrive\documents\github\jogotecnicasprogramacao\jogotecnicasprogramacao\debug\projetil.obj
 c:\users\bruno\onedrive\documents\github\jogotecnicasprogramacao\jogotecnicasprogramacao\debug\plataforma.obj
-c:\users\bruno\onedrive\documents\github\jogotecnicasprogramacao\jogotecnicasprogramacao\debug\jogotecprog.exe
-c:\users\bruno\onedrive\documents\github\jogotecnicasprogramacao\jogotecnicasprogramacao\debug\jogotecprog.ilk
+c:\users\bruno\onedrive\documents\github\jogotecnicasprogramacao\jogotecnicasprogramacao\debug\maquinaestados.obj
+c:\users\bruno\onedrive\documents\github\jogotecnicasprogramacao\jogotecnicasprogramacao\debug\estado.obj
+c:\users\bruno\onedrive\documents\github\jogotecnicasprogramacao\jogotecnicasprogramacao\debug\esferapoder.obj
+c:\users\bruno\onedrive\documents\github\jogotecnicasprogramacao\jogotecnicasprogramacao\debug\construtorfase.obj
+c:\users\bruno\onedrive\documents\github\jogotecnicasprogramacao\jogotecnicasprogramacao\debug\jogador1.obj
+c:\users\bruno\onedrive\documents\github\jogotecnicasprogramacao\jogotecnicasprogramacao\debug\jogador2.obj
+c:\users\bruno\onedrive\documents\github\jogotecnicasprogramacao\jogotecnicasprogramacao\debug\personagem.obj
+c:\users\bruno\onedrive\documents\github\jogotecnicasprogramacao\jogotecnicasprogramacao\debug\jogador.obj.enc
+c:\users\bruno\onedrive\documents\github\jogotecnicasprogramacao\jogotecnicasprogramacao\debug\personagem.obj.enc
 c:\users\bruno\onedrive\documents\github\jogotecnicasprogramacao\jogotecnicasprogramacao\debug\jogotecprog.pdb
-c:\users\bruno\onedrive\documents\github\jogotecnicasprogramacao\jogotecnicasprogramacao\debug\coordenadas.obj
-c:\users\bruno\onedrive\documents\github\jogotecnicasprogramacao\jogotecnicasprogramacao\debug\gerenciadorcolisoes.obj
-c:\users\bruno\onedrive\documents\github\jogotecnicasprogramacao\jogotecnicasprogramacao\debug\inim_atira.obj
-c:\users\bruno\onedrive\documents\github\jogotecnicasprogramacao\jogotecnicasprogramacao\debug\inim_simples.obj
-c:\users\bruno\onedrive\documents\github\jogotecnicasprogramacao\jogotecnicasprogramacao\debug\obst_dano.obj
-c:\users\bruno\onedrive\documents\github\jogotecnicasprogramacao\jogotecnicasprogramacao\debug\obst_simples.obj
-c:\users\bruno\onedrive\documents\github\jogotecnicasprogramacao\jogotecnicasprogramacao\debug\gerentecolisoes.obj.enc
 c:\users\bruno\onedrive\documents\github\jogotecnicasprogramacao\jogotecnicasprogramacao\debug\jogotecprog.tlog\cl.command.1.tlog
 c:\users\bruno\onedrive\documents\github\jogotecnicasprogramacao\jogotecnicasprogramacao\debug\jogotecprog.tlog\cl.read.1.tlog
 c:\users\bruno\onedrive\documents\github\jogotecnicasprogramacao\jogotecnicasprogramacao\debug\jogotecprog.tlog\cl.write.1.tlog
+c:\users\bruno\onedrive\documents\github\jogotecnicasprogramacao\jogotecnicasprogramacao\debug\jogotecprog.tlog\link-cvtres.read.1.tlog
+c:\users\bruno\onedrive\documents\github\jogotecnicasprogramacao\jogotecnicasprogramacao\debug\jogotecprog.tlog\link-cvtres.write.1.tlog
+c:\users\bruno\onedrive\documents\github\jogotecnicasprogramacao\jogotecnicasprogramacao\debug\jogotecprog.tlog\link-rc.read.1.tlog
+c:\users\bruno\onedrive\documents\github\jogotecnicasprogramacao\jogotecnicasprogramacao\debug\jogotecprog.tlog\link-rc.write.1.tlog
+c:\users\bruno\onedrive\documents\github\jogotecnicasprogramacao\jogotecnicasprogramacao\debug\jogotecprog.tlog\link.1152-cvtres.read.1.tlog
+c:\users\bruno\onedrive\documents\github\jogotecnicasprogramacao\jogotecnicasprogramacao\debug\jogotecprog.tlog\link.1152-cvtres.write.1.tlog
+c:\users\bruno\onedrive\documents\github\jogotecnicasprogramacao\jogotecnicasprogramacao\debug\jogotecprog.tlog\link.1152-rc.read.1.tlog
+c:\users\bruno\onedrive\documents\github\jogotecnicasprogramacao\jogotecnicasprogramacao\debug\jogotecprog.tlog\link.1152-rc.write.1.tlog
+c:\users\bruno\onedrive\documents\github\jogotecnicasprogramacao\jogotecnicasprogramacao\debug\jogotecprog.tlog\link.1152.read.1.tlog
+c:\users\bruno\onedrive\documents\github\jogotecnicasprogramacao\jogotecnicasprogramacao\debug\jogotecprog.tlog\link.1152.write.1.tlog
 c:\users\bruno\onedrive\documents\github\jogotecnicasprogramacao\jogotecnicasprogramacao\debug\jogotecprog.tlog\link.command.1.tlog
 c:\users\bruno\onedrive\documents\github\jogotecnicasprogramacao\jogotecnicasprogramacao\debug\jogotecprog.tlog\link.read.1.tlog
 c:\users\bruno\onedrive\documents\github\jogotecnicasprogramacao\jogotecnicasprogramacao\debug\jogotecprog.tlog\link.write.1.tlog

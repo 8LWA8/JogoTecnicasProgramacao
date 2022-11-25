@@ -14,7 +14,7 @@ pGerenteGrafico(pGerenteGrafico->getInstance())
 	
 }
 
-void Jogo::exec() 
+void Jogo::exec()
 {
 	/*Estado* est = MaquinaEstados::getMaquinaEstados()->getEstadoAtual();
 	if (est->getId() == 10)
@@ -22,33 +22,41 @@ void Jogo::exec()
 		Fase* fas = dynamic_cast<Fase*>(est);
 		fas->recuperar();
 	}*/
-	
-    while (pGerenteGrafico->isWindowOpen())
-    {
-        sf::Event event;
-        while (pGerenteGrafico->getWindow()->pollEvent(event))
-        {
+
+	while (pGerenteGrafico->isWindowOpen())
+	{
+		sf::Event event;
+		while (pGerenteGrafico->getWindow()->pollEvent(event))
+		{
 			if (event.type == sf::Event::Closed)
 				pGerenteGrafico->closeWindow();
-        }
-		
-		
+			
+			sf::String playerInput;
+			sf::Text playerText;
+			playerText.setPosition(60, 300);
+
+
+			if (event.type == sf::Event::TextEntered)
+			{
+				if (event.text.unicode < 128)
+				{
+					playerInput += event.text.unicode;
+					playerText.setString(playerInput);
+
+
+				}
+				pGerenteGrafico->getWindow()->draw(playerText);
+			}
+
+		}
 
 		pGerenteGrafico->clear();
-
 		MaquinaEstados::getMaquinaEstados()->executar();
-		//execEnt();
-		
-		
-		
-		
-		
-		//fase1.ini1.imprimir();
 		pGerenteGrafico->display();
-		
-		
-		
-    }
+	}
+
+}
+
 
 	
 	/*if (est->getId() == 10) 
@@ -63,7 +71,7 @@ void Jogo::exec()
 
 
 	
-}
+
 
 Jogo::~Jogo() 
 {

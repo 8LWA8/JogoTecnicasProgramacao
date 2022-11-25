@@ -186,6 +186,7 @@ int Fase::getPontTotal()
 		this->setPontTotal(jogador1->getPontuacao());
 		return this->jogador1->getPontuacao();
 	}
+	return -1;
 }
 
 void Fase::setPontTotal(int p) 
@@ -283,6 +284,20 @@ bool Fase::getCarregar()
 void Fase::setCarregar(bool c)
 {
 	carregar = c;
+}
+
+void Fase::mostrarInfoFase()
+{
+	if (jogador1 != NULL && jogador2 != NULL) {
+		this->pGerenteGrafico->printVidaJ1(jogador1->getNumVidas());
+		this->pGerenteGrafico->printVidaJ2(jogador2->getNumVidas());
+		pGerenteGrafico->printPont(this->getPontTotal());
+	}
+	else if (jogador1 != NULL) 
+	{
+		this->pGerenteGrafico->printVidaJ1(jogador1->getNumVidas());
+		pGerenteGrafico->printPont(this->getPontTotal());
+	}
 }
 
 }

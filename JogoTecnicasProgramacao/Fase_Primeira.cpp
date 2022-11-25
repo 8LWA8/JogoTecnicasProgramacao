@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 
+
 //#include <iostream>
 //using namespace std;
 
@@ -27,6 +28,7 @@ namespace Fases {
 	void Fases::Fase_Primeira::executar()
 	{
 		this->imprimir();
+
 
 		if (jogador2 == nullptr && jogador1->getVivo()==false)
 		{
@@ -63,8 +65,7 @@ namespace Fases {
 			relogio.restart();
 		}
 		
-		pGerenteGrafico->printVida(jogador1->getNumVidas());
-		pGerenteGrafico->printPont(this->getPontTotal());
+		this->mostrarInfoFase();
 		
 		Ger.gerenciarColisoes();
 		
@@ -84,6 +85,8 @@ namespace Fases {
 				fas2->getJog1()->setPontuacao(this->getJog1()->getPontuacao());
 			}
 			
+
+
 		}
 		
 		/*

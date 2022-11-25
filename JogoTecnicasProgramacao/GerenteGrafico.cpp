@@ -177,10 +177,10 @@ using namespace Gerenciadores;
 		//std::cout << "imprimiu texto" << std::endl;
 	}
 
-	void GerenteGrafico::printVida(float val) 
+	void GerenteGrafico::printVidaJ1(float val) 
 	{
 		std::string str =  std::to_string(val);
-		tex.setString("Vida = "+str);
+		tex.setString("Vida astronauta 1 = "+str);
 		
 		
 		tex.setPosition(sf::Vector2f(-590.0f, -350.0f));
@@ -188,13 +188,23 @@ using namespace Gerenciadores;
 		GerenteGrafico::render(&tex);
 	}
 
+	void GerenteGrafico::printVidaJ2(float val)
+	{
+		std::string str = std::to_string(val);
+		tex.setString("Vida astronauta 2 = " + str);
+
+
+		tex.setPosition(sf::Vector2f(-200.0f, -350.0f));
+
+		GerenteGrafico::render(&tex);
+	}
 
 	void GerenteGrafico::printPont(int val)
 	{
 		std::string str = std::to_string(val);
 		tex.setString("Pontuacao = " + str);
 		tex.setFillColor(sf::Color::Yellow);
-		tex.setPosition(sf::Vector2f(-580.0f, -300.0f));
+		tex.setPosition(sf::Vector2f(-590.0f, -290.0f));
 
 		GerenteGrafico::render(&tex);
 	}
