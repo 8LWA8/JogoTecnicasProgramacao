@@ -2,7 +2,7 @@
 #include "Fase.h"
 #include "Plataforma.h"
 #include "Alienigena.h"
-
+#include "MaquinaEstados.h"
 using namespace Entidades;
 
 namespace Fases

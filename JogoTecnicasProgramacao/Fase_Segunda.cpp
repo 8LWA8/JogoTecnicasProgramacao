@@ -22,6 +22,16 @@ void Fases::Fase_Segunda::executar()
 	LEnt.executarTodos();
 	Ger.gerenciarColisoes();
 
+	if (venceuFase() == true)
+	{
+		std::cout << "venceu!!!!" << std::endl;
+		MaquinaEstados::getMaquinaEstados()->addEstado(IDs::IDs::tela_final);
+		TelaFinal* estFinal = dynamic_cast<TelaFinal*>(MaquinaEstados::getMaquinaEstados()->getEstadoAtual());
+		estFinal->setRank(this->getPontTotal());
+
+
+	}
+
 
 	
 }

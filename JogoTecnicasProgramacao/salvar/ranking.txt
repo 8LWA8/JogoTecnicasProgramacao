@@ -1,0 +1,619 @@
+Eustaquio 500pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 8
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 7
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30) 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9
+bruno 9

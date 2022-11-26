@@ -7,9 +7,9 @@
 #include "Vilgax.h"
 #include "Rocha.h"
 #include "Alienigena.h"
-#include "MaquinaEstados.h"
 #include "Plataforma.h"
 #include "Espinhos.h"
+#include "MaquinaEstados.h"
 using namespace Entidades::Personagens;
 using namespace Entidades::Obstaculos;
 

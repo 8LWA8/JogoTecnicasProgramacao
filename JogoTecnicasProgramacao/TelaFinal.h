@@ -29,6 +29,9 @@ public:
     ~TelaFinal();
 
     void salvarRank();
+    void recuperarRank();
+    void setRank(int p);
+    int getRank();
     void executar();
     void imprimir();
 };
