@@ -105,6 +105,9 @@
     <ClCompile Include="Jogador2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="TelaFinal.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Coord.h">
@@ -198,6 +201,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Jogador2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TelaFinal.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

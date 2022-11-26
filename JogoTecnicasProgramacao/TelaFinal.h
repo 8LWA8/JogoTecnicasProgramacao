@@ -1,6 +1,7 @@
 #pragma once
 #include "Estado.h"
 #include <cstring>
+#include <fstream>
 #include <iostream>
 #include <stdio.h>
 
@@ -14,6 +15,7 @@ class TelaFinal :
     bool pressed;
     bool pedirNome;
     float pos;
+    int pontFinal;
 
     std::string nome;
     std::vector<std::string> textos;
@@ -26,6 +28,7 @@ public:
     TelaFinal();
     ~TelaFinal();
 
+    void salvarRank();
     void executar();
     void imprimir();
 };

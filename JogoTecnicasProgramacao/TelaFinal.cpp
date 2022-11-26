@@ -21,17 +21,26 @@ void TelaFinal::loop_events()
 		}
 	}*/
 
+	
+	
+	
+	
+	pGerenteGrafico->setText(nome);
+	
+
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::K) && !pressed)
 	{
+		
+		sf::String string = sf::Clipboard::getString();
+		nome = std::string(string);
 		pressed = true;
-		nome.append("k");
-		pGerenteGrafico->setText("k");
+		pGerenteGrafico->setText(nome);
 		pGerenteGrafico->print(sf::Vector2f(-100.f + pos, 0.f), 30);
-		pos += 10;
-		std::cout << "apertou k " <<std::endl;
+		
+		
 	}
 
-	pGerenteGrafico->print(sf::Vector2f(-100.f + pos, 0.f), 30);
+	
 
 	float dt = relogio.getElapsedTime().asSeconds();
 	if (dt >= 2.f)
@@ -47,17 +56,37 @@ TelaFinal::TelaFinal(): pressed(false), pedirNome(false), pos(0)
 	setTextura("fundo2.jpg");
 	corpo.setPosition(sf::Vector2f(-600.f, -360.f));
 	corpo.setSize(sf::Vector2f(WIDTH, HEIGHT));
-
+	nome = "";
 	textos = { "Fim de jogo", "Digite seu nome", "Pressione esc para sair"};
 	//texts.resize(3);
 	coords = { {-120,-250},{-300, -300},{-120, 280} };
 	sizes = { 80,40,40 };
-	nome = "";
+	
 }
 
 TelaFinal::~TelaFinal()
 {
 	
+}
+
+void TelaFinal::salvarRank() 
+{
+	std::ofstream ranking;
+
+	ranking.open("salvar/ranking.txt", std::ios::app);
+
+	if (!ranking.is_open())
+	{
+		std::cout << "ERRO ABRINDO ranking.txt" << std::endl;
+		exit(1);
+	}
+
+	
+	ranking << nome  << "";
+	
+	
+	ranking.close();
+
 }
 
 void TelaFinal::executar()
@@ -74,6 +103,9 @@ void TelaFinal::imprimir()
 
 	//Imprime textos
 	for (int i = 0; i < 3; i++) {
+		if (i == 1)
+			pGerenteGraf->setText(this->nome);
+		else 
 		pGerenteGrafico->setText(textos[i]);
 		pGerenteGrafico->setTextOutline(0);
 		pGerenteGrafico->print(coords[i], sizes[i]);

@@ -48,6 +48,7 @@
     <ClCompile Include="Projetil.cpp" />
     <ClCompile Include="Robo.cpp" />
     <ClCompile Include="Rocha.cpp" />
+    <ClCompile Include="TelaFinal.cpp" />
     <ClCompile Include="Vilgax.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -81,6 +82,7 @@
     <ClInclude Include="Projetil.h" />
     <ClInclude Include="Robo.h" />
     <ClInclude Include="Rocha.h" />
+    <ClInclude Include="TelaFinal.h" />
     <ClInclude Include="Vilgax.h" />
   </ItemGroup>
   <ItemGroup>

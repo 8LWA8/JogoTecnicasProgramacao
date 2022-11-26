@@ -9,7 +9,7 @@ using namespace Entidades::Personagens;
 Jogo::Jogo(): 
 pGerenteGrafico(pGerenteGrafico->getInstance())
 {
-	MaquinaEstados::getMaquinaEstados()->addEstado(IDs::IDs::menu);
+	MaquinaEstados::getMaquinaEstados()->addEstado(IDs::IDs::tela_final);
 	pGerenteGrafico->CenterView(0.0, 0.0);
 	
 }
