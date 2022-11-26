@@ -8,7 +8,7 @@ using namespace Estados;
 
 MaquinaEstados* MaquinaEstados::pMaquinaEstados = nullptr;
 
-MaquinaEstados::MaquinaEstados() :
+MaquinaEstados::MaquinaEstados() : 
     pilhaEstados()
 {
 

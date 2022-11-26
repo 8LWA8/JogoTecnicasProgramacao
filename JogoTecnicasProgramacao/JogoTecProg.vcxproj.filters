@@ -108,6 +108,9 @@
     <ClCompile Include="TelaFinal.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="TelaRanking.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Coord.h">
@@ -204,6 +207,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="TelaFinal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TelaRanking.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

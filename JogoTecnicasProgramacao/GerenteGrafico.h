@@ -56,7 +56,7 @@ namespace Gerenciadores {
 
 		void CenterView(float x, float y);
 		sf::Texture* loadTexture(const char* path);
-
+		
 		sf::Font* getFont();
 
 		void updateDeltaTime();

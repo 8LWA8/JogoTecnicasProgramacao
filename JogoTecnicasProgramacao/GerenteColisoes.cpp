@@ -326,6 +326,10 @@ namespace Gerenciadores {
 	
 	}
 
+	void GerenteColisoes::operator+=(Jogador* jog) 
+	{
+		this->incluirJogador(jog);
+	}
 	
 	
 }

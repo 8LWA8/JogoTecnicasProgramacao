@@ -266,14 +266,14 @@ void Fase::criaJogadores()
 	{
 		jogador1 = new Jogador1();
 		LEnt.addEntidade(jogador1);
-		Ger.getVecJogs()->push_back(jogador1);
+		Ger.operator+=(jogador1);
 	} else if (jogador1 == NULL && jogador2 == NULL) {
 		jogador1 = new Jogador1();
 		jogador2 = new Jogador2();
 		LEnt.addEntidade(jogador1);
 		LEnt.addEntidade(jogador2);
-		Ger.getVecJogs()->push_back(jogador1);
-		Ger.getVecJogs()->push_back(jogador2);
+		Ger.operator+=(jogador1);
+		Ger.operator+=(jogador2);
 	}
 
 }
@@ -291,7 +291,7 @@ void Fase::criaJogadores(float x, float y, bool empoder, float n_vidas, int pont
 		jogador1->setPontuacao(pont);
 		jogador1->setVivo(estaVivo);
 		LEnt.addEntidade(jogador1);
-		Ger.getVecJogs()->push_back(jogador1);
+		Ger.operator+=(jogador1);
 	}
 }
 
@@ -308,7 +308,7 @@ void Fase::criaJogadores(float x, float y, bool empoder, float n_vidas, int pont
 		jogador1->setPontuacao(pont);
 		jogador1->setVivo(estaVivo);
 		LEnt.addEntidade(jogador1);
-		Ger.getVecJogs()->push_back(jogador1);
+		Ger.operator+=(jogador1);
 
 		jogador2 = new Jogador2(sf::Vector2f(x, y));
 		if (empoder == true)
@@ -319,7 +319,7 @@ void Fase::criaJogadores(float x, float y, bool empoder, float n_vidas, int pont
 		jogador2->setPontuacao(pont);
 		jogador2->setVivo(estaVivo);
 		LEnt.addEntidade(jogador2);
-		Ger.getVecJogs()->push_back(jogador2);
+		Ger.operator+=(jogador2);
 	}
 }
 

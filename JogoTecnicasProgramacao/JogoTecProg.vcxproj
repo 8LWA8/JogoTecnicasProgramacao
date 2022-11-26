@@ -49,6 +49,7 @@
     <ClCompile Include="Robo.cpp" />
     <ClCompile Include="Rocha.cpp" />
     <ClCompile Include="TelaFinal.cpp" />
+    <ClCompile Include="TelaRanking.cpp" />
     <ClCompile Include="Vilgax.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -83,6 +84,7 @@
     <ClInclude Include="Robo.h" />
     <ClInclude Include="Rocha.h" />
     <ClInclude Include="TelaFinal.h" />
+    <ClInclude Include="TelaRanking.h" />
     <ClInclude Include="Vilgax.h" />
   </ItemGroup>
   <ItemGroup>

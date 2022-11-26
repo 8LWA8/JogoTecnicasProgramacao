@@ -1,2 +1,23 @@
-﻿  TelaFinal.cpp
+﻿  ConstrutorFase.cpp
+  Estado.cpp
+  Fase.cpp
+C:\Users\bruno\OneDrive\Documents\GitHub\JogoTecnicasProgramacao\JogoTecnicasProgramacao\Fase.cpp(174,93): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\bruno\OneDrive\Documents\GitHub\JogoTecnicasProgramacao\JogoTecnicasProgramacao\Fase.cpp(174,49): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\bruno\OneDrive\Documents\GitHub\JogoTecnicasProgramacao\JogoTecnicasProgramacao\Fase.cpp(174,40): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\bruno\OneDrive\Documents\GitHub\JogoTecnicasProgramacao\JogoTecnicasProgramacao\Fase.cpp(178,49): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\bruno\OneDrive\Documents\GitHub\JogoTecnicasProgramacao\JogoTecnicasProgramacao\Fase.cpp(178,40): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Fase_Primeira.cpp
+  Fase_Segunda.cpp
+  GerenteColisoes.cpp
+  Jogador.cpp
+  Jogador1.cpp
+  Jogador2.cpp
+  Jogo.cpp
+  JogoTecProg.cpp
+C:\Users\bruno\OneDrive\Documents\GitHub\JogoTecnicasProgramacao\JogoTecnicasProgramacao\JogoTecProg.cpp(10,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  MaquinaEstados.cpp
+  Menu.cpp
+C:\Users\bruno\OneDrive\Documents\GitHub\JogoTecnicasProgramacao\JogoTecnicasProgramacao\Menu.cpp(125,36): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\bruno\OneDrive\Documents\GitHub\JogoTecnicasProgramacao\JogoTecnicasProgramacao\Menu.cpp(160,20): warning C4018: '<': signed/unsigned mismatch
+  Generating Code...
   JogoTecProg.vcxproj -> C:\Users\bruno\OneDrive\Documents\GitHub\JogoTecnicasProgramacao\JogoTecnicasProgramacao\Debug\JogoTecProg.exe
