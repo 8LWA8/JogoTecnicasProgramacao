@@ -60,4 +60,23 @@ bool Plataforma::getFlutua()
 
 void Entidades::Obstaculos::Plataforma::salvar()
 {
+	std::ofstream dadosPlat;
+
+	dadosPlat.open("salvar/salvarPlat.txt", std::ios::app);
+
+	if (!dadosPlat.is_open())
+	{
+		std::cout << "ERRO ABRINDO salvarPlat.txt" << std::endl;
+		exit(1);
+	}
+
+	std::cout << "entrou salvar plataforma" << std::endl;
+
+	dadosPlat << corpo.getPosition().x << " ";
+	dadosPlat << corpo.getPosition().y << " ";
+	dadosPlat << corpo.getSize().x << " ";
+	dadosPlat << corpo.getSize().y << " ";
+
+	dadosPlat << std::endl;
+	dadosPlat.close();
 }

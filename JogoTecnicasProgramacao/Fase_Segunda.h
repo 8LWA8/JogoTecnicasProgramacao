@@ -18,8 +18,9 @@ namespace Fases
         void executar();
         void imprimir();
         void criaPlataformas();
+        void criaPlataformas(float x, float y, float tamx, float tamy);
         void criaAlienigenas();
-        void criaAlienigenas(float x, float y, bool estaVivo);
+        void criaAlienigenas(float x, float y, bool estaVivo, float projx, float projy, bool projatingiu, bool projexiste);
         
     };
 }

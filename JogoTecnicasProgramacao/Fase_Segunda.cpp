@@ -8,7 +8,6 @@ Fases::Fase_Segunda::Fase_Segunda()
 	{
 		this->criaAlienigenas();
 		this->criaPlataformas();
-		//this->criaJogadores();
 	}
 	else
 	{
@@ -16,6 +15,10 @@ Fases::Fase_Segunda::Fase_Segunda()
 		float x;
 		float y;
 		bool estaVivo;
+		float projx;
+		float projy;
+		bool projatingiu;
+		bool projexiste;
 
 		ifstream dados;
 
@@ -27,8 +30,30 @@ Fases::Fase_Segunda::Fase_Segunda()
 			dados >> x;
 			dados >> y;
 			dados >> estaVivo;
+			dados >> projx;
+			dados >> projy;
+			dados >> projatingiu;
+			dados >> projexiste;
 
-			//this->criaVilgax(x, y, estaVivo);
+			this->criaAlienigenas(x, y, estaVivo, projx, projy, projatingiu, projexiste);
+		}
+
+		dados.close();
+
+		float tamx;
+		float tamy;
+
+		dados.open("salvar/salvarPlat.txt", ios::out);
+
+		while (!dados.eof())
+		{
+			/*dados >> id;*/
+			dados >> x;
+			dados >> y;
+			dados >> tamx;
+			dados >> tamy;
+
+			this->criaPlataformas(x, y, tamx, tamy);
 		}
 
 		dados.close();
@@ -92,7 +117,7 @@ void Fases::Fase_Segunda::criaAlienigenas()
 	}
 }
 
-void Fases::Fase_Segunda::criaAlienigenas(float x, float y, bool estaVivo)
+void Fases::Fase_Segunda::criaAlienigenas(float x, float y, bool estaVivo, float projx, float projy, bool projatingiu, bool projexiste)
 {
 	Alienigena* a1 = new Alienigena(sf::Vector2f(x, y));
 	a1->setVivo(estaVivo);
@@ -100,6 +125,10 @@ void Fases::Fase_Segunda::criaAlienigenas(float x, float y, bool estaVivo)
 	LEnt.addEntidade(e1);
 	Inimigo* i1 = static_cast <Inimigo*>(a1);
 	Ger.getVecInimigos()->push_back(i1);
+
+	a1->getProj()->getCorpo()->setPosition(sf::Vector2f(projx, projy));
+	a1->getProj()->setAtingiu(projatingiu);
+	a1->getProj()->setExiste(projexiste);
 }
 
 void Fases::Fase_Segunda::criaPlataformas()
@@ -123,5 +152,13 @@ void Fases::Fase_Segunda::criaPlataformas()
 
 		
 	}
+}
+
+void Fases::Fase_Segunda::criaPlataformas(float x, float y, float tamx, float tamy)
+{
+	Plataforma* p1 = new Plataforma(sf::Vector2f(x, y), sf::Vector2f(tamx, tamy));
+	Entidade* e1 = static_cast <Entidade*>(p1);
+	LEnt.addEntidade(e1);
+	Ger.getListObst()->push_back(p1);
 }
 
