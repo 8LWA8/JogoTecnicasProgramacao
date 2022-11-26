@@ -271,6 +271,19 @@ using namespace Gerenciadores;
 		GerenteGrafico::render(&tex);
 	}
 
+	void Gerenciadores::GerenteGrafico::printRanking(const int pontuacao, const string nome, float pos)
+	{
+		string pont = to_string(pontuacao);
+
+		tex.setString(nome + " - " + pont);
+
+		tex.setFillColor(sf::Color::White);
+		tex.setPosition(sf::Vector2f(-100.0f, -300.0f + pos));
+		tex.setCharacterSize(45);
+
+		GerenteGrafico::render(&tex);
+	}
+
 	void Gerenciadores::GerenteGrafico::setText(std::string text)
 	{
 		tex.setString(text);

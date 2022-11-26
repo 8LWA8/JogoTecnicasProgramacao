@@ -6,6 +6,7 @@
 #include "Fase_Segunda.h"
 #include "Menu.h"
 #include "TelaFinal.h"
+#include "TelaRanking.h"
 #include "IDs.h"
 #include <stack>
 #include <fstream>

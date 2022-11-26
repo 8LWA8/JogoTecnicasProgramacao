@@ -4,13 +4,17 @@
 #include <fstream>
 #include <iostream>
 #include <stdio.h>
+#include <map>
 
+using namespace std;
 using namespace Estados;
+
+//Código do mapa inspirado em https://www.youtube.com/watch?v=aEgG4pidcKU
 
 class TelaFinal :
     public Estado
 {
-
+    map<int, string> mapaRanking;
     sf::Clock relogio;
     bool pressed;
     bool pedirNome;
@@ -34,5 +38,6 @@ public:
     int getRank();
     void executar();
     void imprimir();
+    map<int, string> getMapa();
 };
 

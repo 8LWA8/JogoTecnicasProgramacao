@@ -34,7 +34,6 @@ namespace Fases
 		Listas::ListaEntidades LEnt;
 		int pontTotal;
 		void limpaTdsArq();
-		void mostrarTelaFim();
 
 		//Entidades::Personagens::Inimigo* pInimigo1;
 	public:
@@ -57,10 +56,7 @@ namespace Fases
 		int getPontTotal();
 		void setPontTotal(int p);
 		void mostrarInfoFase();
-		void salvar();
-		virtual void recuperar();
 		bool venceuFase();
-		void carregarTodos();
 		static void setNumJog(int n);
 		static int getNumJog();
 		static bool getCarregar();

@@ -9,6 +9,7 @@ namespace IDs
         carregar_fase1,
         carregar_fase2,
         tela_final,
+        tela_ranking,
         menu
     };
 }

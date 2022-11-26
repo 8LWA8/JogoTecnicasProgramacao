@@ -9,20 +9,8 @@ using namespace Estados;
 
 void TelaFinal::loop_events()
 {
-	/*sf::Event eventNome;
 
-	while (pGerenteGrafico->getWindow()->pollEvent(eventNome))
-	{
-		if (eventNome.type == sf::Event::KeyPressed)
-		{
-			if (eventNome.KeyPressed == sf::Keyboard::K)
-			{
-				
-			}
-		}
-	}*/
 pGerenteGrafico->setText(nome);
-	
 
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::K) && !pressed)
 	{
@@ -35,16 +23,16 @@ pGerenteGrafico->setText(nome);
 		pGerenteGrafico->print(sf::Vector2f(-100.f, 200.f + pos), 30);
 		pos += 10.0;
 		salvarRank();
+		recuperarRank();
 	}
 
-	
-
 	float dt = relogio.getElapsedTime().asSeconds();
-	if (dt >= 2.f)
+	if (dt >= 10.f)
 	{
 		pressed = false;
 		
 	}
+
 }
 
 TelaFinal::TelaFinal(): pressed(false), pedirNome(false), pos(0), pontFinal(0) 
@@ -54,12 +42,10 @@ TelaFinal::TelaFinal(): pressed(false), pedirNome(false), pos(0), pontFinal(0)
 	corpo.setPosition(sf::Vector2f(-600.f, -360.f));
 	corpo.setSize(sf::Vector2f(WIDTH, HEIGHT));
 	nome = "";
-	textos = { "Fim de jogo", "Digite seu nome", "Pressione esc para sair"};
+	textos = { "Fim de jogo", "teste", "Aperte K para copiar nome do clipboard"};
 	//texts.resize(3);
 	coords = { {-120,-250},{-300, -300},{-120, 280} };
 	sizes = { 80,40,40 };
-	recuperarRank();
-	
 }
 
 TelaFinal::~TelaFinal()
@@ -81,9 +67,10 @@ void TelaFinal::salvarRank()
 	}
 	
 	if (nome != "")
-		ranking << nome << "";
+		ranking << nome << " ";
 	
-	ranking << pontFinal << "";
+	//std::cout << " " << pontFinal << " " << std::endl;
+	ranking << pontFinal << " " << std::endl;
 	
 	ranking.close();
 
@@ -93,19 +80,33 @@ void TelaFinal::recuperarRank()
 {
 	std::ifstream ranking;
 	std::string info;
+	int pontuacaoFinal;
+
 	ranking.open("salvar/ranking.txt", std::ios::out);
 	
 	
-	while (!ranking.eof()) {
-
-
-		if (getline(ranking, info)) {
+	
+		/*if (getline(ranking, info)) {
 			pGerenteGrafico->setText(info);
 			pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30);
 			pos += 10.0;
-		}
+		}*/
+	
+	
+
+	while (!ranking.eof())
+	{
+		ranking >> info;
+		ranking >> pontuacaoFinal;
+		ranking >> pontuacaoFinal;
+		//std::cout << info << " " << pontuacaoFinal << std::endl;
+		mapaRanking.insert(pair<int, string>(pontuacaoFinal, info));
 	}
 
+	//for (auto pair : mapaRanking)
+	//{
+	//	//cout << pair.first << " - " << pair.second << std::endl;
+	//}
 
 }
 
@@ -130,13 +131,13 @@ void TelaFinal::executar()
 void TelaFinal::imprimir()
 {
 	pGerenteGrafico->clear();
-	GerenteGrafico* pGerenteGraf = GerenteGrafico::getInstance();
+	//GerenteGrafico* pGerenteGraf = GerenteGrafico::getInstance();
 	pGerenteGrafico->render(&corpo);
 
 	//Imprime textos
 	for (int i = 0; i < 3; i++) {
 		if (i == 1) {
-			pGerenteGraf->setText(this->nome);
+			pGerenteGrafico->setText(this->nome);
 			pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f), 30);
 		}
 		else {
@@ -145,4 +146,9 @@ void TelaFinal::imprimir()
 			pGerenteGrafico->print(coords[i], sizes[i]);
 		}
 	}
+}
+
+map<int, string> TelaFinal::getMapa()
+{
+	return mapaRanking;
 }

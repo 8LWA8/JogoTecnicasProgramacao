@@ -21,7 +21,8 @@ Jogador::~Jogador()
 
 void Jogador::executar()
 {
-    if (this->getVivo()) {
+    if (this->getVivo()) 
+    {
         this->imprimir();
         this->mover();
         this->resetColl();

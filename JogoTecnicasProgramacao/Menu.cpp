@@ -42,6 +42,21 @@ void Menu::loop_events()
 		Fases::Fase::setNumJog(2);
 	}
 
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::L) && !pressed)
+	{
+		std::ofstream arquivo;
+
+		arquivo.open("salvar/ranking.txt");
+		if (!arquivo.is_open())
+		{
+			std::cout << "ERRO ABRINDO ranking.txt" << std::endl;
+			exit(1);
+		}
+		arquivo.close();
+
+		std::cout << "apagou ranking" << std::endl;
+	}
+
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Enter) && !pressed)
 	{
 		//std::cout << optionSelected << std::endl;
@@ -66,6 +81,9 @@ void Menu::loop_events()
 			{
 				MaquinaEstados::getMaquinaEstados()->addEstado(IDs::IDs::carregar_fase2);
 			}
+			break;
+		case 2:
+			MaquinaEstados::getMaquinaEstados()->addEstado(IDs::IDs::tela_ranking);
 			break;
 		case 3:
 			pGerenteGrafico->getWindow()->close();
@@ -129,7 +147,7 @@ void Menu::executar()
 void Menu::imprimir()
 {
 	pGerenteGrafico->clear();
-	GerenteGrafico* pGerenteGraf = GerenteGrafico::getInstance();
+	//GerenteGrafico* pGerenteGraf = GerenteGrafico::getInstance();
 	pGerenteGrafico->render(&corpo);
 
 	//Imprime botões
