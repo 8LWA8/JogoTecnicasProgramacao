@@ -65,7 +65,6 @@ void EsferaPoder::salvar()
 
 	std::cout << "entrou salvar esferas" << std::endl;
 
-	dadosEsfera << this->getId() << " ";
 	dadosEsfera << corpo.getPosition().x << " ";
 	dadosEsfera << corpo.getPosition().y << " ";
 	dadosEsfera << getColetada() << " ";

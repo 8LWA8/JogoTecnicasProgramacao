@@ -98,12 +98,6 @@ namespace Fases {
 			LEnt.salvarTodos();
 		}
 
-		if (sf::Keyboard::isKeyPressed(sf::Keyboard::L) && !pressed)
-		{
-			pressed = true;
-			//LEnt.salvarTodos();
-		}
-
 		float dt = relogio.getElapsedTime().asSeconds();
 		if (dt >= 2.0f)
 		{

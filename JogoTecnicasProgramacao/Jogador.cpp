@@ -91,11 +91,6 @@ void Jogador::levarDano(float dano)
 
 void Jogador::salvar() 
 {   
-
-    /*string info;
-    info = std::to_string(this->getId()) + "," + std::to_string(this->getNumVidas()) + "," + std::to_string(this->getPontuacao()) + "," + std::to_string(this->getCoord()->getX()) + "," + std::to_string(this->getCoord()->getY());
-    return info;*/
-
     std::ofstream dadosJogador;
 
     dadosJogador.open("salvar/salvarJog.txt", ios::in); //ios::app
@@ -106,15 +101,13 @@ void Jogador::salvar()
         exit(1);
     }
 
-    dadosJogador << getId() << " ";
+    std::cout << "salvou jog" << std::endl;
     dadosJogador << corpo.getPosition().x << " ";
     dadosJogador << corpo.getPosition().y << " ";
     dadosJogador << empoderado << " ";
-    dadosJogador << pontuacao << " ";
     dadosJogador << num_vidas << " ";
+    dadosJogador << pontuacao << " ";
     dadosJogador << getVivo() << " ";
-    /*dadosJogador << getColl()->getX() << " ";
-    dadosJogador << getColl()->getY() << " ";*/
 
     dadosJogador.close();
 }

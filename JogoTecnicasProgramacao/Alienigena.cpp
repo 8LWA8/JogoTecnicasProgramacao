@@ -43,6 +43,28 @@ void Alienigena::atirar()
 
 void Entidades::Personagens::Alienigena::salvar()
 {
+	std::ofstream dadosAlien;
+
+	dadosAlien.open("salvar/salvarAlien.txt", std::ios::app);
+
+	if (!dadosAlien.is_open())
+	{
+		std::cout << "ERRO ABRINDO salvarAlien.txt" << std::endl;
+		exit(1);
+	}
+
+	std::cout << "entrou salvar alien" << std::endl;
+
+	dadosAlien << corpo.getPosition().x << " ";
+	dadosAlien << corpo.getPosition().y << " ";
+	dadosAlien << getVivo() << " ";
+	dadosAlien << getProj()->getCorpo()->getPosition().x << " ";
+	dadosAlien << getProj()->getCorpo()->getPosition().y << " ";
+	dadosAlien << getProj()->getAtingiu() << " ";
+	dadosAlien << getProj()->getExiste() << " ";
+
+	dadosAlien << std::endl;
+	dadosAlien.close();
 }
 
 

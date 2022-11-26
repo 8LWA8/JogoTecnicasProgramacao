@@ -81,8 +81,9 @@ void TelaFinal::salvarRank()
 	}
 	
 	if (nome != "")
-		ranking << nome << std::endl;
+		ranking << nome << "";
 	
+	ranking << pontFinal << "";
 	
 	ranking.close();
 
@@ -96,6 +97,8 @@ void TelaFinal::recuperarRank()
 	
 	
 	while (!ranking.eof()) {
+
+
 		if (getline(ranking, info)) {
 			pGerenteGrafico->setText(info);
 			pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30);

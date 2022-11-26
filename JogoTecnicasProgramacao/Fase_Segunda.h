@@ -3,6 +3,7 @@
 #include "Plataforma.h"
 #include "Alienigena.h"
 #include "MaquinaEstados.h"
+
 using namespace Entidades;
 
 namespace Fases
@@ -18,6 +19,7 @@ namespace Fases
         void imprimir();
         void criaPlataformas();
         void criaAlienigenas();
+        void criaAlienigenas(float x, float y, bool estaVivo);
         
     };
 }

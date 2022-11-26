@@ -4,10 +4,36 @@ using namespace Fases;
 #include <iostream>
 Fases::Fase_Segunda::Fase_Segunda()
 {
-	this->criaAlienigenas();
-	this->criaPlataformas();
-	this->criaJogadores();
-	
+	if (Fase::getCarregar() == false)
+	{
+		this->criaAlienigenas();
+		this->criaPlataformas();
+		//this->criaJogadores();
+	}
+	else
+	{
+		this->pressed = false;
+		float x;
+		float y;
+		bool estaVivo;
+
+		ifstream dados;
+
+		dados.open("salvar/salvarAlien.txt", ios::out);
+
+		while (!dados.eof())
+		{
+			/*dados >> id;*/
+			dados >> x;
+			dados >> y;
+			dados >> estaVivo;
+
+			//this->criaVilgax(x, y, estaVivo);
+		}
+
+		dados.close();
+	}
+
 }
 
 Fases::Fase_Segunda::~Fase_Segunda()
@@ -22,17 +48,29 @@ void Fases::Fase_Segunda::executar()
 	LEnt.executarTodos();
 	Ger.gerenciarColisoes();
 
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::S) && !pressed)
+	{
+		pressed = true;
+
+		limpaTdsArq();
+
+		LEnt.salvarTodos();
+	}
+
+	float dt = relogio.getElapsedTime().asSeconds();
+	if (dt >= 2.0f)
+	{
+		pressed = false;
+		relogio.restart();
+	}
+
 	if (venceuFase() == true)
 	{
 		std::cout << "venceu!!!!" << std::endl;
 		MaquinaEstados::getMaquinaEstados()->addEstado(IDs::IDs::tela_final);
 		TelaFinal* estFinal = dynamic_cast<TelaFinal*>(MaquinaEstados::getMaquinaEstados()->getEstadoAtual());
 		estFinal->setRank(this->getPontTotal());
-
-
 	}
-
-
 	
 }
 
@@ -52,6 +90,16 @@ void Fases::Fase_Segunda::criaAlienigenas()
 		Inimigo* i1 = static_cast <Inimigo*>(a1);
 		Ger.getVecInimigos()->push_back(i1);
 	}
+}
+
+void Fases::Fase_Segunda::criaAlienigenas(float x, float y, bool estaVivo)
+{
+	Alienigena* a1 = new Alienigena(sf::Vector2f(x, y));
+	a1->setVivo(estaVivo);
+	Entidade* e1 = static_cast <Entidade*>(a1);
+	LEnt.addEntidade(e1);
+	Inimigo* i1 = static_cast <Inimigo*>(a1);
+	Ger.getVecInimigos()->push_back(i1);
 }
 
 void Fases::Fase_Segunda::criaPlataformas()

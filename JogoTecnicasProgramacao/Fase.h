@@ -45,9 +45,13 @@ namespace Fases
 		void criaRobos();
 		void criaRobos(float x, float y, bool estaVivo);
 		void criaRochas();
+		void criaRochas(float x, float y);
 		void criaPoderes();
+		void criaPoderes(float x, float y, bool colec);
 		virtual void criaPlataformas() = 0;
-		virtual void criaJogadores();
+		void criaJogadores();
+		void criaJogadores(float x, float y, bool empoder, float n_vidas, int pont, bool estaVivo);
+		void criaJogadores(float x, float y, bool empoder, float n_vidas, int pont, bool estaVivo, float x2, float y2, bool empoder2, float n_vidas2, int pont2, bool estaVivo2);
 		Jogador1* getJog1();
 		Jogador2* getJog2();
 		int getPontTotal();

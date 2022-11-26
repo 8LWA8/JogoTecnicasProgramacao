@@ -52,7 +52,7 @@ void MaquinaEstados::addEstado(const IDs::IDs ID) {
         estado = (Estado*) new Fases::Fase_Primeira();
         break;
     case IDs::IDs::carregar_fase2:
-        //estado = (Estado*) new Fases::Fase_Segunda(arqFase);
+        estado = (Estado*) new Fases::Fase_Segunda();
         break;
     case IDs::IDs::menu:
         estado = (Estado*) new Menu();

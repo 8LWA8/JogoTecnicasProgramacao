@@ -60,6 +60,16 @@ namespace Fases{
 			exit(1);
 		}
 		arquivo.close();
+
+		arquivo.open("salvar/salvarAlien.txt");
+		if (!arquivo.is_open())
+		{
+			std::cout << "ERRO ABRINDO salvarAlien.txt" << std::endl;
+			exit(1);
+		}
+		arquivo.close();
+
+
 	}
 
 	void Fase::mostrarTelaFim()
@@ -89,19 +99,84 @@ namespace Fases{
 
 			ifstream dados;
 
-			//dados.open("salvar/salvarVilgax.txt", ios::out);
+			dados.open("salvar/salvarRobo.txt", ios::out);
 
-			//while (!dados.eof())
-			//{
-			//	/*dados >> id;*/
-			//	dados >> x;
-			//	dados >> y;
-			//	dados >> estaVivo;
+			while (!dados.eof())
+			{
+				dados >> x;
+				dados >> y;
+				dados >> estaVivo;
 
-			//	this->criaVilgax(x, y, estaVivo);
-			//}
+				this->criaRobos(x, y, estaVivo);
+			}
 
-			//dados.close();
+			dados.close();
+
+			dados.open("salvar/salvarRocha.txt", ios::out);
+
+			while (!dados.eof())
+			{
+				dados >> x;
+				dados >> y;
+
+				this->criaRochas(x, y);
+			}
+
+			dados.close();
+
+			bool colec;
+
+			dados.open("salvar/salvarEsfera.txt", ios::out);
+
+			while (!dados.eof())
+			{
+				dados >> x;
+				dados >> y;
+				dados >> colec;
+
+				this->criaPoderes(x, y, colec);
+			}
+
+			dados.close();
+
+			bool empoder;
+			int n_vidas;
+			float pont;
+
+			float x2;
+			float y2;
+			float empoder2;
+			float n_vidas2;
+			float pont2;
+			float estaVivo2;
+
+
+			dados.open("salvar/salvarJog.txt", ios::out);
+
+
+			dados >> x;
+			dados >> y;
+			dados >> empoder;
+			dados >> n_vidas;
+			dados >> pont;
+			dados >> estaVivo;
+
+			if (num_jog == 2)
+			{
+				dados >> x2;
+				dados >> y2;
+				dados >> empoder2;
+				dados >> n_vidas2;
+				dados >> pont2;
+				dados >> estaVivo2;
+				this->criaJogadores(x, y, empoder, n_vidas, pont, estaVivo, x2, y2, empoder2, n_vidas2, pont2, estaVivo2);
+			}
+			else
+			{
+				this->criaJogadores(x, y, empoder, n_vidas, pont, estaVivo);
+			}
+
+			dados.close();
 		}
 	}
 
@@ -134,6 +209,12 @@ void Fase::criaRobos()
 
 void Fase::criaRobos(float x, float y, bool estaVivo)
 {
+	Robo* r1 = new Robo(sf::Vector2f(x, y));
+	r1->setVivo(estaVivo);
+	Entidade* e1 = static_cast <Entidade*>(r1);
+	LEnt.addEntidade(e1);
+	Inimigo* i1 = static_cast <Inimigo*>(r1);
+	Ger.getVecInimigos()->push_back(i1);
 }
 
 void Fase::criaRochas()
@@ -149,6 +230,15 @@ void Fase::criaRochas()
 	}
 }
 
+void Fase::criaRochas(float x, float y)
+{
+	Rocha* r1 = new Rocha(sf::Vector2f(x, y));
+	Entidade* e1 = static_cast <Entidade*>(r1);
+	LEnt.addEntidade(e1);
+	Obstaculo* o1 = static_cast <Obstaculo*>(r1);
+	Ger.getListObst()->push_back(o1);
+}
+
 void Fase::criaPoderes()
 {
 	int n = 5 + rand() % 3;
@@ -159,6 +249,15 @@ void Fase::criaPoderes()
 		LEnt.addEntidade(e1);
 		Ger.getVecPoder()->push_back(esfera);
 	}
+}
+
+void Fase::criaPoderes(float x, float y, bool colec)
+{
+	EsferaPoder* esfera = new EsferaPoder(sf::Vector2f(x, y));
+	esfera->setColetada(colec);
+	Entidade* e1 = static_cast <Entidade*>(esfera);
+	LEnt.addEntidade(e1);
+	Ger.getVecPoder()->push_back(esfera);
 }
 
 void Fase::criaJogadores() 
@@ -177,6 +276,51 @@ void Fase::criaJogadores()
 		Ger.getVecJogs()->push_back(jogador2);
 	}
 
+}
+
+void Fase::criaJogadores(float x, float y, bool empoder, float n_vidas, int pont, bool estaVivo)
+{
+	if (jogador1 == NULL && num_jog == 1)
+	{
+		jogador1 = new Jogador1(sf::Vector2f(x, y));
+		if (empoder == true)
+		{
+			jogador1->ficarEmpoderado();
+		}
+		jogador1->setNumVidas(n_vidas);
+		jogador1->setPontuacao(pont);
+		jogador1->setVivo(estaVivo);
+		LEnt.addEntidade(jogador1);
+		Ger.getVecJogs()->push_back(jogador1);
+	}
+}
+
+void Fase::criaJogadores(float x, float y, bool empoder, float n_vidas, int pont, bool estaVivo, float x2, float y2, bool empoder2, float n_vidas2, int pont2, bool estaVivo2)
+{
+	if (jogador1 == NULL && jogador2 == NULL)
+	{
+		jogador1 = new Jogador1(sf::Vector2f(x, y));
+		if (empoder == true)
+		{
+			jogador1->ficarEmpoderado();
+		}
+		jogador1->setNumVidas(n_vidas);
+		jogador1->setPontuacao(pont);
+		jogador1->setVivo(estaVivo);
+		LEnt.addEntidade(jogador1);
+		Ger.getVecJogs()->push_back(jogador1);
+
+		jogador2 = new Jogador2(sf::Vector2f(x, y));
+		if (empoder == true)
+		{
+			jogador2->ficarEmpoderado();
+		}
+		jogador2->setNumVidas(n_vidas);
+		jogador2->setPontuacao(pont);
+		jogador2->setVivo(estaVivo);
+		LEnt.addEntidade(jogador2);
+		Ger.getVecJogs()->push_back(jogador2);
+	}
 }
 
 Jogador1* Fase::getJog1() 

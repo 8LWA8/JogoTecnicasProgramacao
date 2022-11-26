@@ -10,6 +10,7 @@ namespace Entidades {
 
 		public:
 			Jogador1();
+			Jogador1(const sf::Vector2f pos);
 			void mover();
 			
 		};

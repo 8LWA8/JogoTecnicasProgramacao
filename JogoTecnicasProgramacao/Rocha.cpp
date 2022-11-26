@@ -33,7 +33,6 @@ void Entidades::Obstaculos::Rocha::salvar()
 
     std::cout << "entrou salvar rocha" << std::endl;
 
-    dadosRocha << getId() << " ";
     dadosRocha << corpo.getPosition().x << " ";
     dadosRocha << corpo.getPosition().y << " ";
 

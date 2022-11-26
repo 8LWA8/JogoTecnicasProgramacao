@@ -8,6 +8,13 @@ Jogador2::Jogador2()
     this->setTextura("astronauta.png");
 }
 
+Entidades::Personagens::Jogador2::Jogador2(const sf::Vector2f pos)
+{
+    this->setId(2);
+    this->setTextura("astronauta.png");
+    this->getCorpo()->setPosition(pos);
+}
+
 void Jogador2::mover()
 {
     if (mov == true)

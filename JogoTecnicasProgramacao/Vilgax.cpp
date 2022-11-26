@@ -36,13 +36,9 @@ void Vilgax::salvar()
 
     std::cout << "entrou salvar vilgax" << std::endl;
 
-    /*dadosVilgax << getId() << " ";*/
     dadosVilgax << corpo.getPosition().x << " ";
     dadosVilgax << corpo.getPosition().y << " ";
-    //dadosVilgax << num_vidas << " ";
     dadosVilgax << getVivo() << " ";
-    /*dadosJogador << getColl()->getX() << " ";
-    dadosJogador << getColl()->getY() << " ";*/
 
     dadosVilgax << std::endl;
     dadosVilgax.close();
