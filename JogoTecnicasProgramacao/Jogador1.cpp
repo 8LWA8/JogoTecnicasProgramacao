@@ -16,6 +16,10 @@ Entidades::Personagens::Jogador1::Jogador1(const sf::Vector2f pos)
     this->getCorpo()->setPosition(pos);
 }
 
+Entidades::Personagens::Jogador1::~Jogador1()
+{
+}
+
 void Jogador1::mover()
 {
     if (mov == true)

@@ -8,7 +8,7 @@ namespace Entidades
         class Plataforma :
             public Obstaculo
         {
-        protected:
+        private:
             bool flutua;
         public:
             Plataforma();

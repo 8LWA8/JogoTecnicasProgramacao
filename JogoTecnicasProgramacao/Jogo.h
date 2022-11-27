@@ -16,6 +16,7 @@ class Jogo
 {
 private:
 	GerenteGrafico* pGerenteGrafico;
+	MaquinaEstados* pMaquinaEst;
 	//GerenteColisoes Ger;
 	//Inimigo ini1;
 

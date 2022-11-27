@@ -53,9 +53,17 @@ void TelaRanking::imprimir()
 
 	int pos = 0;
 
-	for (auto iter = mapaRanking.rbegin(); iter != mapaRanking.rend(); ++iter)
+	if (!mapaRanking.empty())
 	{
-		pos++;
-		pGerenteGrafico->printRanking(iter->first, iter->second, 100.f * pos);
+		for (auto iter = mapaRanking.rbegin(); iter != mapaRanking.rend(); ++iter)
+		{
+			pos++;
+			pGerenteGrafico->printRanking(iter->first, iter->second, 100.f * pos);
+		}
+	}
+	else
+	{
+		pGerenteGrafico->setText("Sem Ranking");
+		pGerenteGrafico->print(sf::Vector2f(-100.0f, 0.f), 50);
 	}
 }

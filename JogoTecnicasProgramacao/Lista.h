@@ -42,8 +42,6 @@ namespace Listas
 	void removerElemento(int pos);
 	int getTam();
 	TL* operator[](int pos);
-	void grave();
-	void recupere();
 	};
 
 	template<class TL>
@@ -105,21 +103,6 @@ namespace Listas
 	template<class TL>
 	void Lista<TL>::limpaLista()
 	{
-	/*	Elemento<TL>* paux1;
-		Elemento<TL>* paux2;
-
-		paux1 = pPrimeiro;
-		paux2 = paux1;
-
-		while (paux1 != nullptr)
-		{
-			paux2 = paux1->getProx();
-			delete (paux1);
-			paux1 = paux2;
-		}
-
-		pPrimeiro = nullptr;
-		pUltimo = nullptr;*/
 
 		if (pPrimeiro) {
 

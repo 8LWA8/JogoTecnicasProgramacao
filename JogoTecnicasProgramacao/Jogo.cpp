@@ -7,9 +7,9 @@ using namespace Entidades::Personagens;
 #define WIDTH 1200
 
 Jogo::Jogo(): 
-pGerenteGrafico(pGerenteGrafico->getInstance())
+pGerenteGrafico(pGerenteGrafico->getInstance()), pMaquinaEst(pMaquinaEst->getMaquinaEstados())
 {
-	MaquinaEstados::getMaquinaEstados()->addEstado(IDs::IDs::menu);
+	pMaquinaEst->addEstado(IDs::IDs::menu);
 	pGerenteGrafico->CenterView(0.0, 0.0);
 	
 }
@@ -46,21 +46,15 @@ void Jogo::exec()
 		}
 
 		pGerenteGrafico->clear();
-		MaquinaEstados::getMaquinaEstados()->executar();
+		pMaquinaEst->executar();
 		pGerenteGrafico->display();
 	}
 
 }
 
 
-	
-	
-
-
-	
-
-
 Jogo::~Jogo() 
 {
 	pGerenteGrafico->deleteInstance();
+	pMaquinaEst->deleteInstance();
 }

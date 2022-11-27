@@ -8,9 +8,8 @@ using namespace Personagens;
 
 namespace Gerenciadores {
 
-	GerenteColisoes::GerenteColisoes(/*ListaEntidades* pL*/)
+	GerenteColisoes::GerenteColisoes()
 	{
-		//pLista = pL;
 	};
 
 	GerenteColisoes::~GerenteColisoes() {};

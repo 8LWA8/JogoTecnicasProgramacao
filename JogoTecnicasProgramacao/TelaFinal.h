@@ -14,10 +14,8 @@ using namespace Estados;
 class TelaFinal :
     public Estado
 {
-    map<int, string> mapaRanking;
     sf::Clock relogio;
     bool pressed;
-    bool pedirNome;
     float pos;
     int pontFinal;
 
@@ -33,11 +31,9 @@ public:
     ~TelaFinal();
 
     void salvarRank();
-    void recuperarRank();
     void setRank(int p);
     int getRank();
     void executar();
     void imprimir();
-    map<int, string> getMapa();
 };
 

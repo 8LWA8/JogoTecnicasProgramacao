@@ -21,6 +21,16 @@ MaquinaEstados* MaquinaEstados::getMaquinaEstados() {
     return pMaquinaEstados;
 }
 
+void Estados::MaquinaEstados::deleteInstance()
+{
+    if (MaquinaEstados::pMaquinaEstados != NULL)
+    {
+        MaquinaEstados* pAux = MaquinaEstados::getMaquinaEstados();
+        delete pAux;
+        pAux = NULL;
+    }
+}
+
 MaquinaEstados::~MaquinaEstados() {
     //Deleta todos os estados da pilha
     while (!pilhaEstados.empty()) {

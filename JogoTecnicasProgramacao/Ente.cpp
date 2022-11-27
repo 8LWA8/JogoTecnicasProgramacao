@@ -21,9 +21,6 @@ int Ente::getId() const
 	return id;
 }
 
-
-//void Ente::imprimir() {}
-
 void Ente::setTextura(const char* path) 
 {
 	this->textura = pGerenteGrafico->loadTexture(path);

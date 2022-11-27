@@ -23,7 +23,6 @@ pGerenteGrafico->setText(nome);
 		pGerenteGrafico->print(sf::Vector2f(-100.f, 200.f + pos), 30);
 		pos += 10.0;
 		salvarRank();
-		recuperarRank();
 	}
 
 	float dt = relogio.getElapsedTime().asSeconds();
@@ -35,7 +34,7 @@ pGerenteGrafico->setText(nome);
 
 }
 
-TelaFinal::TelaFinal(): pressed(false), pedirNome(false), pos(0), pontFinal(0) 
+TelaFinal::TelaFinal(): pressed(false), pos(0), pontFinal(0) 
 {
 	//Créditos da imagem: https://www.freepik.com/free-vector/realistic-stars-galaxy-background_14063401.htm#query=outer%20space%20background&position=43&from_view=keyword
 	setTextura("fundo2.jpg");
@@ -43,7 +42,6 @@ TelaFinal::TelaFinal(): pressed(false), pedirNome(false), pos(0), pontFinal(0)
 	corpo.setSize(sf::Vector2f(WIDTH, HEIGHT));
 	nome = "";
 	textos = { "Fim de jogo", "teste", "Aperte K para copiar nome do clipboard"};
-	//texts.resize(3);
 	coords = { {-120,-250},{-300, -300},{-120, 280} };
 	sizes = { 80,40,40 };
 }
@@ -69,44 +67,9 @@ void TelaFinal::salvarRank()
 	if (nome != "")
 		ranking << nome << " ";
 	
-	//std::cout << " " << pontFinal << " " << std::endl;
 	ranking << pontFinal << " " << std::endl;
 	
 	ranking.close();
-
-}
-
-void TelaFinal::recuperarRank() 
-{
-	std::ifstream ranking;
-	std::string info;
-	int pontuacaoFinal;
-
-	ranking.open("salvar/ranking.txt", std::ios::out);
-	
-	
-	
-		/*if (getline(ranking, info)) {
-			pGerenteGrafico->setText(info);
-			pGerenteGrafico->print(sf::Vector2f(-100.f, 0.f + pos), 30);
-			pos += 10.0;
-		}*/
-	
-	
-
-	while (!ranking.eof())
-	{
-		ranking >> info;
-		ranking >> pontuacaoFinal;
-		ranking >> pontuacaoFinal;
-		//std::cout << info << " " << pontuacaoFinal << std::endl;
-		mapaRanking.insert(pair<int, string>(pontuacaoFinal, info));
-	}
-
-	//for (auto pair : mapaRanking)
-	//{
-	//	//cout << pair.first << " - " << pair.second << std::endl;
-	//}
 
 }
 
@@ -131,7 +94,6 @@ void TelaFinal::executar()
 void TelaFinal::imprimir()
 {
 	pGerenteGrafico->clear();
-	//GerenteGrafico* pGerenteGraf = GerenteGrafico::getInstance();
 	pGerenteGrafico->render(&corpo);
 
 	//Imprime textos
@@ -146,9 +108,4 @@ void TelaFinal::imprimir()
 			pGerenteGrafico->print(coords[i], sizes[i]);
 		}
 	}
-}
-
-map<int, string> TelaFinal::getMapa()
-{
-	return mapaRanking;
 }

@@ -29,7 +29,7 @@ namespace Gerenciadores {
 		
 
 	public:
-		GerenteColisoes(/*ListaEntidades* pL*/);
+		GerenteColisoes();
 		~GerenteColisoes();
 
 		bool verificaColisao(Entidade* ent1, Entidade* ent2);
@@ -44,7 +44,6 @@ namespace Gerenciadores {
 		list <Obstaculo*>* getListObst();
 
 		void colideCanto(Entidade* ent);
-		//void checaColisaoLista(Entidade* ent1);
 		void checaColisaoObst(Entidade* ent);
 		void checaColisaoIni(Entidade* ent);
 		void checaColisaoEsfera(Jogador* jog);

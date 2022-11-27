@@ -28,6 +28,7 @@ namespace Estados
         ~MaquinaEstados();
 
         static MaquinaEstados* getMaquinaEstados();
+        static void deleteInstance();
 
         void executar();
 

@@ -127,21 +127,7 @@ namespace Fases {
 			
 
 
-		}
-		
-		/*
-		//fase1.Ger.verificaColisao(&jogador1, &fase1.esfera1);
-		Ger.checaColisaoEsfera(&jogador1);
-		Ger.colideCanto(&jogador1);
-		Ger.checaColisaoObst(&jogador1);
-		Ger.checaColisaoObst(&chao);
-		Ger.checaColisaoIni(&jogador1);
-		Ger.checaColisaoIni(&chao);
-		Ger.verificaColisao(&jogador1, &chao);
-		
-
-		*/
-		
+		}	
 	}
 
 	void Fase_Primeira::imprimir()

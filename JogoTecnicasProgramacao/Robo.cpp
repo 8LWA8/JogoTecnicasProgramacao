@@ -48,15 +48,6 @@ void Robo::salvar()
     dadosRobo.close();
 }
 
-void Robo::setPersegue(bool per) 
-{
-	this->persegue = per;
-}
-bool Robo::getPersegue() 
-{
-	return persegue;
-}
-
 //void Entidades::Personagens::Robo::executar()
 //{
 //	Robo::imprimir();

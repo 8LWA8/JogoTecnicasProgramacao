@@ -4,7 +4,7 @@
 #include <iostream>
 #include <string>
 
-#define FONT_PATH "assets\\textures\\font.ttf" //<-- PEGAR UMA FONTE
+#define FONT_PATH "assets\\textures\\font.ttf"
 #define WIDTH 1200
 #define HEIGHT 720
 #define FRAME_RATE 100
@@ -166,15 +166,11 @@ using namespace Gerenciadores;
 
 	void GerenteGrafico::print(sf::Vector2f pos, int tam)
 	{
-		/*sf::Text tex;
-		tex.setString(text);*/
 		std::string s = tex.getString();
 		tex.setPosition(pos);
 		tex.setCharacterSize(tam);
 		tex.setOutlineColor(sf::Color::Red);
-		//tex.setOutlineThickness(4);
 		GerenteGrafico::render(&tex);
-		//std::cout << "imprimiu texto" << std::endl;
 	}
 
 	void GerenteGrafico::printVidaJ1(float val) 
@@ -231,11 +227,6 @@ using namespace Gerenciadores;
 		GerenteGrafico::render(&tex);
 	}
 
-	void Gerenciadores::GerenteGrafico::printNome(char letra)
-	{
-
-		tex.setString("" + letra);
-	}
 
 	void Gerenciadores::GerenteGrafico::printCarregaSelec(bool c)
 	{
@@ -297,5 +288,4 @@ using namespace Gerenciadores;
 	void Gerenciadores::GerenteGrafico::setTextOutline(float value)
 	{
 		tex.setOutlineThickness(value);
-		//std::cout << "menu outline" << tex.getOutlineThickness() << std::endl;
 	}

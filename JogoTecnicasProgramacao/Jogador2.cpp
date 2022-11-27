@@ -8,6 +8,10 @@ Jogador2::Jogador2()
     this->setTextura("astronauta.png");
 }
 
+Entidades::Personagens::Jogador2::~Jogador2()
+{
+}
+
 Entidades::Personagens::Jogador2::Jogador2(const sf::Vector2f pos)
 {
     this->setId(2);

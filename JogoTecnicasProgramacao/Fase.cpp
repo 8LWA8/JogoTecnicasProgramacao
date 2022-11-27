@@ -189,7 +189,6 @@ Fase::~Fase()
 {
 	LEnt.limpaLista();
 	Ger.getVecInimigos()->erase(Ger.getVecInimigos()->begin(), Ger.getVecInimigos()->end());
-	
 }
 
 void Fase::criaRobos()

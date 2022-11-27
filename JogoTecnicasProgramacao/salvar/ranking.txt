@@ -1,2 +1,3 @@
-aaa 10 10 
-bbb 18 18
+testemap 9 9 
+outrotest 16 16 
+outrotest 7 7 
