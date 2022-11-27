@@ -6968,6 +6968,24 @@
 											"top": 2174,
 											"width": 238.81787109375,
 											"height": 13,
+											"text": "+anularGravidade(): void",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "AAAAAAGEubKGgZEto8Y=",
+											"_parent": {
+												"$ref": "AAAAAAGEL+nsCtfySO4="
+											},
+											"model": {
+												"$ref": "AAAAAAGEubKGYZEqKx0="
+											},
+											"fillColor": "#a3ffa3",
+											"font": "Arial;13;0",
+											"left": 3789,
+											"top": 2189,
+											"width": 238.81787109375,
+											"height": 13,
 											"text": "+salvar(): void",
 											"horizontalAlignment": 0
 										}
@@ -6977,7 +6995,7 @@
 									"left": 3784,
 									"top": 2019,
 									"width": 248.81787109375,
-									"height": 173
+									"height": 188
 								},
 								{
 									"_type": "UMLReceptionCompartmentView",
@@ -7023,7 +7041,7 @@
 							"left": 3784,
 							"top": 1928,
 							"width": 248.81787109375,
-							"height": 264,
+							"height": 279,
 							"nameCompartment": {
 								"$ref": "AAAAAAGEL+nsCtfs0Cc="
 							},
@@ -26927,13 +26945,32 @@
 									"_parent": {
 										"$ref": "AAAAAAGEL+nsCdfpmcQ="
 									},
-									"name": "salvar",
+									"name": "anularGravidade",
 									"parameters": [
 										{
 											"_type": "UMLParameter",
 											"_id": "AAAAAAGEtIvwZbYTw0o=",
 											"_parent": {
 												"$ref": "AAAAAAGEtIvjF7Jw/qI="
+											},
+											"type": "void",
+											"direction": "return"
+										}
+									]
+								},
+								{
+									"_type": "UMLOperation",
+									"_id": "AAAAAAGEubKGYZEqKx0=",
+									"_parent": {
+										"$ref": "AAAAAAGEL+nsCdfpmcQ="
+									},
+									"name": "salvar",
+									"parameters": [
+										{
+											"_type": "UMLParameter",
+											"_id": "AAAAAAGEubKZyZRAU6k=",
+											"_parent": {
+												"$ref": "AAAAAAGEubKGYZEqKx0="
 											},
 											"type": "void",
 											"direction": "return"
