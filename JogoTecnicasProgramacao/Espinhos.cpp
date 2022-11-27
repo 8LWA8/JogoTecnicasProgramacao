@@ -10,7 +10,7 @@ Espinhos::Espinhos()
 	this->setId(4);
 	corpo.setSize(sf::Vector2f(35.f, 35.f));
 	corpo.setPosition(sf::Vector2f(-400.f, 200.f));
-	setTextura("espinhos.png");
+	setTextura("assets\\textures\\espinhos.png");
 }
 
 Espinhos::Espinhos(const sf::Vector2f pos, const sf::Vector2f tam, float altu)
@@ -22,7 +22,7 @@ Espinhos::Espinhos(const sf::Vector2f pos, const sf::Vector2f tam, float altu)
 
 	corpo.setSize(sf::Vector2f(tam));
 	corpo.setPosition(pos);
-	setTextura("espinhos.png");
+	setTextura("assets\\textures\\espinhos.png");
 }
 
 Espinhos::~Espinhos()

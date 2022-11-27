@@ -42,7 +42,7 @@ void Menu::loop_events()
 		Fases::Fase::setNumJog(2);
 	}
 
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::L) && !pressed)
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Num0) && !pressed)
 	{
 		std::ofstream arquivo;
 
@@ -112,7 +112,7 @@ void Menu::loop_events()
 Menu::Menu() : pos(1), pressed(false), optionSelected(0)
 {
 	//Créditos da imagem: https://www.freepik.com/free-vector/realistic-stars-galaxy-background_14063401.htm#query=outer%20space%20background&position=43&from_view=keyword
-	setTextura("fundo2.jpg");
+	setTextura("assets\\textures\\fundo2.jpg");
 	corpo.setPosition(sf::Vector2f(-600.f, -360.f));
 	corpo.setSize(sf::Vector2f(WIDTH, HEIGHT));
 

@@ -96,9 +96,6 @@
     <ClCompile Include="EsferaPoder.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ConstrutorFase.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Jogador1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -164,13 +161,7 @@
     <ClInclude Include="Projetil.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="baseInclude.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="GerenteColisoes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Mapa.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Robo.h">
@@ -220,13 +211,40 @@
     <Image Include="Diagrama.png">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="fundomenu1.png">
-      <Filter>Resource Files</Filter>
-    </Image>
     <Image Include="vilgax.png">
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="EsferaPoder.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="projetil.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="fundo_menu.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="fundo2.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="astronauta.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="espinhos.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="fundo_menu.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="fundomenu1.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="plataforma.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="robo_parado.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="rocha.png">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>

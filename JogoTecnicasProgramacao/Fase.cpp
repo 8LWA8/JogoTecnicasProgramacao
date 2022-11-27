@@ -298,6 +298,7 @@ void Fase::criaJogadores(float x, float y, bool empoder, float n_vidas, int pont
 {
 	if (jogador1 == NULL && jogador2 == NULL)
 	{
+		
 		jogador1 = new Jogador1(sf::Vector2f(x, y));
 		if (empoder == true)
 		{
@@ -308,17 +309,19 @@ void Fase::criaJogadores(float x, float y, bool empoder, float n_vidas, int pont
 		jogador1->setVivo(estaVivo);
 		LEnt.addEntidade(jogador1);
 		Ger.operator+=(jogador1);
+		
 
-		jogador2 = new Jogador2(sf::Vector2f(x, y));
-		if (empoder == true)
+		jogador2 = new Jogador2(sf::Vector2f(x2, y2));
+		if (empoder2 == true)
 		{
 			jogador2->ficarEmpoderado();
 		}
-		jogador2->setNumVidas(n_vidas);
+		jogador2->setNumVidas(n_vidas2);
 		jogador2->setPontuacao(pont);
-		jogador2->setVivo(estaVivo);
+		jogador2->setVivo(estaVivo2);
 		LEnt.addEntidade(jogador2);
 		Ger.operator+=(jogador2);
+		
 	}
 }
 

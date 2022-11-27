@@ -6,7 +6,7 @@
 TelaRanking::TelaRanking()
 {
 	//Créditos da imagem: https://www.freepik.com/free-vector/realistic-stars-galaxy-background_14063401.htm#query=outer%20space%20background&position=43&from_view=keyword
-	setTextura("fundo2.jpg");
+	setTextura("assets\\textures\\fundo2.jpg");
 	corpo.setPosition(sf::Vector2f(-600.f, -360.f));
 	corpo.setSize(sf::Vector2f(WIDTH, HEIGHT));
 

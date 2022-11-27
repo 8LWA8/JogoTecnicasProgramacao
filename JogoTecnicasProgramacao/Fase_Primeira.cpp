@@ -61,7 +61,7 @@ namespace Fases {
 
 			dados.close();
 
-			this->criaJogadores();
+			//this->criaJogadores();
 		}
 
 	}

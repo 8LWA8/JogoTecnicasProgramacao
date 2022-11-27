@@ -113,64 +113,6 @@ void Jogador::salvar()
     dadosJogador.close();
 }
 
-void Jogador::recuperar() 
-{/*
-    fstream fin;
-    
-    
-    fin.open("text.csv");
-
-    if (fin.fail()) {
-        cout << "Error opening file" << endl;
-        return;
-    }
-    string l;
-   
-    
-    vector<string> row;
-    string line, word, temp;
-    stringstream s(l);
-
-    int i = 0;
-    while (getline(fin, l, ',')) {
-
-        row.push_back(l);
-        cout << row[i] << endl;
-           i++;
-    }
-    
-
-        // used for breaking words
-
-
-        
-
-        // read every column data of a row and
-        // store it in a string variable, 'word'
-        while (getline(s, word, ',')) {
-            
-
-            // add all the column data
-            // of a row to a vector
-            row.push_back(word);
-            cout << word << endl;
-            
-        }
-    
-    
-    
-
-    for (i = 0; i < row.size(); i++)
-    {
-        if (i == 0) {
-            
-            std::cout << row[i] << std::endl;
-            
-        }
-    }*/
-
-}
-
 
 void Jogador::operator++(int)
 {

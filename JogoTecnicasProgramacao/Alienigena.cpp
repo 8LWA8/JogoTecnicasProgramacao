@@ -4,7 +4,7 @@ using namespace Entidades::Personagens;
 Alienigena::Alienigena(const sf::Vector2f pos)//: atirou(false)
 {
 	this->setId(6);
-	setTextura("alien_parado.png");
+	setTextura("assets\\textures\\alien_parado.png");
 	corpo.setSize(sf::Vector2f(40.f, 80.f));
 	corpo.setPosition(pos);
 

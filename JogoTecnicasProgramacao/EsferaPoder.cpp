@@ -4,7 +4,7 @@
 
 EsferaPoder::EsferaPoder(): coletada(false)
 {
-	setTextura("EsferaPoder.png");
+	setTextura("assets\\textures\\EsferaPoder.png");
 	corpo.setSize(sf::Vector2f(25.f, 25.f));
 	int p = rand() % 500;
 	corpo.setPosition(sf::Vector2f(-600.f + (float) p, 150.f));
@@ -12,7 +12,7 @@ EsferaPoder::EsferaPoder(): coletada(false)
 
 EsferaPoder::EsferaPoder(const sf::Vector2f pos): coletada(false)
 {
-	setTextura("EsferaPoder.png");
+	setTextura("assets\\textures\\EsferaPoder.png");
 	corpo.setSize(sf::Vector2f(25.f, 25.f));
 	corpo.setPosition(sf::Vector2f(pos));
 }

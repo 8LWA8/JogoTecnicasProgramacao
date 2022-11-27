@@ -6,14 +6,14 @@ using namespace Entidades::Personagens;
 
 Entidades::Personagens::Robo::Robo()
 {
-	setTextura("robo_parado.png");
+	setTextura("assets\\textures\\robo_parado.png");
 	corpo.setSize(sf::Vector2f(70.f, 70.f));
 	corpo.setPosition(sf::Vector2f(100.f, 100.f));
 }
 
 Entidades::Personagens::Robo::Robo(const sf::Vector2f pos)
 {
-	setTextura("robo_parado.png");
+	setTextura("assets\\textures\\robo_parado.png");
 	corpo.setSize(sf::Vector2f(70.f, 70.f));
 	corpo.setPosition(pos);
 }

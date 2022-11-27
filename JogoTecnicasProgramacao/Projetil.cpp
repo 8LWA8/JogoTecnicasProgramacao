@@ -11,7 +11,7 @@ Projetil::Projetil(sf::Vector2f pos): atingiu(false), existe(true)
 	corpo.setSize(sf::Vector2f(20.f, 10.f));
 	corpo.setPosition(pos);
 	corpo.move(sf::Vector2f(0.f, 35.f));
-	setTextura("projetil.png");
+	setTextura("assets\\textures\\projetil.png");
 	//corpo.setFillColor(sf::Color::Red);
 	vel.setVal(0.2, 0.0);
 	//std::cout << "criou projetil" << std::endl;
@@ -37,6 +37,8 @@ void Entidades::Projetil::executar()
 	{
 		imprimir();
 		corpo.move(sf::Vector2f(-2 * vel.getX(), 0.f));
+		sofrer_gravidade();
+		anularGravidade();
 
 		if (getCoord()->getX() < -600.f)
 		{
@@ -76,8 +78,12 @@ void Entidades::Projetil::recebePosAlien(sf::Vector2f posAli)
 	posAlien = posAli;
 }
 
-void Projetil::salvar() 
+void Entidades::Projetil::anularGravidade()
 {
-	/*std::string null;
-	return null;*/
+	corpo.move(sf::Vector2f(0.0f, -0.5f));
+	coordenada.addY(-0.5);
+}
+
+void Entidades::Projetil::salvar()
+{
 }

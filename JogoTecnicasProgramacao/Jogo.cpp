@@ -6,17 +6,17 @@ using namespace Entidades::Personagens;
 
 #define WIDTH 1200
 
-Jogo::Jogo(): 
-pGerenteGrafico(pGerenteGrafico->getInstance()), pMaquinaEst(pMaquinaEst->getMaquinaEstados())
+Jogo::Jogo() :
+	pGerenteGrafico(pGerenteGrafico->getInstance()), pMaquinaEst(pMaquinaEst->getMaquinaEstados())
 {
 	pMaquinaEst->addEstado(IDs::IDs::menu);
 	pGerenteGrafico->CenterView(0.0, 0.0);
-	
+
 }
 
 void Jogo::exec()
 {
-	
+
 
 	while (pGerenteGrafico->isWindowOpen())
 	{
@@ -25,24 +25,10 @@ void Jogo::exec()
 		{
 			if (event.type == sf::Event::Closed)
 				pGerenteGrafico->closeWindow();
-			
+
 			sf::String playerInput;
 			sf::Text playerText;
 			playerText.setPosition(60, 300);
-
-
-			if (event.type == sf::Event::TextEntered)
-			{
-				if (event.text.unicode < 128)
-				{
-					playerInput += event.text.unicode;
-					playerText.setString(playerInput);
-
-
-				}
-				pGerenteGrafico->getWindow()->draw(playerText);
-			}
-
 		}
 
 		pGerenteGrafico->clear();

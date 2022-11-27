@@ -28,7 +28,6 @@ namespace Entidades
             bool getEmpoderado();
             void levarDano(float dano);
             void salvar();
-            virtual void recuperar();
             
             void operator++(int);
 

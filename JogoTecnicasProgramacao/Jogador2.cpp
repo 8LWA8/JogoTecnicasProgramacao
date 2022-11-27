@@ -5,7 +5,7 @@ using namespace Entidades::Personagens;
 Jogador2::Jogador2()
 {
     this->setId(2);
-    this->setTextura("astronauta.png");
+    this->setTextura("assets\\textures\\astronauta.png");
 }
 
 Entidades::Personagens::Jogador2::~Jogador2()
@@ -14,8 +14,9 @@ Entidades::Personagens::Jogador2::~Jogador2()
 
 Entidades::Personagens::Jogador2::Jogador2(const sf::Vector2f pos)
 {
+    std::cout << "controi jog2" << std::endl;
     this->setId(2);
-    this->setTextura("astronauta.png");
+    this->setTextura("assets\\textures\\astronauta.png");
     this->getCorpo()->setPosition(pos);
 }
 
