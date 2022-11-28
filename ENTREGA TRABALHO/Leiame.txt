@@ -1,0 +1,8 @@
+Sistema operacional onde o programa executa: Windows 11, Sistema operacional de 64 bits, processador baseado em x64.
+
+Compilador: Visual C++ 14.2
+
+A compilação e os testes foram feitos usando Visual Studio Community 2019.
+
+Biblioteca Gráfica: SFML 2.5.1 - Visual C++ 15 (2017) - 32-bit
+
