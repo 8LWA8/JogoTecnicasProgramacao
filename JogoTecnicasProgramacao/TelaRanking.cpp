@@ -44,13 +44,19 @@ void TelaRanking::recuperarRank()
 void TelaRanking::executar()
 {
 	imprimir();
+
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
+	{
+		MaquinaEstados::getMaquinaEstados()->removerEstado();
+	}
 }
 
 void TelaRanking::imprimir()
 {
 	pGerenteGrafico->clear();
 	pGerenteGrafico->render(&corpo);
-
+	pGerenteGrafico->setText("Pressione Esc para voltar.");
+	pGerenteGrafico->print(sf::Vector2f(-200.f, -300.f), 40);
 	int pos = 0;
 
 	if (!mapaRanking.empty())

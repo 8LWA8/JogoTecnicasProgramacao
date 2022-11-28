@@ -165,4 +165,6 @@ void Menu::imprimir()
 
 	pGerenteGrafico->printJogSelec(Fases::Fase::getNumJog());
 	pGerenteGrafico->printCarregaSelec(Fases::Fase::getCarregar());
+	pGerenteGrafico->setText("Aperte 0 para apagar o arquivo ranking");
+	pGerenteGrafico->print(sf::Vector2f(-160.f, 270.f), 30);
 }

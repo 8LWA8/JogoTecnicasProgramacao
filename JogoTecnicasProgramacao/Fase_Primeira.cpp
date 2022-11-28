@@ -98,6 +98,13 @@ namespace Fases {
 			LEnt.salvarTodos();
 		}
 
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::P) && !pressed)
+		{
+			pressed = true;
+
+			MaquinaEstados::getMaquinaEstados()->addEstado(IDs::IDs::tela_pause);
+		}
+
 		float dt = relogio.getElapsedTime().asSeconds();
 		if (dt >= 2.0f)
 		{

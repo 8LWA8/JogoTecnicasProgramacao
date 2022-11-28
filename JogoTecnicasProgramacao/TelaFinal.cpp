@@ -16,7 +16,14 @@ pGerenteGrafico->setText(nome);
 	{
 		
 		sf::String string = sf::Clipboard::getString();
-		nome = std::string(string);
+		if (!string.isEmpty())
+		{
+			nome = std::string(string);
+		}
+		else
+		{
+			nome = "Jogador";
+		}
 		nome = nome + " " + std::to_string(getRank());
 		pressed = true;
 		pGerenteGrafico->setText(nome);

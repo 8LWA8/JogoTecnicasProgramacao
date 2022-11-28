@@ -317,7 +317,6 @@ void Fase::criaJogadores(float x, float y, bool empoder, float n_vidas, int pont
 			jogador2->ficarEmpoderado();
 		}
 		jogador2->setNumVidas(n_vidas2);
-		jogador2->setPontuacao(pont);
 		jogador2->setVivo(estaVivo2);
 		LEnt.addEntidade(jogador2);
 		Ger.operator+=(jogador2);
@@ -411,6 +410,11 @@ void Fase::mostrarInfoFase()
 		this->pGerenteGrafico->printVidaJ1(jogador1->getNumVidas());
 		pGerenteGrafico->printPont(this->getPontTotal());
 	}
+	this->pGerenteGrafico->setText("Aperte S para salvar");
+	this->pGerenteGrafico->print(sf::Vector2f(-10.f, -300.f), 30);
+
+	this->pGerenteGrafico->setText("Aperte P para pausar");
+	this->pGerenteGrafico->print(sf::Vector2f(-10.f, -270.f), 30);
 }
 
 }

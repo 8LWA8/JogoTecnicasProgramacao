@@ -73,6 +73,9 @@ void MaquinaEstados::addEstado(const IDs::IDs ID) {
     case IDs::IDs::tela_ranking:
         estado = (Estado*) new TelaRanking();
         break;
+    case IDs::IDs::tela_pause:
+        estado = (Estado*) new TelaPause();
+        break;
     }
 
     if (estado == nullptr) {

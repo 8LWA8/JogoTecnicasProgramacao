@@ -94,7 +94,7 @@ void Jogador::salvar()
 {   
     std::ofstream dadosJogador;
 
-    dadosJogador.open("salvar/salvarJog.txt", ios::in); //ios::app
+    dadosJogador.open("salvar/salvarJog.txt", ios::app);
 
     if (!dadosJogador.is_open())
     {

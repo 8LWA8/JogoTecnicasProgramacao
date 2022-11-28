@@ -1,5 +1,6 @@
 #pragma once
 #include "Estado.h"
+#include "MaquinaEstados.h"
 #include <map>
 #include <cstring>
 #include <fstream>

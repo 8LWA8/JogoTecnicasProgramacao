@@ -7,6 +7,7 @@
 #include "Menu.h"
 #include "TelaFinal.h"
 #include "TelaRanking.h"
+#include "TelaPause.h"
 #include "IDs.h"
 #include <stack>
 #include <fstream>

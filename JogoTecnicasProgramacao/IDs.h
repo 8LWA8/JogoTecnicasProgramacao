@@ -10,6 +10,7 @@ namespace IDs
         carregar_fase2,
         tela_final,
         tela_ranking,
+        tela_pause,
         menu
     };
 }
